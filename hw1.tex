@@ -1,0 +1,93 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{graphicx}
+
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#1}
+\duedate{12/16/2018}
+
+\begin{document}
+
+\problemlist{Problem B,Problem C, Problem D, \\Rudin 1.1, 1.2, 1.3a}
+
+\begin{problem}[Part A: Problem B]
+We defined a rational number \(\frac{m}{n}\) to be an equivalence class of pairs (m,n) under an equivalence relation. Check that the equivalence relation is transitive: if $(p,q)\sim(m,n)$ and $(m,n)\sim(a,b)$, then $(p,q)\sim(a,b)$. 
+\end{problem}
+
+
+\begin{solution}
+By the definition of the relation, $\sim$, $(p,q) \sim (m,n)$ is equal to $pn = mq$.
+We then have two relations, $(p,q)\sim(m,n)$ and $(m,n)\sim(a,b)$. These have the following representations:
+$$ (pn = mq) \land (mb = an)$$
+$$ pnmb = mqan$$
+$$pb = qa $$
+which reduces to $(p,q)\sim(a,b)$.
+\end{solution}
+
+\begin{problem}[Part A: Problem C]
+We defined addition of rational numbers in terms of representatives: \(\frac{a}{b}\) + \(\frac{c}{d}\)= \(\frac{ad+bc}{bd}\). Show that the addition of rational numbers is well-defined.
+\end{problem}
+
+\begin{solution}
+Let $(a, b) \sim (a_1, b_1)$ and $(c, d) \sim (c_1, d_1)$. Recall from the definition of the equivalence relation that it implies $ab_1 = a_1b$ and $cd_1 = c_1d$. To prove the property of addition holds, we need to show that, even if we choose different representatives, the equivalence relation is still valid. More explictly, $(a, b) + (c, d) \sim (a_1, b_1) + (c_1, d_1)$. After applying the definition of addition, we obtain:
+$$ (ad + bc, bd) \sim (a_1d_1 + b_1c_1, b_1d_1).$$
+This implies that $(ad + bc)b_1d_1 = (a_1d_1 + b_1c_1)bd$. Let us focus on the left hand side of this equality:
+$$ (ad + bc)b_1d_1 = adb_1d_1 + bcb_1d_1 $$
+$$ adb_1d_1 + bcb_1d_1 = d(ab_1)d_1 + b(cd_1)b_1. $$
+Recall the initial equivalence we defined at the beginning with $ab_1 = a_1b$ and $cd_1 = c_1d$. Using these as necessary,
+
+$$ d(ab_1)d_1 + b(cd_1)b_1 = d(a_1b)d_1 + b(c_1d)b_1 $$
+$$ d(a_1b)d_1 + b(c_1d)b_1 = bd(a_1d_1 + b_1c_1).$$
+
+\end{solution}
+\newpage
+\begin{problem}[Part B: Problem D]
+Define a multiplication of rational numbers (corresponding to the one you are used to), and show this multiplication is well-defined.
+\end{problem}
+
+\begin{solution}
+Definition of multiplication in rationals: if \(\frac{a}{b}\) and \(\frac{c}{d}\) are rational numbers with $b, d \neq 0$, 
+$$ \frac{a}{b} \cdot \frac{c}{d}  = \frac{ac}{bd}.$$
+Let $(a, b) \sim (a_1, b_1)$ and $(c, d) \sim (c_1, d_1)$. Recall from the definition of the equivalence relation that it implies $ab_1 = a_1b$ and $cd_1 = c_1d$. Again, we need to prove if different representatives will change the equivalence relations: $(a,b) \cdot (c,d) \sim (a_1, b_1) \cdot (c,d).$ Let us apply our definition of multiplication from above to get $(ac, bd) \sim (a_1c_1,b_1d_1).$
+
+This implies $acb_1d_1 = a_1c_1bd.$ Let's focus our attention on the left hand side. Recall the initial equivalence we defined at the beginning with $ab_1 = a_1b$ and $cd_1 = c_1d$. Using these as necessary, $(ab_1)(cd_1) = a_1bc_1d = a_1c_1bd.$ Thus, the equivalence is still valid.
+\end{solution}
+
+\begin{problem}[Part B: Rudin 1.1]
+If $r$ is rational $(r \neq 0)$ and $x$ is irrational, prove that $r + x$ and $rx$ are irrational.
+\end{problem}
+
+\begin{solution}
+Let us solve by proof of contridiction. Suppose $r + x$ and $rx$ is rational. Since $r$ is rational, $-r$ and \(\frac{1}{r}\) are also rational. Thus, $(r + x) - r = x$ which implies x is rational by property of addition of rationals. 
+Similarly, $rx \cdot (\frac{1}{r}) = x$ which suggests x is also rational by definition of multiplication of rationals. These are both clearly contridictions. Thus, $r + x$ and $rx$ are irrational.
+\end{solution}
+
+\begin{problem}[Part C: Rudin 1.2]
+Prove that there is no rational number whose square is 12.
+\end{problem}
+
+\begin{solution}
+Let us solve by proof of contridiction. If there was a $x$ such that $x^2 = 12$, we can write $x = \frac{m}{n}$ where $m$ and $n$ are not both multiples of 3. Then $x^2 = 12$ implies that
+$$ m^2 = 12n^2.$$
+This shows that 3 divides $m^2$, and hence, that 3 divides $m$, so that $9$ divides $m^2.$ It then follows that $n^2$ is divisible by 3, so that $n$ is a multiple of 3. This clearly shows a contridiction.
+
+\end{solution}
+
+
+\begin{problem}[Part D: Rudin 1.3a]
+Prove: If $x \neq 0$ and $xy = xz$ then $y = z.$
+\end{problem}
+
+\begin{solution}
+If $xy = xz$ and $x \neq 0$, then $y = (1)y = \frac{1}{x}(xy) = \frac{1}{x}(xz) = (1)z = z.$
+\end{solution}
+
+\end{document}
