@@ -48,8 +48,10 @@ If $G \subset B$ then the inverse image, $f^{-1}(G)$ of $G$ under $f$ is $f^{-1}
 (1) Let us prove this direction, $\rightarrow$. \\
 Given $f$ is injective, let $C_1$ be some subset of $A$. $f$ maps all elements of $C_1$ to some set $B_1 \subset B$. Applying the definition of the inverse image to this set $B_1$ under f yields $f^{-1}(B_1)=\{x \in A:f(x)\in B_1\}.$ Since we know that $f$ is injective, we know that the resulting set obtained from the inverse image has to be the original set, $C_1$. \\ \\
 Now the other direction, $\leftarrow$. Given $f^{-1}(f(C))=C$. Let us do proof by contradiction. Let $x_1, x_2$ be elements in $C$ and assume that $f(x_1)=f(x_2)$ but $x_1 \neq x_2$ (this is another way to say $f$ is not injective). Applying the given fact to a subset of $C$, $\{x_1\}$, yields $f^{-1}(f(\{x_1\}))=\{x \in C:f(x)\in f(C)\} = \{x_1, x_2\}$. Clearly, this is a contradiction since the set we put into the function and inverse image is not the same set that was returned. This proves that $f$ has to be injective.
-\newline
-
+\newline \\
+(2) If $f(A) = B$, we say that $f$ maps $A$ onto $B$, or that $f : A \rightarrow B$ is surjective. Let us look at the $\rightarrow$ direction first. \\
+Given $f$ is surjective. Let $C_1 = f^{-1}(D)=\{x \in A : f(x) \in D\}.$ If we apply $f$ to $C_1$, we will obtain our original set $D$ since f is surjective. \\ \\ 
+Now for the other direction, $\leftarrow$. Given $f(f^{-1}(D)) = D$. Let us try to argue that $f$ is not surjective. Let us call $C_2 = f^{-1}(D)$. What we mean when we call $f$ not surjective is $f(C_2)\neq D$. But this goes against the given fact so it must be that $f$ is surjective.
 
 \end{solution}
 
