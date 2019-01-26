@@ -19,40 +19,75 @@
 \problemlist{Exercise 1.7, 3.3, 3.4, 3.6, \\ 4.5, 4.7, 4.17}
 
 \begin{problem}[Exercise 1.7.]
-Let $A$ and $B$ be subsets of another $X$. Prove the following the following statements. \\
-(1) $A \cap B = A \setminus(A\setminus B)$\\
-(2) $A \subset B$ if and only if $X\setminus A \supset X\setminus B.$
+Let $A$ and $B$ be subsets of another $X$. Prove the following the following statements. 
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item $A \cap B = A \setminus(A\setminus B)$
+	\item $A \subset B$ if and only if $X\setminus A \supset X\setminus B.$
+\end{enumerate}
 \end{problem}
 
 
 \begin{solution}
-Recall the definitions of $\cup$ and $\setminus$. $ A \cup B = \{x: x \in A$ and $x \in B\}$. $A\setminus B = \{ x \in A: x \notin B\}.$\\
-(1) Let $D = A \setminus B.$ $D$ is the set of elements in $A$ that are strictly unique. Let $E = A \setminus D.$ $E$ is the relative complement of $D$ in $A$, which only leaves elements common to both $A$ and $B$. \\ \\
-(2) Let us prove this $\rightarrow$ direction first. \\
-Given $A \subset B.$ This means that $A$ will have a lesser or equal to number of elements in its set than $B.$ It follows that $X\setminus A$ will contain all elements of the set $X\setminus B.$ Thus, $X\setminus A \supset X\setminus B.$ \\
-\\
-Now the other direction, $\leftarrow$. Given $X\setminus A \supset X\setminus B.$ Assume $\exists$ some $x \in A$ and $x \notin B,$ which means that $A \not\subset B$. However, $x \notin X\setminus A$ and $x \in X\setminus B$ when we stated $X\setminus A \supset X\setminus B.$ So, it must be $\forall x \in A$ must be also be $x \in B$ so $A \subset B$.
+Recall the definitions of $\cup$ and $\setminus$. $ A \cup B = \{x: x \in A$ and $x \in B\}$. $A\setminus B = \{ x \in A: x \notin B\}.$
+
+\begin{enumerate}
+	\itemsep0em
+\item Let $D = A \setminus B.$ $D$ is the set of elements in $A$ that are strictly unique. Let $E = A \setminus D.$ $E$ is the relative complement of $D$ in $A$, which only leaves elements common to both $A$ and $B$. 
+\item 
+
+\begin{enumerate}
+	\itemsep0em
+	\item Let us prove this $\rightarrow$ direction first. Given $A \subset B.$ This means that $A$ will have a lesser or equal to number of elements in its set than $B.$ It follows that $X\setminus A$ will contain all elements of the set $X\setminus B.$ Thus, $X\setminus A \supset X\setminus B.$ 
+	\item Now the other direction, $\leftarrow$. Given $X\setminus A \supset X\setminus B.$ Assume $\exists$ some $x \in A$ and $x \notin B,$ which means that $A \not\subset B$. However, $x \notin X\setminus A$ and $x \in X\setminus B$ when we stated $X\setminus A \supset X\setminus B.$ So, it must be $\forall x \in A$ must be also be $x \in B$ so $A \subset B$.
+\end{enumerate}
+\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 3.3.]
-Let $f: A \leftarrow B$ be a function. Prove the following statements. \\
-(1) $f$ is injective if and only if $f^{-1}(f(C)) = C$ for every subset $C$ of $A$.\\
-(2) $f$ is surjective if and only if $f^{-1}(f(D)) = D$ for every subset $D$ of $B$.
+Let $f: A \leftarrow B$ be a function. Prove the following statements.
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item $f$ is injective if and only if $f^{-1}(f(C)) = C$ for every subset $C$ of $A$.
+	\item $f$ is surjective if and only if $f^{-1}(f(D)) = D$ for every subset $D$ of $B$.
+\end{enumerate}
 \end{problem}
 
 \begin{solution}
 First, let us list some useful definitions.\\
 If $G \subset B$ then the inverse image, $f^{-1}(G)$ of $G$ under $f$ is $f^{-1}(G)=\{x \in A : f(x) \in G\}.$
 \\ If $f^{-1}(y)$ contains at most one element of A for each $y \in B$, then $f$ is said to be injective. 
-\\ \newline
-(1) Let us prove this direction, $\rightarrow$. \\
-Given $f$ is injective, let $C_1$ be some subset of $A$. $f$ maps all elements of $C_1$ to some set $B_1 \subset B$. Applying the definition of the inverse image to this set $B_1$ under f yields $f^{-1}(B_1)=\{x \in A:f(x)\in B_1\}.$ Since we know that $f$ is injective, we know that the resulting set obtained from the inverse image has to be the original set, $C_1$. \\ \\
-Now the other direction, $\leftarrow$. Given $f^{-1}(f(C))=C$. Let us do proof by contradiction. Let $x_1, x_2$ be elements in $C$ and assume that $f(x_1)=f(x_2)$ but $x_1 \neq x_2$ (this is another way to say $f$ is not injective). Applying the given fact to a subset of $C$, $\{x_1\}$, yields $f^{-1}(f(\{x_1\}))=\{x \in C:f(x)\in f(C)\} = \{x_1, x_2\}$. Clearly, this is a contradiction since the set we put into the function and inverse image is not the same set that was returned. This proves that $f$ has to be injective.
-\newline \\
-(2) If $f(A) = B$, we say that $f$ maps $A$ onto $B$, or that $f : A \rightarrow B$ is surjective. Let us look at the $\rightarrow$ direction first. \\
-Given $f$ is surjective. Let $C_1 = f^{-1}(D)=\{x \in A : f(x) \in D\}.$ If we apply $f$ to $C_1$, we will obtain our original set $D$ since f is surjective. \\ \\ 
-Now for the other direction, $\leftarrow$. Given $f(f^{-1}(D)) = D$. Let us try to argue that $f$ is not surjective. Let us call $C_2 = f^{-1}(D)$. What we mean when we call $f$ not surjective is $f(C_2)\neq D$. But this goes against the given fact so it must be that $f$ is surjective.
+\\ If $f(A) = B$, we say that $f$ maps $A$ onto $B$, or that $f : A \rightarrow B$ is surjective.\newline
 
+\begin{enumerate}
+	\itemsep0em
+	\item
+	\begin{enumerate}
+		\itemsep0em
+		\item Let us prove this direction, $\rightarrow$. Given $f$ is injective, let $C_1$ be some subset of $A$. $f$ maps all elements of $C_1$ to some set $B_1 \subset B$. Applying the definition of the inverse image to this set $B_1$ under f yields $f^{-1}(B_1)=\{x \in A:f(x)\in B_1\}.$ Since we know that $f$ is injective, we know that the resulting set obtained from the inverse image has to be the original set, $C_1$.
+		\item Now the other direction, $\leftarrow$. Now the other direction, $\leftarrow$. Given $f^{-1}(f(C))=C$. Let us do proof by contradiction. Let $x_1, x_2$ be elements in $C$ and assume that $f(x_1)=f(x_2)$ but $x_1 \neq x_2$ (this is another way to say $f$ is not injective). Applying the given fact to a subset of $C$, $\{x_1\}$, yields $f^{-1}(f(\{x_1\}))=\{x \in C:f(x)\in f(C)\} = \{x_1, x_2\}$. Clearly, this is a contradiction since the set we put into the function and inverse image is not the same set that was returned. This proves that $f$ has to be injective.
+	\end{enumerate}
+
+	\item
+	\begin{enumerate}
+		\itemsep0em
+	\item  Let us look at the $\rightarrow$ direction first. Given $f$ is surjective. Let $C_1 = f^{-1}(D)=\{x \in A : f(x) \in D\}.$ If we apply $f$ to $C_1$, we will obtain our original set $D$ since f is surjective.
+	\item Now for the other direction, $\leftarrow$. Given $f(f^{-1}(D)) = D$. Let us try to argue that $f$ is not surjective. Let us call $C_2 = f^{-1}(D)$. What we mean when we call $f$ not surjective is $f(C_2)\neq D$. But this goes against the given fact so it must be that $f$ is surjective.
+	\end{enumerate}
+\end{enumerate}
 \end{solution}
+
+\begin{problem}[Exercise 3.4.]
+Let $f: A \leftarrow B$ be a function. Prove the following statements.
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item $f$ is injective if and only if $f^{-1}(f(C)) = C$ for every subset $C$ of $A$.
+	\item $f$ is surjective if and only if $f^{-1}(f(D)) = D$ for every subset $D$ of $B$.
+\end{enumerate}
+\end{problem}
+
 
 \end{document}
