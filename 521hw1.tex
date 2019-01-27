@@ -46,7 +46,7 @@ Recall the definitions of $\cup$ and $\setminus$. $ A \cup B = \{x: x \in A$ and
 \end{solution}
 
 \begin{problem}[Exercise 3.3.]
-Let $f: A \leftarrow B$ be a function. Prove the following statements.
+Let $f: A \rightarrow B$ be a function. Prove the following statements.
 \vspace{-2mm}
 \begin{enumerate}
 	\itemsep0em
@@ -80,14 +80,69 @@ If $G \subset B$ then the inverse image, $f^{-1}(G)$ of $G$ under $f$ is $f^{-1}
 \end{solution}
 
 \begin{problem}[Exercise 3.4.]
-Let $f: A \leftarrow B$ be a function. Prove the following statements.
+Let $f: A \rightarrow B$ and $g : B \rightarrow C$ be functions. Prove the following statements.
 \vspace{-2mm}
 \begin{enumerate}
 	\itemsep0em
-	\item $f$ is injective if and only if $f^{-1}(f(C)) = C$ for every subset $C$ of $A$.
-	\item $f$ is surjective if and only if $f^{-1}(f(D)) = D$ for every subset $D$ of $B$.
+	\item If $f$ and $g$ are both injective, then so is $g \circ f.$
+	\item If $f$ and $g$ are both surjective, then so is $g \circ f.$
+	\item If $g \circ f$ is surjective, then so is $g$.
+	\item Surjectivity of $g \circ f$ does not imply surjectivity of $f$.
+	\item If $g \circ f$ is injective, then so is $f$.
+	\item Injectivity of $g \circ f$ does not imply injectivity of $g$.
 \end{enumerate}
 \end{problem}
+\begin{solution}
+\begin{enumerate}
+	\itemsep0em
+	\item Let $h = g \circ f = g(f(a)) $ for $ a \in A.$ To be injective, $h(a) = h(b) \implies a = b.$ Substitute for h and use the fact that $g$ and $f$ are injective: $g(f(a))=g(f(b)) \implies f(a) = f(b) \implies a = b.$ So, $f \circ g$ is injective.
+	\item Let $h = g \circ f = g(f(a)) $ for $ a \in A.$ To be surjective, $h(A)=C$ Substitute for h and use the fact that $g$ and $f$ are surjective: $g(f(A)) \implies g(B)$ since $f$ is surjective $ \implies g(B)=C$ since $g$ is surjective. So, $f \circ g$ is surjective.
+	\item Let $h = g \circ f = g(f(a)) $ for $ a \in A.$ Restate what $f(A)$ is and call it $T$: $f(A) = \{f(x) : x \in A\} = T.$ So, $ g(T)=\{g(y) : y \in T\}$. But since we know that $h$ is surjective, it must span all $x \in C.$ This is only possible if $g$ is surjective.
+	\item Surjectivity of $g \circ f$ does not imply surjectivity of $f$.
+	\item If $g \circ f$ is injective, then so is $f$.
+	\item Injectivity of $g \circ f$ does not imply injectivity of $g$.
+\end{enumerate}
+\end{solution}
+
+
+\begin{problem}[Exercise 3.6.]
+Let $f: X \rightarrow Y$ be a function. Prove the following statements.
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item If $A$ and $C$ are subsets of $X$, then $f(C\setminus A)\supset f(C)\setminus f(A)$.
+	\item $f$ is injective if and only if $f(C\setminus A) = f(C)\setminus f(A)$ for any two subsets $A$ and $C$ of $X.$
+	\item If $B$ and $D$ are subsets of $Y$, then $f^{-1}(D\setminus B)= f^{-1}(D)\setminus f^{-1}(B).$
+\end{enumerate}
+\end{problem}
+\begin{solution}
+\end{solution}
+
+\begin{problem}[Exercise 4.5]
+Assume that $card(A) \leq card(X)$ and $card(B) \leq card(Y).$ Prove that $card(B^{A}) \leq card(Y^{X})$. Hint: Consider a function $\Phi(f) = h \circ f \circ k$,
+where $k : X \rightarrow A$ and $h : B \rightarrow Y$ are certain functions. Theorem 3.9 might be useful for the final step.
+ \end{problem}
+
+\begin{solution}
+\end{solution}
+
+\begin{problem}[Exercise 4.7]
+Prove that for any set $A$, one has $\mathcal{P}(A) \sim \{0,1\}^{A}$.
+\end{problem}
+
+\begin{solution}
+\end{solution}
+
+\begin{problem}[Exercise 4.17]
+Let $A$ and $B$ be sets, and assume $f: A \rightarrow B$ and $g: B \rightarrow A$ are injective functions.
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item Assume additionally that A is finite. Prove that $f$ and $g$ must actually be bijections.
+	\item Show by way of an example that both $f$ and $g$ may fail to be bijective if we do not assume that $A$ is finite.
+\end{enumerate}
+\end{problem}
+
 
 
 \end{document}
