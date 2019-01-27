@@ -98,9 +98,9 @@ Let $f: A \rightarrow B$ and $g : B \rightarrow C$ be functions. Prove the follo
 	\item Let $h = g \circ f = g(f(a)) $ for $ a \in A.$ To be injective, $h(a) = h(b) \implies a = b.$ Substitute for h and use the fact that $g$ and $f$ are injective: $g(f(a))=g(f(b)) \implies f(a) = f(b) \implies a = b.$ So, $f \circ g$ is injective.
 	\item Let $h = g \circ f = g(f(a)) $ for $ a \in A.$ To be surjective, $h(A)=C$ Substitute for h and use the fact that $g$ and $f$ are surjective: $g(f(A)) \implies g(B)$ since $f$ is surjective $ \implies g(B)=C$ since $g$ is surjective. So, $f \circ g$ is surjective.
 	\item Let $h = g \circ f = g(f(a)) $ for $ a \in A.$ Restate what $f(A)$ is and call it $T$: $f(A) = \{f(x) : x \in A\} = T.$ So, $ g(T)=\{g(y) : y \in T\}$. But since we know that $h$ is surjective, it must span all $x \in C.$ This is only possible if $g$ is surjective.
-	\item Surjectivity of $g \circ f$ does not imply surjectivity of $f$.
-	\item If $g \circ f$ is injective, then so is $f$.
-	\item Injectivity of $g \circ f$ does not imply injectivity of $g$.
+	\item Assume $\exists a_1 \in A : f(a_1) \notin B.$ This states that $f$ cannot be surjective. However, we know that if $h$ is surjective, $g$ must be surjective to map to all elements of $C$. Consider the example, $A = \{3\}, B = \{4, 5\}, C = \{6\}$ where $f:A\rightarrow B$ by $f(3) = 4$ and $g:B\rightarrow C$ by $g(4)=g(5)=6.$ $f \circ g$ is surjective by $g(f(3))=6$ but $\nexists$ any $a \in A$ where $f(a)=5$, implying $f$ need not be surjective. 
+	\item Given that $g \circ f$ is injective, that implies the following: for some $a_1, a_2 \in A, g(f(a_1)) = g(f(a_2)) \implies a_1 = a_2.$ Assume f was not injective, then $f(a_1) = f(a_2)$ but $a_1 \neq a_2.$ But this would violate that $g \circ f$ is injective since $a_1 = a_2$ so $f$ must be injective.
+	\item For $g$ to be injective, we need the condition for some $a_1, a_2 \in A, g(a_1)=g(a_2)\implies a_1 = a_2.$ Consider the example, $A = \{3\}, B = \{4, 5\}, C = \{6\}$ where $f:A\rightarrow B$ by $f(3) = 4$ and $g:B\rightarrow C$ by $g(4)=g(5)=6$.$ g \circ f(3) = 6$ is injective but $g(4)=g(5)$ leads to $4 \neq 5$, implying $g$ need not be injective.  
 \end{enumerate}
 \end{solution}
 
