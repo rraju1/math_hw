@@ -100,7 +100,7 @@ Let $f: A \rightarrow B$ and $g : B \rightarrow C$ be functions. Prove the follo
 	\item Let $h = g \circ f = g(f(a)) $ for $ a \in A.$ Restate what $f(A)$ is and call it $T$: $f(A) = \{f(x) : x \in A\} = T.$ So, $ g(T)=\{g(y) : y \in T\}$. But since we know that $h$ is surjective, it must span all $x \in C.$ This is only possible if $g$ is surjective.
 	\item Assume $\exists a_1 \in A : f(a_1) \notin B.$ This states that $f$ cannot be surjective. However, we know that if $h$ is surjective, $g$ must be surjective to map to all elements of $C$. Consider the example, $A = \{3\}, B = \{4, 5\}, C = \{6\}$ where $f:A\rightarrow B$ by $f(3) = 4$ and $g:B\rightarrow C$ by $g(4)=g(5)=6.$ $f \circ g$ is surjective by $g(f(3))=6$ but $\nexists$ any $a \in A$ where $f(a)=5$, implying $f$ need not be surjective. 
 	\item Given that $g \circ f$ is injective, that implies the following: for some $a_1, a_2 \in A, g(f(a_1)) = g(f(a_2)) \implies a_1 = a_2.$ Assume f was not injective, then $f(a_1) = f(a_2)$ but $a_1 \neq a_2.$ But this would violate that $g \circ f$ is injective since $a_1 = a_2$ so $f$ must be injective.
-	\item For $g$ to be injective, we need the condition for some $a_1, a_2 \in A, g(a_1)=g(a_2)\implies a_1 = a_2.$ Consider the example, $A = \{3\}, B = \{4, 5\}, C = \{6\}$ where $f:A\rightarrow B$ by $f(3) = 4$ and $g:B\rightarrow C$ by $g(4)=g(5)=6$.$ g \circ f(3) = 6$ is injective but $g(4)=g(5)$ leads to $4 \neq 5$, implying $g$ need not be injective.  
+	\item For $g$ to be injective, we need the condition for some $a_1, a_2 \in A, g(a_1)=g(a_2)\implies a_1 = a_2.$ Consider the example, $A = \{3\}, B = \{4, 5\}, C = \{6\}$ where $f:A\rightarrow B$ by $f(3) = 4$ and $g:B\rightarrow C$ by $g(4)=g(5)=6$.$ g \circ f(3) = 6$ is injective but $g(4)=g(5)$ leads to $4 \neq 5$, implying $g$ need not be injective. 
 \end{enumerate}
 \end{solution}
 
@@ -112,10 +112,22 @@ Let $f: X \rightarrow Y$ be a function. Prove the following statements.
 	\itemsep0em
 	\item If $A$ and $C$ are subsets of $X$, then $f(C\setminus A)\supset f(C)\setminus f(A)$.
 	\item $f$ is injective if and only if $f(C\setminus A) = f(C)\setminus f(A)$ for any two subsets $A$ and $C$ of $X.$
-	\item If $B$ and $D$ are subsets of $Y$, then $f^{-1}(D\setminus B)= f^{-1}(D)\setminus f^{-1}(B).$
+	\item If $B$ and $D$ are subsets of $Y$, then $f^{-1}(D\setminus B)= f^{-1}(D)\setminus f^{-1}(B).$ 
 \end{enumerate}
 \end{problem}
 \begin{solution}
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item Assume some $d \in f(C)\setminus f(A)$ but $d \notin f(C\setminus A).$ $d$ needs to be in $f(C)$ then but not in $f(A).$ So that means that $\exists$ a particular $x : f(x)=d$ which cannot reside in $A$ and must uniquely reside in $C$. But this contradicts our initial assumption that $d \notin f(C\setminus A)$ since this set contains elements unique to set $C.$ Thus, $f(C\setminus A)\supset f(C)\setminus f(A)$. 
+	\item 
+		\begin{enumerate}
+			\itemsep0em
+		\item  Let us look at the $\rightarrow$ direction first. Given $f$ is injective. 
+		\item Now for the other direction, $\leftarrow$. 
+		\end{enumerate}
+	\item If $B$ and $D$ are subsets of $Y$, then $f^{-1}(D\setminus B)= f^{-1}(D)\setminus f^{-1}(B).$
+\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 4.5]
