@@ -123,8 +123,8 @@ Let $f: X \rightarrow Y$ be a function. Prove the following statements.
 	\item 
 		\begin{enumerate}
 			\itemsep0em
-		\item  Let us look at the $\rightarrow$ direction first. Given $f$ is injective. 
-		\item Now for the other direction, $\leftarrow$. 
+		\item  Let us look at the $\rightarrow$ direction first. Given $f$ is injective. Let's try proof by contradiction. Assume that $f(x_1) \in f(C)\setminus f(A)$ but $f(x_1) \notin f(C\setminus A).$  $f(x_1) \in f(C)\setminus f(A) = \{w \in f(C) : w \notin f(A)\}$ $\implies x_1\in \{x\in C : x\notin A\}$ because $f$ is injective. So then we apply $f$ which then $f(x_1)\in f(C\setminus A)$, which contradicts our original statement. So, $f(C\setminus A) = f(C)\setminus f(A)$.
+		\item Now for the other direction, $\leftarrow$. Given $f(C\setminus A) = f(C)\setminus f(A)$. $f(C)\setminus f(A)=\{w \in f(C) : w \notin f(A)\}$, let us call this set $D$. $f(C\setminus A)=f(\{x \in C : x \notin A\})$. To show $f$ is not injective, $f(x_1)=f(x_2) \implies x_1 \neq x_2$. Let's say that $\exists f(x_1)=f(x_2)\in D$ and that $x_1, x_2 \in C \setminus A$. So, $D=\{\dots,f(x_1),\dots\}=\{\dots,f(x_2),\dots\}.$ This implies $D=f(\{\dots,x_1,\dots\})$ by definition of image but then this suggests that $x_2 \notin C\setminus A$, which is a contradiction. So, $f$ must be injective. 
 		\end{enumerate}
 	\item If $B$ and $D$ are subsets of $Y$, then $f^{-1}(D\setminus B)= f^{-1}(D)\setminus f^{-1}(B).$
 \end{enumerate}
