@@ -136,6 +136,9 @@ where $k : X \rightarrow A$ and $h : B \rightarrow Y$ are certain functions. The
  \end{problem}
 
 \begin{solution}
+To prove $card(B^{A}) \leq card(Y^{X})$ and $\Phi(f) = h \circ f \circ k$,
+where $k : X \rightarrow A$ and $h : B \rightarrow Y$ are certain functions, we need to show that $\Phi$ is injective by the definition of cardinality. $card(A) \leq card(X)$ tells us that $\exists$ some function that maps $A$ to $X$ that is injective. $card(B) \leq card(Y)$ tells us that $\exists$ some function that maps $B$ to $Y$ that is injective. By Theorem 3.9, for $\Phi$ to be injective, it needs to have a left inverse. \\ \\
+A left inverse for $\Phi$ is a function $\Phi_2 : Y^{X} \rightarrow B^{A}$ s.t. $\Phi_2 \circ \Phi = id_{B^{A}}. \Phi_2 \circ \Phi(f) = h_2 \circ \Phi(f) \circ k_2$, where $h_2 : Y\rightarrow B$ and $k_2:A\rightarrow X.$ From the given facts, we can select $h$ and $k_2$ to be injective functions so they must have left inverses. This leads to $h_2 \circ \Phi(f) \circ k_2 = h_2 \circ h \circ f \circ k \circ k_2 = id_{B}\circ f \circ id_{A}=f.$ So, $\Phi_2$ is a left inverse so $\Phi$ is injective and $card(B^{A}) \leq card(Y^{X}).$
 \end{solution}
 
 \begin{problem}[Exercise 4.7]
