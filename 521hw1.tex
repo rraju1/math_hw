@@ -146,6 +146,14 @@ Prove that for any set $A$, one has $\mathcal{P}(A) \sim \{0,1\}^{A}$.
 \end{problem}
 
 \begin{solution}
+$\mathcal{P}(A) \sim \{0,1\}^{A} \implies card(\mathcal{P}(A)) = card(\{0,1\}^{A}).$ So, $f : \mathcal{P}(A) \rightarrow \{0,1\}^{A}$ needs to be bijective for the previous statement to be true. Let us break it into two parts. 
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item Prove $f$ is injective. Let's do proof by contradiction. Assume $f(x_1)=f(x_2)\implies x_1 \neq x_2.$ So, $f(x_1)=f(x_2)\in\{0,1\}^{A}$ and $x_1, x_2 \in \mathcal{P}(A).$ $\{0,1\}^{A} = \{\dots,f(x_1),\dots\} \rightarrow f(E)$, where $E = \mathcal{P}(A)$ by definition of image. But, $x_2 \notin E$ which establishes a condtradiction so $f$ must be injective.
+	\item Prove $f$ is surjective. Assume $a_1 \notin \mathcal{P}(A)$ where $f(a_1) \in \{0,1\}^{A}.$ But $f^{-1}(\{0,1\}^{A}) = \{x\in \mathcal{P}(A) : f(x) \in \{0,1\}^{A} \}$ so $a_1 \in A.$ This is a contradiction so $f$ must be surjective.  
+\end{enumerate}
+If $f$ is both injective and surjective, it must be bijective. Thus, $card(\mathcal{P}(A)) = card(\{0,1\}^{A}) \rightarrow \mathcal{P}(A) \sim \{0,1\}^{A}.$ 
 \end{solution}
 
 \begin{problem}[Exercise 4.17]
@@ -159,6 +167,12 @@ Let $A$ and $B$ be sets, and assume $f: A \rightarrow B$ and $g: B \rightarrow A
 \end{problem}
 
 \begin{solution}
+\begin{enumerate}
+	\itemsep0em
+	\item First, if $A$ is finite, we know that it will be a countable set and that $\forall x\in A \rightarrow B$ because $f$ is injective. Since $f$ is injective, $card(A)\leq card(B).$ Similarly, $card(B)\leq card(A)$ because $g$ is injective $\implies card(A)=card(B)$ by Thm. 4.2(5). So $f$ and $g$ must both be bijections.
+	\item Suppose $f: \mathbb{N}x\mathbb{N}\rightarrow \mathbb{N}$. It is clear to see that this function will be injective but there are elements in $\mathbb{N}$ where there is no mapping so it is not surjective. Define $g: \mathbb{N}\rightarrow \mathbb{N}x\mathbb{N}$ where $g(n)=(n,n)$, this is clearly injective but not surjective.
+\end{enumerate}
+
 \end{solution}
 
 
