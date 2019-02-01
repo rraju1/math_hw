@@ -24,7 +24,7 @@ Let $A$ and $B$ be sets. Assume $A$ is infinite, $B$ is countable, and $A$ and $
 
 
 \begin{solution}
-If $A$ is infinite, we have $C\subset A$, a countably infinite set. The union of two countable sets is still countable, $B\cup C$, which is countably infinite. Since $((A\cup B)\setminus B\cup C) \cap C$ and $((A\cup B)\setminus B\cup C) \cap (B\cup C)$ are both empty, $A \cup B = ((A\cup B)\setminus B\cup C) \cup (B\cup C) \sim ((A\cup B)\setminus B\cup C) \cup C = A.$
+If $A$ is infinite, we have $C\subset A$, a countably infinite set. By Proposition 4.21, the union of two countable sets is still countable, $B\cup C$, which is countably infinite. Since $((A\cup B)\setminus B\cup C) \cap C$ and $((A\cup B)\setminus B\cup C) \cap (B\cup C)$ are both empty, $A \cup B = ((A\cup B)\setminus B\cup C) \cup (B\cup C) \sim ((A\cup B)\setminus B\cup C) \cup C = A.$
 \end{solution}
 
 \begin{problem}[Exercise 4.19.]
@@ -32,7 +32,9 @@ Let $X$ and $Y$ be sets. Assume $Y$ is countable and $X\setminus Y$ is infinite.
 \end{problem}
 
 \begin{solution}
-
+If $X\setminus Y$ is infinite, $X \setminus Y$ must have a countably infinite subset. This means that $X$ must be infinite. We can use Exercise 4.18 but we need to prove that $X$ and $Y$ are disjoint sets. Let's solve by contradiction.
+\\ \\
+Assume $a_1 \in X, Y$ s.t. $X \cap Y = \{a_1\}.$ This means that $X \setminus Y$ will be a proper subset of $X$. We can apply Theorem 4.16 to say $X \sim X\setminus Y.$ But then, $X \cap Y \sim (X \cap Y)\cap Y = \emptyset$, which is a contradicts our assumption. This suggest that $X$ and $Y$ are disjoint and apply Exercise 4.18 directly to say $X \sim X \cup Y \sim X \setminus Y.$
 \end{solution}
 
 \begin{problem}[Exercise 4.22.]
