@@ -49,8 +49,8 @@ Let $X$ be a countable set.
 \begin{solution}
 \begin{enumerate}
 	\itemsep0em
-	\item 
-	\item 
+	\item WLOG, let $n=2.$ For the base case, by definition of n-tuples, $X^{2}=X\times X \sim X^{1}\times X$. For the inductive step, assume statement is true for $n$, $X^{n+1}=(X \times X \times \dots)\times X = X^{n}\times X = X^{(n + 1)-1}\times X.$
+	\item WLOG, let $n=2.$ $X^{2}=X\times X=\{ (a,b) : a \in X$ and $ b \in X \}$. If $X \cup X$ is countable by Proposition 4.21, then $X\times X$ should also be countable. For the inductive step, let $n=k + 1$ assume $X^{k}$ is countable. $X^{k+1}=X \times X^{k}\implies$ $X$ is countable and $X^{k}$ is countable by assumption so by Proposition 4.21, $X^{k+1}$ should be countable.
 \end{enumerate}
 \end{solution}
 
@@ -69,9 +69,14 @@ Let $E, F,$ and $G$ be nonempty subsets of an ordered set $(S,\le).$ Prove the f
 \vspace{-2mm}
 \begin{enumerate}
 	\itemsep0em
-	\item  
+	\item By definition of upper bound, $\forall x \in E : x \leq \beta$. By definition of lower bound, $\forall x \in E : x \ge \alpha.$ So, $\alpha \leq x \leq \beta \implies \alpha \leq E \leq \beta \implies \alpha \leq \beta.$
 	\item 
-	\item 
+	\begin{enumerate}
+		\itemsep0em
+		\item Let us prove this $\rightarrow$ direction first. Given $\sup E \leq \inf F$. Let's solve by contradiciton. Assume $x > y$ for any $x \in E, y \in F$ . Say $\beta_1 = \sup E$, implying $\beta_1$ is an upper bound for $E$. So by definition, $x < \beta_1 \, \forall x\in E.$ Say $\alpha_1 = \inf F$, implying $\alpha_1$ is a lower bound for $F$. So by definition, $\alpha_1 \le y \, \forall y\in F.$ By the given statement, $\beta_1\leq \alpha_1 \implies x \leq \beta_1 \leq \alpha_1 \leq y$. This establishes a contradiction so $x \leq y$.
+		\item Now the other direction, $\leftarrow$. Given $x \leq y$ for any $x \in E, y \in F$. Let $\beta_2$ be the upper bound for $E$. Let $\alpha_2$ be the upper bound for $F$. $x \leq \beta_2 \leq \alpha_2\leq y$; the tightest bounds for this expression would be if $\beta_2=\sup E$ and $\alpha_2=\inf F.$ $x \leq \sup E \leq \inf F \leq y \implies \sup E \leq \inf F.$
+	\end{enumerate}	
+	\item Let $a = \sup G$ and $b = \sup E$. Assume $b > a.$ If $b$ is larger than $a$, $a$ could not be the upper bound of $G$ since $E \subset G.$ So, this establishes a contradiction and $\sup E \leq \sup G.$ 
 \end{enumerate}
 \end{solution}
 
@@ -80,6 +85,7 @@ Let $(S,\leq)$ be an ordered set, let $f$ and $g$ be functions from $X$ to $S$ a
  \end{problem}
 
 \begin{solution}
+Given $\sup_{A}f=\sup\{f(x) : x \in A\}=\beta, \sup_{A}g=\sup\{g(x) : x \in A\}=\alpha,$ and $f(x) \leq g(x)\, \forall x \in A$. Clearly, since $\beta$ is an upper bound for $f$, $f(x)\leq \beta \leq g(x) \forall x\in A.$ Since $\alpha$ is an upper bound for $g$, $f(x)\leq \beta \leq g(x) \leq \alpha\, \forall x\in A \implies \beta \leq \alpha = \sup_A f \leq \sup_A g. $ 
 \end{solution}
 
 \begin{problem}[Exercise 2.3.]
@@ -88,7 +94,7 @@ Let $A$ be a nonempty subset of an ordered field $(F,+,\cdot,\leq)$. Assume that
 \vspace{-2mm}
 \begin{enumerate}
 	\itemsep0em
-	\item Prove that $ c \leq 0$, then $\sup(cA) = c\sup A.$ 
+	\item Prove that $ c \ge 0$, then $\sup(cA) = c\sup A.$ 
 	\item What is $\sup(cA)$ if $c \le 0$? Prove your answer is correct.
 \end{enumerate}
 
