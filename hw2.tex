@@ -105,7 +105,7 @@ Let $A$ be a nonempty subset of an ordered field $(F,+,\cdot,\leq)$. Assume that
 \begin{enumerate}
 	\itemsep0em
 	\item WLOG, let $c > 0.$ Let $B_1$ be an upper bound for $A$. $\sup cA = \sup(\{ ca : a \in A\})=C_1=cB_1=c\sup A.$
-	\item Prove $\sup(cA) = c\inf(A).$ Let $inf A = C_2$ and $cC_2=B_2$. So, $\{ B_2 \ge ca : a \in A\}$ since $A$ is an ordered field. $\{ ca : a\in A \}\leq B_2 \implies$ tightest upper bound is $\sup(cA).$   
+	\item Prove $\sup(cA) = c\inf(A).$ Let $\inf A = C_2$ and $cC_2=B_2$. So, $\{ B_2 \ge ca : a \in A\}$ since $A$ is an ordered field. $\{ ca : a\in A \}\leq B_2 \implies$ tightest upper bound is $\sup(cA).$   
 \end{enumerate}
 \end{solution}
 
@@ -128,13 +128,19 @@ Let $s = \sup A, t = \sup B.$ By definition of supremum, no element in $A + B$ i
 Let $f$ and $g$ be functions from a set $X$ to an ordered field $(F,+,\cdot,\leq).$ Let $A$ be a subset of $X.$
 \begin{itemize}
 	\itemsep0em
-	\item Prove that the following inequality holds, assuming the relevant suprema all exist. $$(*) \sup_{x \in A}(f(x) + g(x) \leq \sup_{x \in A}f(x) + \sup_{x\in A}g(x)).$$
+	\item Prove that the following inequality holds, assuming the relevant suprema all exist. $$(*) \sup_{x \in A}(f(x) + g(x)) \leq \sup_{x \in A}f(x) + \sup_{x\in A}g(x)).$$
 	\item Show by way of an example that equality might not hold in $(*)$, even if the suprema all exist. (Hint: This is probably easiest if you choose $X$ to be a set with two elements, and $F=\mathbb{Q}$.)
 \end{itemize}
 
 \end{problem}
 
 \begin{solution}
+\begin{itemize}
+	\itemsep0em
+	\item $\forall \, x_0 \in A, f(x_0) + g(x_0) \leq f(x_0) + g(x_0). \,\forall x_0, \exists x_1, x_2 \in A : f(x_0) + g(x_0) \leq f(x_1) + g(x_2).$ Let $f(x_1) = \sup_{x \in A} f(x)$ and $g(x_2) = \sup_{x \in A} g(x). \sup_{X} (f(x) + g(x) \leq \sup_{X} f(x) + \sup_{X} g(x).$ 
+	\item Let $X=\{a,b\}$, $f : a \rightarrow 4, b \rightarrow 5,$ and $g : a \rightarrow -1, b \rightarrow -2.$ Clearly, $\sup f=5$ and $\sup g = -1$ but $\sup f(x) + g(x) = \sup \{3,3\}=3.$ This proves that equality doesn't hold.
+\end{itemize}
+
 \end{solution}
 
 \begin{problem}[Exercise 3.3.]
