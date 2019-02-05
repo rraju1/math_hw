@@ -158,7 +158,14 @@ Using the strategies similar to those proofs in this section, prove the followin
 \begin{enumerate}
 	\itemsep0em
 	\item Assume $p$ is a rational number s.t. $p^{2}=20.$ Since $p\in\mathbb{Q},$ we can write $p = \frac{m}{n},$ where $m$ and $n$ are integers with no common factors. So, $p^{2}=20 \rightarrow m^{2}=20n^{2}.$ This shows that 5 divides $m^2$, and hence, that $5$ divides $m$, so that $25$ divides $m^2.$ It then follows that $n^2$ is divisible by $5$, so that $n$ is a multiple of $5$. This is clearly a contradiction.
-	\item The set $A := \{r \in \mathbb{Q} : r^2 \le 20\}$ has no least upper bound in $\mathbb{Q}$. 
+	\item First, we want to break the proof into two steps:
+	\begin{enumerate}
+	\itemsep0em
+	\item $p\in \mathbb{Q}$ is an upper bound for $A$ if and only if $p^{2} > 20$ and $p \ge 0.$
+	\item If $p^{2} > 20$ and $p > 0,$ then there exists $q \in \mathbb{Q}$ such that $0 \leq q \leq p$ and $q^{2}>20$.
+	\end{enumerate}
+	If $p$ is not an upper bound for $A$, then $\exists r\in A$ s.t. $r > p$. But then $20 > r^{2} > rp > p^{2}$, which contradicts initial definition of $p$ in (a). So now we prove $p^{2}>20.$ So if $0 \leq p^{2} \leq 20,$ then $p^{2}<20.$ This implies $q=p + \frac{20 - p^{2}}{p + 20}$. So, $q\in A > p$ because $20 - p^{2}$ is positive. To see this, we need to prove that $20 - q^{2} > 0$. $$ q = p\frac{(p + 20)}{(p +20)} + \frac{20 - p^{2}}{p + 20} = \frac{20p + 20}{p + 20},$$ so $$ 20 - q^{2} = 20(\frac{(p + 20)^{2}}{(p + 20)^{2}}) -  (\frac{(20p + 20)^{2}}{(p + 20)^{2}}) = \frac{20(p^{2} + 40p + 400) - 400p^{2} + 800p+400}{(p + 20)^{2}}$$ $$=\frac{-380p^{2} + 7600}{(p + 20)^{2}}= \frac{380(20 - p^{2})}{(p + 20)^{2}} > 0.$$
+	So, $q^{2} < 20$ meaning that $p$ is not an upper bound for $A$. This leaves that the upper bounds of $A$ in $\mathbb{Q}$ are the numbers $p\in\mathbb{Q}$ such that $p^{2}>20$ and $p \ge 0.$ \\ Now, for last part, we need to prove that $p$ is not the least upper bound for $A$ in $\mathbb{Q}.$ So, recall that $q = p - \frac{p^{2} - 20}{p + 20}$ is an upper bound for $A$ which is less than $p$. This is becuase of the positivity of $p^{2} - 20.\, q \ge 0$ follows from $$ \frac{p^{2} - 20}{p + 20} \leq \frac{p^{2} + 20p}{p + 20}=p.$$ This leads us to the conclusion $$q^{2} - 2 = \frac{380(p^{2} - 20)}{(p + 20)^{2}} > 0.$$ So $q^{20}>20.$ Thus, $q$ is an upper bound for $A$ which is less than $p$; that is, $p$ is not the least upper bound for $A$ in $\mathbb{Q}.$ But, $p$ is just an arbitrary upper bound so there is no least upper bound for $A$ in $\mathbb{Q}$. So it follows that $A$ doesn't have the least upper bound property in $\mathbb{Q}$ and it follows that $\mathbb{Q}$ doesn't have the least upper bound property.
 \end{enumerate}
 \end{solution}
 
