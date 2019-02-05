@@ -154,13 +154,19 @@ Using the strategies similar to those proofs in this section, prove the followin
 \end{problem}
 
 \begin{solution}
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item Assume $p$ is a rational number s.t. $p^{2}=20.$ Since $p\in\mathbb{Q},$ we can write $p = \frac{m}{n},$ where $m$ and $n$ are integers with no common factors. So, $p^{2}=20 \rightarrow m^{2}=20n^{2}.$ This shows that 5 divides $m^2$, and hence, that $5$ divides $m$, so that $25$ divides $m^2.$ It then follows that $n^2$ is divisible by $5$, so that $n$ is a multiple of $5$. This is clearly a contradiction.
+	\item The set $A := \{r \in \mathbb{Q} : r^2 \le 20\}$ has no least upper bound in $\mathbb{Q}$. 
+\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 4.6.]
 Elements of $\mathbb{R}\setminus\mathbb{Q}$ are called \textit{irrational numbers}.
 \begin{enumerate}
 	\itemsep0em
-	\item Assume $r$ is rational and $x$ is irrational. Show that $r + x$ and $rx$ are irrational.
+	\item Assume $r$ is rational and $x$ is irrational. Show that $r + x$ is irrational. Show that $rx$ is irrational unless $r=0$.
 	\item Use the Archimedean property of $\mathbb{R}$ to prove that the set of irrational numbers is dense in $\mathbb{R}.$ (Hint: First prove if $x$ and $y$ are real numbers with $y - x > \sqrt{2},$ then there exists an integer $m$ such that $x < m\sqrt{2} < y$.)
 \end{enumerate}
 \end{problem}
@@ -168,8 +174,8 @@ Elements of $\mathbb{R}\setminus\mathbb{Q}$ are called \textit{irrational number
 \begin{solution}
 \begin{enumerate}
 	\itemsep0em
-	\item Let us solve by proof of contridiction. Suppose $r + x$ and $rx$ is rational. Since $r$ is rational, $-r$ and \(\frac{1}{r}\) are also rational. Thus, $(r + x) - r = x$ which implies x is rational by property of addition of rationals. 
-	Similarly, $rx \cdot (\frac{1}{r}) = x$ which suggests x is also rational by definition of multiplication of rationals. These are both clearly contridictions. Thus, $r + x$ and $rx$ are irrational.
+	\item Let us solve by proof of contridiction. Suppose $r + x$ and $rx$ is rational. Since $r$ is rational, $-r$ and \(\frac{1}{r}\) are also rational for $r \neq 0$. Thus, $(r + x) - r = x$ which implies x is rational. 
+	Similarly, $rx \cdot (\frac{1}{r}) = x$ which suggests x is also rational. These are both clearly contridictions. Thus, $r + x$ and $rx$ are irrational.
 	\item 
 \end{enumerate}
 \end{solution}
