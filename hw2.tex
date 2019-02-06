@@ -195,7 +195,7 @@ Assume $a, b \in \mathbb{R}.$ Prove that $a \leq b$ if and only if $a \leq b + \
 \begin{enumerate}
 		\itemsep0em
 		\item Let us prove this $\rightarrow$ direction first. Given $a \leq b.$ By the definition of a well-ordered field, it's obvious to see that for any $\epsilon > 0$, $a + 0 \leq b + \epsilon$.
-		\item Now the other direction, $\leftarrow$. 
+		\item Now the other direction, $\leftarrow$. Given $a \leq b + \epsilon$ for every $\epsilon > 0.$ Assume $a > b$. This implies $a - b > 0$. So we can choose an apporpriate $\epsilon$ from which we can derive a contradiction. Setting $\epsilon=\frac{a - b}{n},$ $n\in \mathbb{N}$ and $n > 1$. $a \leq b + \frac{a - b}{n} \implies \frac{a}{n} \leq \frac{b}{n} \implies a \leq b$. This is clearly a contradiction so $a \leq b$.
 \end{enumerate}	
 \end{solution}
 
