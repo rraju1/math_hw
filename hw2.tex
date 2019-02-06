@@ -183,7 +183,7 @@ Elements of $\mathbb{R}\setminus\mathbb{Q}$ are called \textit{irrational number
 	\itemsep0em
 	\item Let us solve by proof of contridiction. Suppose $r + x$ and $rx$ is rational. Since $r$ is rational, $-r$ and \(\frac{1}{r}\) are also rational for $r \neq 0$. Thus, $(r + x) - r = x$ which implies x is rational. 
 	Similarly, $rx \cdot (\frac{1}{r}) = x$ which suggests x is also rational. These are both clearly contridictions. Thus, $r + x$ and $rx$ are irrational.
-	\item We need to prove that if $y - x > \sqrt{2}, \exists$ an integer $m$ s.t. $x < m\sqrt{2} < y.$ Let $m$ be the smallest positive integer such that $m\sqrt{2} > nx.$ $x < \frac{m\sqrt{2}}{n} < y$; since $nx<m\sqrt{2}$ by definition of $m$, $(m - 1)\sqrt{2} < nx.$ On the other hand, $nx < ny - \sqrt{2}$ so $(m-1)\sqrt{2} < nx < ny - \sqrt{2}.$ This reduces to $\sqrt{2}m < nx < ny \implies \sqrt{2}m < ny.$ This finishes the proof. 
+	\item We need to prove that if $y - x > \sqrt{2}, \exists$ an integer $m$ s.t. $x < m\sqrt{2} < y.$ Let $m$ be the smallest positive integer such that $m\sqrt{2} > nx, n\in\mathbb{N}.$ $x < \frac{m\sqrt{2}}{n} < y$; since $nx<m\sqrt{2}$ by definition of $m$, $(m - 1)\sqrt{2} < nx.$ On the other hand, $nx < ny - \sqrt{2}$ so $(m-1)\sqrt{2} < nx < ny - \sqrt{2}.$ This reduces to $\sqrt{2}m < nx < ny \implies \sqrt{2}m < ny.$ This finishes the proof. 
 \end{enumerate}
 \end{solution}
 
@@ -211,6 +211,13 @@ Let $A$ and $B$ be nonempty sets of real numbers. Decide whether the following s
 \end{problem}
 
 \begin{solution}
+
+\begin{enumerate}
+	\itemsep0em
+	\item True. Let $x=\sup A$ and $y=\inf B$. Clearly, $a < x < y < b \, \forall a \in A, b \in B.$ We need to prove that if $y - x > \epsilon, \epsilon \in \mathbb{R}, \exists$ an integer $m$ s.t. $x < m\epsilon < y.$ Let $m$ be the smallest positive integer such that $m\epsilon > nx, n\in\mathbb{N}.$ $x < \frac{m\epsilon}{n} < y$; since $nx<m\epsilon$ by definition of $m$, $(m - 1)\epsilon < nx.$ On the other hand, $nx < ny - \epsilon$ so $(m-1)\epsilon < nx < ny - \epsilon.$ This reduces to $m\epsilon < nx < ny \implies m\epsilon < ny.$ This quantity is the $c$ we are looking for since $\frac{m}{n}$ is a rational number and $\epsilon$ is real. This concludes the proof.
+	\item False. Let $A$ be the set of all negative $\mathbb{R}$ and $B$ be the set of all positive $\mathbb{R}$. Clearly, $c = 0$ so $\sup A = \inf B$, disproving the claim.
+\end{enumerate}
+
 \end{solution}
 
 \end{document}
