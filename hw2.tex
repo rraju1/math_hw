@@ -204,6 +204,13 @@ Let $E$ be a set of real numbers, let $s$ be an upper bound for $E$. Prove that 
 \end{problem}
 
 \begin{solution}
+$E \subset \mathbb{R}$ and $s$ is an upper bound for $E$. Because $E$ is a nonempty set in $\mathbb{R}$ and it is bounded above, it has the least upper bound property, implying that $\sup E$ exists.  
+\begin{enumerate}
+		\itemsep0em
+		\item Let us prove this $\rightarrow$ direction first. Given $s = \sup E$. It is easiest to do this via contradiction. This means that $\exists x \in E$ s.t. $x < s - \epsilon$. This would suggest that this particular $x + \epsilon$ would be a tighter bound for $E$ than $s$. We know that is cannot be the case since $s = \sup E$, which is the least upper bound by definition. 
+		\item Now the other direction, $\leftarrow$. The main property we need to demonstrate is that $s$ is actually the least upper bound. Given for every $\epsilon > 0$ there exists $x \in E$ such that $x > s - \epsilon.$. Assume that there is an upper bound for $E$ called $d$ s.t. $s > d.$ If $x > s - \epsilon$, then $d > x > s - \epsilon$. Let's look at $x > s - \epsilon$ which is the same as $x + \epsilon > s$. Using our definition of $d$ from above, $x + \epsilon > d$ so $x > d - \epsilon$. So our inequality expression becomes $d > x > d - \epsilon > s - \epsilon$. Looking at the last part, $d - \epsilon > s - \epsilon \implies d > s$, which violates the above definition of $d$. This shows there is no $d$ s.t. $s > d$ so $s$ is the least upper bound for $E$. It necessarily follows then $s = \sup E$.
+\end{enumerate}	
+
 \end{solution}
 
 \begin{problem}[Exercise 4.10.]
