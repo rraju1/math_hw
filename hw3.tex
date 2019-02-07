@@ -1,0 +1,159 @@
+% Math dept HW template example
+% Ravi Raju
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+\usepackage{mathtools}
+% include this if you want to import graphics files with /includegraphics
+\usepackage{graphicx}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Int}{Int}
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#3}
+\duedate{2/14/2018}
+
+\begin{document}
+
+\problemlist{Chapter 2: 5.4, 5.5, 6.4 \\ Chapter 3: 1.7, 2.3, 2.4, 2.6, 2.8, 2.11, 2.12, 2.16, 2.20}
+
+\begin{problem}[Exercise 5.4.]
+Let $a$ and $b$ be real numbers. Show that the following three equalities hold: $$\bigcap_{x > b}(a,x) = (a,b], \quad \quad \bigcup_{n=1}^{\infty}[a + \frac{1}{n}, b - \frac{1}{n}]=(a,b), \quad \quad \bigcap_{n = 1}^{\infty}(a + n,+\infty) = \emptyset.$$
+\end{problem}
+
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 5.5.]
+Let $a_1, a_2, \dots$ be any enumeration of the negative rational numbers; let $b_1, b_2, \dots$ be any enumeration of the positive rational numbers. Show that the following two equalities hold: $$ \bigcap_{j = 1}(a_j,b_j) = \{0\}, \quad \quad \bigcup_{j=1}^{\infty}(a_j,b_j)=\mathbb{R},$$.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+
+\begin{problem}[Exercise 6.4.]
+Prove there exists no order $\leq$ that makes $(\mathbb{C},+,\cdot,\leq)$ into an ordered field.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 1.7.]
+Let $\left\lVert \cdot \right\rVert$ be a norm on a real vector space $V$. Prove the \textit{reverse triangle inequality}: $$\abs{\left\lVert x \right\rVert - \left\lVert y \right\rVert} \leq \left\lVert x - y \right\rVert$$
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.3.]
+Let $X$ be any set. Prove that the discrete metric $d : X \times X \rightarrow \mathbb{R}$(defined by $d(x,y)=1$ if $x \neq y$ and $d(x, x) = 0$ for $x \in X$) satisfies the triangle inequality and is therefore a metric on $X$.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.4.]
+Determine which of the following functions are metrics on $\mathbb{R}$. Prove your answer in each case.
+\vspace{-2mm}
+\begin{itemize}
+	\itemsep0em
+	\item $d_1(x,y)=\sqrt{\abs{x - y}}.$
+	\item $d_2(x,y)=\abs{x - 2y}.$
+	\item $d_3(x,y)=\frac{\abs{x - y}}{1 + \abs{x - y}}.$
+\end{itemize}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.6.]
+Let $\norm{\cdot}$ denote the Euclidean norm $\mathbb{R}^{2},$ i.e. $\norm{(x_1, x_2)} = \sqrt{x_1^{2} + x_2^{2}}.$ Consider the function from $\mathbb{R}^{2} \times \mathbb{R}^{2} \rightarrow \mathbb{R}$, defined by $$d(x, y) = \norm{x_1 - y_1} + \norm{x_2 - y_2}, \quad \quad (x = (x_1, x_2), y = (y_1, y_2)). $$
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item Prove that $d$ is a metric on $\mathbb{R}^{2}.$
+	\item On a sheet of graph paper, draw the set $B_{d}((5, 1), 3).$ Use dotted lines to indicate the ‘boundary’,
+which is not included in the set you are drawing. (Hint: it may be easier to figure out what the
+set looks like if you first consider $B_{d}((0, 0), 3).$
+	\item On the same graph as in the previous part, draw $B_{d_{u}}((-3, 2),1)$, where $d_{u}$ denotes the square metric.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.7.]
+For example, let $X=\mathbb{R}^{2}, Y = [-1, 3] \times [2, 4],$ and $d$ denote the Euclidean metric on $X = \mathbb{R}^{2}$. Let $p$ denote the point (3, 4), the upper right corner of $Y$. Then $B_{(Y,d)}(p,2)$ looks like a quarter of the ball $B_{(X,d)}(p,2).$ (Draw a picture to see this)
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.8.]
+Let ($X, d$) be a metric space, and let $E$ be a subset of $X$. The \textit{diameter} of $E$ in ($X,d$) is defined by the formula $$\diam_{d}(E) = \sup\{d(x,y) : x,y \in E\}.$$
+
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item Prove that for any $r > 0$ and $x \in X$, we have $\diam(B(x,r))\leq 2r.$
+	\item If $X$ is any set and $d$ is the discrete metric, show $\diam(B(x, r)) = 0.$
+	\item If $X = \mathbb{R}^{n}$ for some $n \in \mathbb{N}$ and $d$ is the Euclidean metric, prove that $\diam(B(x,r)) = 2r.$ 
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.11.]
+As in Example 2.7, let $X = \mathbb{R}^{2}, Y = [-1,3]\times[2,4],$ and let $d$ denote the Euclidean metric on $X = \mathbb{R}^{2}.$ Let $p = (3,4)$ and let $q = (2, 4)$. Arguing \textit{directly from the definition of an interior point} (i.e., without using Exercise 2.12), show that $q$ is an interior point $B_{Y}(p,2)$ with respect to $Y$, but $q$ is not an interior point $B_{Y}(p,2)$ with respect to $X$. In addition, draw a picture on a piece of graph paper that illustrates the idea of your proof.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 2.12.]
+Let $(X, d)$ be a metric space, and let $Y$ be a subset of $X$. Prove that $$(*) \Int_{X}(U) = \Int_{Y}(U)\cap\Int_{X}(Y).$$
+In the notation of Exercise 2.11, the equality $(*)$ gives an alternate explanation of why q is not an interior point of $B_{Y}(p, 2)$ with respect to $X$: It is because $q \notin \Int_{X}(Y)$, as can be seen from the picture you drew in that Exercise.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.12.]
+Let $(X, d)$ be a metric space, and let $Y$ be a subset of $X$. Prove that $$(*) \Int_{X}(U) = \Int_{Y}(U)\cap\Int_{X}(Y).$$
+In the notation of Exercise 2.11, the equality $(*)$ gives an alternate explanation of why q is not an interior point of $B_{Y}(p, 2)$ with respect to $X$: It is because $q \notin \Int_{X}(Y)$, as can be seen from the picture you drew in that Exercise.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.16.]
+Let $(X, d)$ be a metric space, and let $U$ be a subset of $X$. Use Proposition 2.15 to prove that $\Int_{X}(U)$ is open in $X$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.20.]
+Let $(X, d)$ be a metric space. Assume that $U\subset Y\subset X,$ and additionally that $Y$ is open $X$. Prove that $U$ is open in $Y$ if and only if $U$ is open in $X$. (Note: There at least two possible solutions; one uses Theorem 2.19, the other uses Exercise 2.12.)
+\end{problem}
+\begin{solution}
+
+\end{solution}
+\end{document}
