@@ -12,6 +12,9 @@
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \DeclareMathOperator{\diam}{diam}
 \DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\C}{\mathbb{C}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\newcommand{\iu}{{i\mkern1mu}}
 % info for header block in upper right hand corner
 \name{Ravi Raju}
 \class{MA 521}
@@ -46,7 +49,14 @@ Prove there exists no order $\leq$ that makes $(\mathbb{C},+,\cdot,\leq)$ into a
 \end{problem}
 
 \begin{solution}
+Let us argue by contradiction. Assume that $\mathbb{C}$ is a ordered field. Let us analyze the case $(0,1)= \iu.$ 
 
+\vspace{-2mm}
+\begin{itemize}
+	\itemsep0em
+	\item If $\iu > 0$, $x, y \in \C$ and $x = \iu, y = \iu$, $\iu \cdot\iu > 0 \implies -1 > 0$, which is a contradiction.
+	\item If $\iu < 0$, $x, y \in \C$ and $x = -\iu, y = -\iu$ (since $x, y > 0$ for the second condition to hold), $-\iu \cdot - \iu < 0 \rightarrow \iu^{2} > 0 \implies -1 > 0$, which is a contradiction.
+\end{itemize}
 \end{solution}
 
 
@@ -96,13 +106,6 @@ set looks like if you first consider $B_{d}((0, 0), 3).$
 
 \end{solution}
 
-\begin{problem}[Exercise 2.7.]
-For example, let $X=\mathbb{R}^{2}, Y = [-1, 3] \times [2, 4],$ and $d$ denote the Euclidean metric on $X = \mathbb{R}^{2}$. Let $p$ denote the point (3, 4), the upper right corner of $Y$. Then $B_{(Y,d)}(p,2)$ looks like a quarter of the ball $B_{(X,d)}(p,2).$ (Draw a picture to see this)
-\end{problem}
-\begin{solution}
-
-\end{solution}
-
 \begin{problem}[Exercise 2.8.]
 Let ($X, d$) be a metric space, and let $E$ be a subset of $X$. The \textit{diameter} of $E$ in ($X,d$) is defined by the formula $$\diam_{d}(E) = \sup\{d(x,y) : x,y \in E\}.$$
 
@@ -126,14 +129,6 @@ As in Example 2.7, let $X = \mathbb{R}^{2}, Y = [-1,3]\times[2,4],$ and let $d$ 
 
 \end{solution}
 
-
-\begin{problem}[Exercise 2.12.]
-Let $(X, d)$ be a metric space, and let $Y$ be a subset of $X$. Prove that $$(*) \Int_{X}(U) = \Int_{Y}(U)\cap\Int_{X}(Y).$$
-In the notation of Exercise 2.11, the equality $(*)$ gives an alternate explanation of why q is not an interior point of $B_{Y}(p, 2)$ with respect to $X$: It is because $q \notin \Int_{X}(Y)$, as can be seen from the picture you drew in that Exercise.
-\end{problem}
-\begin{solution}
-
-\end{solution}
 
 \begin{problem}[Exercise 2.12.]
 Let $(X, d)$ be a metric space, and let $Y$ be a subset of $X$. Prove that $$(*) \Int_{X}(U) = \Int_{Y}(U)\cap\Int_{X}(Y).$$
