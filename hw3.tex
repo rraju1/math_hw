@@ -15,6 +15,22 @@
 \DeclareMathOperator{\C}{\mathbb{C}}
 \DeclareMathOperator{\R}{\mathbb{R}}
 \newcommand{\iu}{{i\mkern1mu}}
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
 % info for header block in upper right hand corner
 \name{Ravi Raju}
 \class{MA 521}
@@ -31,11 +47,16 @@ Let $a$ and $b$ be real numbers. Show that the following three equalities hold: 
 
 
 \begin{solution}
-
+\begin{enumerate}
+	\itemsep0em
+	\item Let $A_1$ be the set $(a, b + \epsilon_1)$ for some $\epsilon_1 > 0.$ This translates to $\{x\in \overline{\R} : a < x < b + \epsilon_1\}.$ Since this is a general intersection, another set in the collection will some subset, $A_2\subset A_1, A_2=\{x\in \overline{\R} : a < x < b + \epsilon_2 \}$ where $\epsilon_1 > \epsilon_2$. There are many more subsets of $A_2$ and will continue for $\epsilon_{n+1} < \epsilon_{n}, n \in \mathbb{N}.$ The key insight to note is that $b$ is a common element between all subsets. Clearly, the upper bounds of these subsets are tending to $b$ so that will be the upper bound of general intersection. So, $A_1\cap A_2 \cap \dots = \{x\in \overline{\R} : a < x \leq b \}=(a,b].$
+	\item 
+	\item 
+\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 5.5.]
-Let $a_1, a_2, \dots$ be any enumeration of the negative rational numbers; let $b_1, b_2, \dots$ be any enumeration of the positive rational numbers. Show that the following two equalities hold: $$ \bigcap_{j = 1}(a_j,b_j) = \{0\}, \quad \quad \bigcup_{j=1}^{\infty}(a_j,b_j)=\mathbb{R},$$.
+Let $a_1, a_2, \dots$ be any enumeration of the negative rational numbers; let $b_1, b_2, \dots$ be any enumeration of the positive rational numbers. Show that the following two equalities hold: $$ \bigcap_{j = 1}(a_j,b_j) = \{0\}, \quad \quad \bigcup_{j=1}^{\infty}(a_j,b_j)=\R.$$.
 \end{problem}
 
 \begin{solution}
