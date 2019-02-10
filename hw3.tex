@@ -14,6 +14,7 @@
 \DeclareMathOperator{\Int}{Int}
 \DeclareMathOperator{\C}{\mathbb{C}}
 \DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\N}{\mathbb{N}}
 \newcommand{\iu}{{i\mkern1mu}}
 
 \newcommand*\xoverline[2][0.75]{%
@@ -42,15 +43,22 @@
 \problemlist{Chapter 2: 5.4, 5.5, 6.4 \\ Chapter 3: 1.7, 2.3, 2.4, 2.6, 2.8, 2.11, 2.12, 2.16, 2.20}
 
 \begin{problem}[Exercise 5.4.]
-Let $a$ and $b$ be real numbers. Show that the following three equalities hold: $$\bigcap_{x > b}(a,x) = (a,b], \quad \quad \bigcup_{n=1}^{\infty}[a + \frac{1}{n}, b - \frac{1}{n}]=(a,b), \quad \quad \bigcap_{n = 1}^{\infty}(a + n,+\infty) = \emptyset.$$
+Let $a$ and $b$ be real numbers. Show that the following three equalities hold: $$\bigcap_{x > b}(a,x) = (a,b], \quad \quad \bigcup_{n=1}^{\infty}[a + \frac{1}{n}, b - \frac{1}{n})=(a,b), \quad \quad \bigcap_{n = 1}^{\infty}(a + n,+\infty) = \emptyset.$$
 \end{problem}
 
 
 \begin{solution}
 \begin{enumerate}
 	\itemsep0em
-	\item Let $A_1$ be the set $(a, b + \epsilon_1)$ for some $\epsilon_1 > 0.$ This translates to $\{x\in \overline{\R} : a < x < b + \epsilon_1\}.$ Since this is a general intersection, another set in the collection will some subset, $A_2\subset A_1, A_2=\{x\in \overline{\R} : a < x < b + \epsilon_2 \}$ where $\epsilon_1 > \epsilon_2$. There are many more subsets of $A_2$ and will continue for $\epsilon_{n+1} < \epsilon_{n}, n \in \mathbb{N}.$ The key insight to note is that $b$ is a common element between all subsets. Clearly, the upper bounds of these subsets are tending to $b$ so that will be the upper bound of general intersection. So, $A_1\cap A_2 \cap \dots = \{x\in \overline{\R} : a < x \leq b \}=(a,b].$
-	\item 
+	\item $\bigcap_{x > b}(a,x) = \{y \in \overline{\R} : y \in (a, x) \forall x > b\}$. $\overline{\R}$ has a least upper bound so call this bound, $d$ so $y \leq d \forall y \in \bigcap_{x > b} (a, x)$. Assume $d < b$, then $a < y \leq d < b < x \exists p \in \bigcap_{x > b}(a,x)$ s.t. $a < b < p < x.$ So, $d$ is not the least upper bound. So, $b \leq d$ and $a < y \leq b \leq d \forall \bigcap_{x>b}(a, x)$. $\bigcap_{x>b}(a, x)=\{y \in \overline{\R} : a < y \leq b\} = (a, b].$
+	\item $\bigcup_{n=1}^{\infty} = [a + \frac{1}{n - 1}, b - \frac{1}{n - 1}) \cup [a + \frac{1}{n}, b - \frac{1}{n}) = \{ y \in \overline{\R} : a + \frac{1}{n} \leq y \leq b - \frac{1}{n} \} = B$.
+	\vspace{-2mm}
+	\begin{itemize}
+		\itemsep0em
+		\item $a - \frac{1}{2}$ is a lower bound since $\nexists y \in B$ s.t. $y < a + \frac{1}{n}$. Assume $\exists$ a lower bound called $\beta$ s.t. $\beta > a + \frac{1}{n}.$ If so then, $B = \{a + \frac{1}{n} < y < b - \frac{1}{n} \}.$ But, $\exists y\in B$ s.t. $y = a + \frac{1}{n}.$ So, $\nexists $ any $\beta$ so $\inf B = a + \frac{1}{n}$ and $a < a + \frac{1}{n}=\inf B.$ 
+		\item $b - \frac{1}{n}$ is a upper bound since $\nexists y \in B$ s.t. $y > b - \frac{1}{n}$. Assume $\exists$ some upper bound $\alpha$ s.t. $\alpha < b - \frac{1}{n}.$ So, $b - \frac{1}{n} - \alpha > 0.$ Choose $\gamma \in \N$ so $\frac{1}{\gamma} < b - \frac{1}{n} - \alpha. (b - \frac{1}{n} - \frac{1}{\gamma}) > b - \frac{1}{n} - (b - \frac{1}{n} - \alpha).$ So, $\alpha$ is not an upper bound. So, $\sup B = b - \frac{1}{n} < b.$ 
+	\end{itemize} 
+	Thus, $B = \{a < \inf B \leq y < \sup B < b \forall y \in B\} = (a,b)$.
 	\item 
 \end{enumerate}
 \end{solution}
@@ -86,6 +94,8 @@ Let $\left\lVert \cdot \right\rVert$ be a norm on a real vector space $V$. Prove
 \end{problem}
 
 \begin{solution}
+$\norm{x}= \norm{(x - y) + y} \leq \abs{\norm{x - y} + \norm{y}}$. $ \abs{\norm{x} - \norm{y}} \leq \abs{\norm{(x - y) + \norm{y} - \norm{y}}} = \abs{\norm{(x - y)}}=\norm{x - y}.$ \\
+$\norm{y}= \norm{(y - x) + x}=\norm{y - x} + \norm{x}. $$\abs{\norm{x} - \norm{y}} \leq \abs{\norm{x} - (\norm{y - x} + \norm{x})} \leq \norm{x - y}.$
 
 \end{solution}
 
@@ -94,6 +104,15 @@ Let $X$ be any set. Prove that the discrete metric $d : X \times X \rightarrow \
 \end{problem}
 
 \begin{solution}
+Let's argue via proof by contrapositive. Assume $d(x, y) > d(x, z) + d(z, y) \, \forall x, y, z \in X$ so $d$ is not a metric on $X.$ Let $x \neq y$ and enumerate what values $z$ can take on. 
+\vspace{-2mm}
+\begin{itemize}
+	\itemsep0em
+	\item If $z \neq y \neq$ z, then $1 > 2.$
+	\item If $z = x$ and $z \neq y$, vice versa, then $1 > 1.$
+	\item If $z = y = x,$ then $1 > 0.$ However, this contradicts our initial assumption that $x \neq y.$
+\end{itemize}
+Clearly, all these pose contradictions, so it must be that $d$ satisfies the triangle inequality and is a metric on $X$.
 
 \end{solution}
 
