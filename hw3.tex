@@ -14,6 +14,7 @@
 \DeclareMathOperator{\Int}{Int}
 \DeclareMathOperator{\C}{\mathbb{C}}
 \DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
 \DeclareMathOperator{\N}{\mathbb{N}}
 \newcommand{\iu}{{i\mkern1mu}}
 
@@ -64,14 +65,30 @@ Let $a$ and $b$ be real numbers. Show that the following three equalities hold: 
 \end{solution}
 
 \begin{problem}[Exercise 5.5.]
-Let $a_1, a_2, \dots$ be any enumeration of the negative rational numbers; let $b_1, b_2, \dots$ be any enumeration of the positive rational numbers. Show that the following two equalities hold: $$ \bigcap_{j = 1}(a_j,b_j) = \{0\}, \quad \quad \bigcup_{j=1}^{\infty}(a_j,b_j)=\R.$$.
+Let $a_1, a_2, \dots$ be any enumeration of the negative rational numbers; let $b_1, b_2, \dots$ be any enumeration of the positive rational numbers. Show that the following two equalities hold: $$ \bigcap_{j = 1}^{\infty}(a_j,b_j) = \{0\}, \quad \quad \bigcup_{j=1}^{\infty}(a_j,b_j)=\R.$$.
 \end{problem}
 
 \begin{solution}
+\begin{enumerate}
+	\item Let's analyze one set of this general intersection, $(a_n, b_n)$ and call it $A$. $\sup A$ exists by the least upper bound property since $A\subset\R$ is bounded above and nonempty by least upper bound property. Similar argument for existence of $\inf A$ but it is bounded below. Let us prove what $\sup A, \inf A$ are supposed to be.
+	\vspace{-2mm}
+	\begin{itemize}
+		\itemsep0em
+		\item $a_n$ is a lower bound $\rightarrow x \notin A$ s.t. $x < a_n \, \forall x \in A.$ Assume that $l$ is a lower bound s.t. $l > a_n.$ So, $A = \{ x \in \overline{\R} : a_n < k < x < b_n \}$. So, $l - a_n > 0$. Choose $\alpha \in \N$ so $\alpha > l - a_n.\, \alpha + a_n > a_n + l - a_n.$ Thus, $l$ is not a lower bound. So, $\inf A = a_n.$
+		\item $b_n$ is a upper bound $\rightarrow x \notin A$ s.t. $x > b_n \, \forall x \in A.$ Assume that $u$ is an upper bound s.t. $u < b_n.$ So, $A = \{ x \in \overline{\R} : a_n < x < u < b_n \}$. So, $u -  b_n > 0$. Choose $n \in \N$ so $u - b_n > \frac{1}{n}.$ So, $b_n - \frac{1}{n} > u$. Thus, $u$ is not an upper bound. So, $\sup A = b_n.$
+	\end{itemize}
+	Since $a_n \in - \Q$ and $b_n \in +\Q \, \forall n \in \N, 0 \in (a_n, b_n) \, \forall n$ so $\bigcap_{j=1}^{\infty} (a_n,b_n)= \{0\}.$
 
+	\item Let's analyze one set of this general union, $(a_n, b_n)$ and call it $A$. $\sup A$ exists by the least upper bound property since $A\subset\R$ is bounded above and nonempty by least upper bound property. Similar argument for existence of $\inf A$ but it is bounded below. Let us prove what $\sup A, \inf A$ are supposed to be.
+	\vspace{-2mm}
+	\begin{itemize}
+		\itemsep0em
+		\item $a_n$ is a lower bound $\rightarrow x \notin A$ s.t. $x < a_n \, \forall x \in A.$ Assume that $l$ is a lower bound s.t. $l > a_n.$ So, $A = \{ x \in \overline{\R} : a_n < k < x < b_n \}$. So, $l - a_n > 0$. Choose $\alpha \in \N$ so $\alpha > l - a_n.\, \alpha + a_n > a_n + l - a_n.$ Thus, $l$ is not a lower bound. So, $\inf A = a_n.$
+		\item $b_n$ is a upper bound $\rightarrow x \notin A$ s.t. $x > b_n \, \forall x \in A.$ Assume that $u$ is an upper bound s.t. $u < b_n.$ So, $A = \{ x \in \overline{\R} : a_n < x < u < b_n \}$. So, $u -  b_n > 0$. Choose $n \in \N$ so $u - b_n > \frac{1}{n}.$ So, $b_n - \frac{1}{n} > u$. Thus, $u$ is not an upper bound. So, $\sup A = b_n.$
+	\end{itemize}
+	Assume that there is some $\beta \in \R$. If $\beta \notin A$, $\exists$ some set in  $\bigcup_{j=1}^{\infty}(a_j,b_j)$ s.t. $\beta \in \{ a_n - \epsilon < x < b_n + \epsilon\}$ for any $\epsilon > 0.$ So, if true for any $\beta$, $\bigcup_{j=1}^{\infty}(a_j,b_j)= \R.$
+\end{enumerate}
 \end{solution}
-
-
 
 \begin{problem}[Exercise 6.4.]
 Prove there exists no order $\leq$ that makes $(\mathbb{C},+,\cdot,\leq)$ into an ordered field.
