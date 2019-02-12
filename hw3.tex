@@ -166,7 +166,22 @@ set looks like if you first consider $B_{d}((0, 0), 3).$)
 \end{enumerate}
 \end{problem}
 \begin{solution}
+For nonnegativity, analyze two cases where $x, y \in \R^{2}$.
+\begin{enumerate}
+	\itemsep0em
+	\item Case 1: Let  $(x_1, x_2) = (y_1, y_2)$. So, $d(x, y) = \abs{x_1 - y_1} + \abs{x_2 - y_2} = \abs{x_1 - x_1} + \abs{x_2 - x_2} = 0.$ 
+	\item Case 2: Let $x \neq y \, \forall x, y \in \R^{2}.$ Claim that $d(x, y) < 0$ so $d$ is not a metric. $d(x, y) = \abs{x_1 - y_1} + \abs{x_2 - y_2} < 0.$ $\abs{x_1 - y_1} < -\abs{x_2 - y_2}$. Choose $x = (0, 0)$ and $y = (1, 2)$. So, $\abs{0 - 1} < -\abs{0 - 2} \rightarrow 1 < -2.$ Clearly, this is false so $d(x,y) \ge 0.$ 
+\end{enumerate}
 
+For symmetry, $d(x, y) = \abs{x_1 - y_1} + \abs{x_2 - y_2} = \abs{(-1)y_1 - x_1} + \abs{(-1)y_2 - x_2} = \abs{y_1 - x_1} + \abs{y_2 - x_2} = d(y,x).$ \\
+For triangle inequality, assume that $d(x, y) > d(x,z) + d(z,y) \rightarrow \abs{x_1 - y_1} + \abs{x_2 - y_2} > \abs{x_1 - z_1} + \abs{x_2 - z_2} + \abs{z_1 - y_1} + \abs{z_2 - y_2}.$
+\vspace{-2mm}
+\begin{itemize}
+	\itemsep0em
+	\item $x_1 - y_1 + x_2 - y_2 > x_1 - z_1 + x_2 - z_2 + z_1 - y_1 + z_2 - y_2 \rightarrow 0 > 0.$
+	\item $x_1 - y_1 + x_2 - y_2 < -1(x_1 - z_1 + x_2 - z_2 + z_1 - y_1 + z_2 - y_2) \rightarrow 0 <>> 0.$
+\end{itemize}
+Both these cases don't hold so $d$ holds for triangle inequality and is a metric.
 \end{solution}
 
 \begin{problem}[Exercise 2.8.]
