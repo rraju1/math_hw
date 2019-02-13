@@ -191,6 +191,13 @@ Let ($X, d$) be a metric space, and let $E$ be a subset of $X$. The \textit{diam
 \end{problem}
 \begin{solution}
 
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item 
+	\item 
+	\item Choose two points $a_1, a_2 \in B(x,r)$ s.t. $a_1 = [x_1 + r, x_2, x_3, \dots], a_2 = [x_1 - r, x_2, x_3, \dots].$ $\diam{B(x,r)}= \sup\{d(a_1, a_2): a_1, a_2 \in B(x,r)\}.$ Apply triangle inequality to $d(a_1, a_2) \rightarrow d(a_1, a_2) \leq d(a_1, x) + d(x, a_2).$ So, $\diam{B(x,r)} = \sup \{d(a_1, a_2) \leq \norm{r} + \norm{r}\} = \sup (d(a_1, a_2) \leq 2r) = 2r.$
+\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 2.11.]
@@ -206,7 +213,8 @@ Let $(X, d)$ be a metric space, and let $Y$ be a subset of $X$. Prove that for a
 In the notation of Exercise 2.11, the equality $(*)$ gives an alternate explanation of why q is not an interior point of $B_{Y}(p, 2)$ with respect to $X$: It is because $q \notin \Int_{X}(Y)$, as can be seen from the picture you drew in that Exercise.
 \end{problem}
 \begin{solution}
-
+$\Int_{X}(U)=\{ x \in U : x$ is an interior point of $U$ with respect to $X \}$. That means there is some $B_X(x, r) \subset U,$ s.t. $r > 0.$ Call this ball, $D$. Since $D\subset U \rightarrow D \subset \Int_{Y}(U).$ Also, since $U\subset Y,$ $D\subset Y.$ So, $D \subset \Int_{X}(Y)$. So, $\Int_{X}(U) \subset \Int_{Y}(U)\cap\Int_{X}(Y).$\\
+Now for the other direction, $\Int_{Y}(U)=\{ x \in U : x$ is an interior point of $U $ with respect to $Y \}.$ That means there is some $B_Y(x, r) \subset U,$ s.t. $r > 0.$ Call this ball, $E$. Since $E\subset U$, $E \subset Y \rightarrow E \subset \Int_{X}(Y).$ So, $E \subset \Int_{Y}(U)\cap\Int_{X}(Y)\subset U \subset \Int_{X}(U).$ So, $\Int_{X}(U) = \Int_{Y}(U)\cap\Int_{X}(Y)$.
 \end{solution}
 
 \begin{problem}[Exercise 2.16.]
