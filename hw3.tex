@@ -51,7 +51,7 @@ Let $a$ and $b$ be real numbers. Show that the following three equalities hold: 
 \begin{solution}
 \begin{enumerate}
 	\itemsep0em
-	\item $\bigcap_{x > b}(a,x) = \{y \in \overline{\R} : y \in (a, x) \forall x > b\}$. $\overline{\R}$ has a least upper bound so call this bound, $d$ so $y \leq d \forall y \in \bigcap_{x > b} (a, x)$. Assume $d < b$, then $a < y \leq d < b < x \exists p \in \bigcap_{x > b}(a,x)$ s.t. $a < b < p < x.$ So, $d$ is not the least upper bound. So, $b \leq d$ and $a < y \leq b \leq d \forall \bigcap_{x>b}(a, x)$. $\bigcap_{x>b}(a, x)=\{y \in \overline{\R} : a < y \leq b\} = (a, b].$
+	\item $\bigcap_{x > b}(a,x) = \{y \in \overline{\R} : y \in (a, x) \forall x > b\}$. Clearly, $(a,b]\subset \bigcap_{x > b}(a,x)$ since it is contained in every set of the general intersection. For the other inclusion, let $z$ be an upper bound of $\bigcap_{x > b}(a,x)$ where $z < x \, \forall x > b$. For some $\epsilon > 0$, $z = b + \epsilon$. By Exer. 4.8, $b \leq z \rightarrow b \leq b.$ So, $b$ is upper bound on $\bigcap_{x > b}(a,x)$ so $\bigcap_{x > b}(a,x)\subset (a,b].$
 	\item $\bigcup_{n=1}^{\infty} = [a + \frac{1}{n - 1}, b - \frac{1}{n - 1}) \cup [a + \frac{1}{n}, b - \frac{1}{n}) = \{ y \in \overline{\R} : a + \frac{1}{n} \leq y \leq b - \frac{1}{n} \} = B$.
 	\vspace{-2mm}
 	\begin{itemize}
@@ -174,7 +174,8 @@ For nonnegativity, analyze two cases where $x, y \in \R^{2}$.
 \end{enumerate}
 
 For symmetry, $d(x, y) = \abs{x_1 - y_1} + \abs{x_2 - y_2} = \abs{(-1)y_1 - x_1} + \abs{(-1)y_2 - x_2} = \abs{y_1 - x_1} + \abs{y_2 - x_2} = d(y,x).$ \\
-For triangle inequality, $d(x,y) = \abs{x_1 - y_1} + \abs{x_2 - y_2} \leq \abs{x_1 - z_1} + \abs{z_1 - y_1} + \abs{x_2 - z_2} + \abs{z_2 - y_2} = d(x, z) + d(z, y).$
+For triangle inequality, $d(x,y) = \abs{x_1 - y_1} + \abs{x_2 - y_2} \leq \abs{x_1 - z_1} + \abs{z_1 - y_1} + \abs{x_2 - z_2} + \abs{z_2 - y_2} = d(x, z) + d(z, y).$ 
+Drawings attached on back
 \end{solution}
 
 \begin{problem}[Exercise 2.8.]
@@ -195,8 +196,15 @@ Let ($X, d$) be a metric space, and let $E$ be a subset of $X$. The \textit{diam
 \begin{enumerate}
 	\itemsep0em
 	\item $B(x, r)= \{ y \in X : d(x, y) < r\}.$ $\diam_d(\{ y \in X : d(x, y) : x, y \in B(x,r)\}) = \sup\{ d(x,y) : x, y \in B(x,r)\} \leq \sup\{ d(x,z) : z, y \in B(x,r)\} + \sup\{ d(z,y) : y, z \in B(x,r)\}.$ So, $\diam_d(\{y \in X : d(x, y) : x, y \in B(x,r)\})\leq r + r = 2r.$
-	\item 
-	\item Choose two points $a_1, a_2 \in B(x,r)$ s.t. $a_1 = [x_1 + r, x_2, x_3, \dots], a_2 = [x_1 - r, x_2, x_3, \dots].$ $\diam{B(x,r)}= \sup\{d(a_1, a_2): a_1, a_2 \in B(x,r)\}.$ Apply triangle inequality to $d(a_1, a_2) \rightarrow d(a_1, a_2) \leq d(a_1, x) + d(x, a_2).$ So, $\diam{B(x,r)} = \sup \{d(a_1, a_2) \leq \norm{r} + \norm{r}\} = \sup (d(a_1, a_2) \leq 2r) = 2r.$
+	\item Recall discrete metric is defined as $d(x, y) = 1$ if $x \neq y$ and $d(x, y) = 0$ if $x = y$. 
+	\vspace{-2mm}
+	\begin{enumerate}
+		\itemsep0em
+		\item For $r \leq 1,$ $B_{(X, d)}(x, r) = \{ y \in X : d(x, y) < r \}$. The cases where $x \neq y$ will yield an empty set since $1$ is not greater $1$. So, we will only have the set,$D$, where $x = y.$ So, $\sup\{d(x,y) : x, y \in D\} = 0.$
+		\item For $r > 1,$ $B_{(X, d)}(x, r) = \{ y \in X : d(x, y) < r \} = \{y \in X : x \neq y\}\cap\{y \in X : x \in y\} = B.$ $\sup\{d(x,y) : x, y \in B \} = 1$. Any point, $y$ in the metric space will fulfill the condition from the ball since $d$ is the discrete metric. The maximum can only be $1$ so it must be the $\sup$ of the set.
+	\end{enumerate}
+
+	\item Choose two points $a_1, a_2 \in B(x,r)$ s.t. $a_1 = [x_1 + r - \epsilon, x_2, x_3, \dots], a_2 = [x_1 - (r - \epsilon), x_2, x_3, \dots].$ $\diam{B(x,r)}= \sup\{d(a_1, a_2): a_1, a_2 \in B(x,r)\}.$ Apply triangle inequality to $d(a_1, a_2) \rightarrow d(a_1, a_2) \leq d(a_1, x) + d(x, a_2).$ So, $d(a_1, a_2) \leq \norm{r - \epsilon} + \norm{(-1)(r - \epsilon)}.$ $d(a_1,a_2)\leq 2r -2\epsilon \forall \epsilon > 0.$ Use Exer. 4.8, $d(a_1,a_2) + 2\epsilon \leq 2r \rightarrow d(a_1,a_2) \leq 2r.$ So, $\diam{B(x,r)}= \sup\{d(a_1,a_2)\leq 2r\}=2r.$
 \end{enumerate}
 \end{solution}
 
@@ -204,7 +212,9 @@ Let ($X, d$) be a metric space, and let $E$ be a subset of $X$. The \textit{diam
 As in Example 2.7, let $X = \mathbb{R}^{2}, Y = [-1,3]\times[2,4],$ and let $d$ denote the Euclidean metric on $X = \mathbb{R}^{2}.$ Let $p = (3,4)$ and let $q = (2, 4)$. Arguing \textit{directly from the definition of an interior point} (i.e., without using Exercise 2.12), show that $q$ is an interior point of $B_{Y}(p,2)$ with respect to $Y$, but $q$ is not an interior point of $B_{Y}(p,2)$ with respect to $X$. In addition, draw a picture on a piece of graph paper that illustrates the idea of your proof.
 \end{problem}
 \begin{solution}
-
+Let $D=B_Y(p,2)$ with respect to $Y$. To show that $q$ is an interior point of $D$, $\exists r > 0$ s.t. $B_Y(q,r)\subset D$. Set $r = 1$ so for some $x \in B_Y(q,1)$ s.t. $d(x,q) < 1$ and $x \in Y.$ By triangle inequality, $d(x,p) \leq d(x, q) + d(p, q)$. $d(x, q) < 1$ and $d(p, q) = 1$ so $d(x, q) + d(p, q) < 2 \rightarrow x \in D.$ So, $B_Y(q,1) \subset D \rightarrow q \in \Int_Y(D).$ \\
+Let $E=B_Y(p,2)$. To show that $q$ is not an interior point of $E$, $x \in B_X(q, r), x \notin E$, for some $r > 0$. Take $x = (2, 4 + \frac{r}{2}). \, d(x, q) = \frac{r}{2} \rightarrow x\in B_X(q, r).$ But, $x \notin Y$ since $(4 + \frac{r}{2} > 4).$ So, $q$ is not an interior point of $E$ with respect to $X.$\\
+Drawings attached on back
 \end{solution}
 
 
@@ -221,7 +231,7 @@ Now for the other direction, $\Int_{Y}(U)=\{ x \in U : x$ is an interior point o
 Let $(X, d)$ be a metric space, and let $U$ be a subset of $X$. Use Proposition 2.15 to prove that $\Int_{X}(U)$ is open in $X$.
 \end{problem}
 \begin{solution}
-
+For $x \in U$, since $U\subset X$ and $(X,d)$ is a metric space, $B_X(x, r)$ is open in $X.$ Since $U \subset X, \Int_X(B_X(x, r))\subset \Int_U(B_X(x, r)).$ So every $B_X(x, r)$ is an interior point of $U$. $U = \cup_{x\in U} B_X(x, r) = \Int_X U$ by Prop 2.17(1) to prove $U$ is open with respect to $X.$
 \end{solution}
 
 \begin{problem}[Exercise 2.20.]
