@@ -174,14 +174,7 @@ For nonnegativity, analyze two cases where $x, y \in \R^{2}$.
 \end{enumerate}
 
 For symmetry, $d(x, y) = \abs{x_1 - y_1} + \abs{x_2 - y_2} = \abs{(-1)y_1 - x_1} + \abs{(-1)y_2 - x_2} = \abs{y_1 - x_1} + \abs{y_2 - x_2} = d(y,x).$ \\
-For triangle inequality, assume that $d(x, y) > d(x,z) + d(z,y) \rightarrow \abs{x_1 - y_1} + \abs{x_2 - y_2} > \abs{x_1 - z_1} + \abs{x_2 - z_2} + \abs{z_1 - y_1} + \abs{z_2 - y_2}.$
-\vspace{-2mm}
-\begin{itemize}
-	\itemsep0em
-	\item $x_1 - y_1 + x_2 - y_2 > x_1 - z_1 + x_2 - z_2 + z_1 - y_1 + z_2 - y_2 \rightarrow 0 > 0.$
-	\item $x_1 - y_1 + x_2 - y_2 < -1(x_1 - z_1 + x_2 - z_2 + z_1 - y_1 + z_2 - y_2) \rightarrow 0 <>> 0.$
-\end{itemize}
-Both these cases don't hold so $d$ holds for triangle inequality and is a metric.
+For triangle inequality, $d(x,y) = \abs{x_1 - y_1} + \abs{x_2 - y_2} \leq \abs{x_1 - z_1} + \abs{z_1 - y_1} + \abs{x_2 - z_2} + \abs{z_2 - y_2} = d(x, z) + d(z, y).$
 \end{solution}
 
 \begin{problem}[Exercise 2.8.]
