@@ -51,7 +51,7 @@ Let $a$ and $b$ be real numbers. Show that the following three equalities hold: 
 \begin{solution}
 \begin{enumerate}
 	\itemsep0em
-	\item $\bigcap_{x > b}(a,x) = \{y \in \overline{\R} : y \in (a, x) \forall x > b\}$. Clearly, $(a,b]\subset \bigcap_{x > b}(a,x)$ since it is contained in every set of the general intersection. For the other inclusion, let $z$ be an upper bound of $\bigcap_{x > b}(a,x)$ where $z < x \, \forall x > b$. For some $\epsilon > 0$, $z = b + \epsilon$. By Exer. 4.8, $b \leq z \rightarrow b \leq b.$ So, $b$ is upper bound on $\bigcap_{x > b}(a,x)$ so $\bigcap_{x > b}(a,x)\subset (a,b].$
+	\item $\bigcap_{x > b}(a,x) = \{y \in \overline{\R} : y \in (a, x) \forall x > b\}$. Clearly, $(a,b]\subset \bigcap_{x > b}(a,x)$ since it is contained in every set of the general intersection. For the other inclusion, let $z$ be an upper bound of $\bigcap_{x > b}(a,x)$ where $z < x \, \forall x > b$. For any $\epsilon > 0$, $z = b + \epsilon$. By Exer. 4.8, $b \leq z \rightarrow b \leq b.$ So, $b$ is upper bound on $\bigcap_{x > b}(a,x)$ so $\bigcap_{x > b}(a,x)\subset (a,b].$
 	\item $\bigcup_{n=1}^{\infty} = [a + \frac{1}{n - 1}, b - \frac{1}{n - 1}) \cup [a + \frac{1}{n}, b - \frac{1}{n}) = \{ y \in \overline{\R} : a + \frac{1}{n} \leq y \leq b - \frac{1}{n} \} = B$.
 	\vspace{-2mm}
 	\begin{itemize}
@@ -231,7 +231,7 @@ Now for the other direction, $\Int_{Y}(U)=\{ x \in U : x$ is an interior point o
 Let $(X, d)$ be a metric space, and let $U$ be a subset of $X$. Use Proposition 2.15 to prove that $\Int_{X}(U)$ is open in $X$.
 \end{problem}
 \begin{solution}
-For $x \in U$, since $U\subset X$ and $(X,d)$ is a metric space, $B_X(x, r)$ is open in $X.$ Since $U \subset X, \Int_X(B_X(x, r))\subset \Int_U(B_X(x, r)).$ So every $B_X(x, r)$ is an interior point of $U$. $U = \cup_{x\in U} B_X(x, r) = \Int_X U$ by Prop 2.17(1) to prove $U$ is open with respect to $X.$
+For $x \in U$, since $U\subset X$ and $(X,d)$ is a metric space, $B_X(x, r)$ is open in $X$. Choose $y\in U$ so $y$ is the interior point of $B_X(y,r)$ using Proposition 2.15. $B_X(y, r)\cap U = B_U(y, r) \subset U.$ So, $y$ is an interior point of $U$ wrt $X$ so $\forall y \in U$ are interior points so $\Int_X U = U.$
 \end{solution}
 
 \begin{problem}[Exercise 2.20.]
