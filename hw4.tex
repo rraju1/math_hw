@@ -1,0 +1,37 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{graphicx}
+\DeclareMathOperator{\Lim}{Lim}
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#4}
+\duedate{2/28/2018}
+
+\begin{document}
+
+\problemlist{1.9, 1.10, 1.13, 1.14, 1.15, 1.21, 1.24}
+
+\begin{problem}[Exercise 1.9]
+Let $E_1$ and $E_2$ be subsets of a metric space $(X,d).$ Prove that $$\Lim_X(E_1 \cup E_2) = \Lim_X(E_1)\cup\Lim_X(E_2).$$
+\end{problem}
+
+\begin{solution}
+For $\subset$, assume $x\in \Lim_X(E_1\cup E_2)$ and $U$ is a neighborhood of $x$ in $X$. So, $\emptyset\neq U \cap (E_1 \cup E_2)\setminus \{x\}.$ $U \cap [(E_1\setminus\{x\})\cup(E_2\setminus\{x\})] = [U\cap(E_1\setminus\{x\})\cup U \cap (E_2\setminus\{x\})] = \Lim_X(E_1)\cup\Lim_X(E_2).$ For $\supset$, using Proposition 1.8, $E_1\subset E_1 \cup E_2 \rightarrow \Lim_X(E_1)\subset\Lim_X(E_1\cup E_2).$ Similarly, $E_2\subset E_1 \cup E_2 \rightarrow \Lim_X(E_2)\subset\Lim_X(E_1\cup E_2).$ So, $\Lim_X(E_1) \cup \Lim_X(E_2) \subset \Lim_X(E_1\cup E_2).$ So, $\Lim_X(E_1 \cup E_2) = \Lim_X(E_1)\cup\Lim_X(E_2).$
+\end{solution}
+
+\begin{problem}[Part A: Problem C]
+We defined addition of rational numbers in terms of representatives: \(\frac{a}{b}\) + \(\frac{c}{d}\)= \(\frac{ad+bc}{bd}\). Show that the addition of rational numbers is well-defined.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\end{document}
