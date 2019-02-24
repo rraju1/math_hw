@@ -56,18 +56,18 @@ For $\subset$, if $x_n \rightarrow x$ in $X,$ and $x \in Y,$ then for some neigh
 \end{solution}
 
 \begin{problem}[Exercise 1.14]
-Let $(X,d)$ be a metric space, and let $(x_n)_{n=1}^{\infty}$ be a sequence in $Y$ and let $x$ be a point of $X$. Prove that the following two statements are equivalent:
+Let $(X,d)$ be a metric space, and let $(x_n)_{n=1}^{\infty}$ be a sequence in $Y$ and let $x$ be a point of $X$. Prove that the following statements are equivalent:
 \vspace{-2mm}
 \begin{enumerate}
 	\itemsep0em
 	\item $x_n \rightarrow x$ in $X$
-	\item For every $\epsilon > 0,$ there exists $N\in\N$ such that $n \ge N$ implies $x_n\in B_X(x,\epsilon) ($i.e.$ d(x, x_n) , \epsilon).$
+	\item For every $\epsilon > 0,$ there exists $N\in\N$ such that $n \ge N$ implies $x_n\in B_X(x,\epsilon) ($i.e. $ d(x, x_n) < \epsilon).$
 	\item $d(x, x_n) \rightarrow 0$ as $n\rightarrow\infty$.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
-
+Let's consider the first two points first. For $x_n \rightarrow x$ in $X$, $\exists$ a neighborhood $U$ around $x$ in $X$ s.t. $n\in \N$ that $x_n\in U$ and $n\ge N$, where $N\in\N$. For $\subset$, set $U$ to the ball $B_X(x, \epsilon)$ for $\epsilon > 0$ so $x_n \in B_X(x, \epsilon)$. For $\supset$, use the same reasoning that $n \ge N$ implies $B_X(x, \epsilon)$. $B_X(x, \epsilon)$ is a neighborhood of $x$ which is open in $X$. Since $x_n \in B_X(x, \epsilon)$ for $n\ge N$, so $x_n \rightarrow x$ in $X.$ For the last equality, let us look at points 2 and 3. To prove the direction $(2) \rightarrow (3)$, let's argue via proof by contrapositive. Assume that $d(x, x_n) \rightarrow \zeta$ as $n\rightarrow\infty$ for some $n \in \N$. If this is true, then $\exists$ some $\epsilon > 0$ s.t. $\zeta > \epsilon$ so then $x_n \notin B_X(x, \epsilon).$ So, for $x_n$ to be in the set $B_X(x, \epsilon)$, $d(x, x_n)$ must tend to 0 as $n\rightarrow \infty.$ For the other inclusion $\supset$, for any $\epsilon$ selected, there will always be another $n \in \N$ such that $\epsilon > d(x,x_n)$ so $x_n\in B_X(x, \epsilon).$ 
 \end{solution}
 
 
