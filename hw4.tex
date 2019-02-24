@@ -37,7 +37,7 @@ Let $(X,d)$ be a metric space, and assume $E\subset Y \subset X.$ Prove that $$\
 \end{problem}
 
 \begin{solution}
-
+For $\subset$, $\Lim_Y(E) = V \cap (E\setminus\{x\}) = (U \cap Y)\cap(E\setminus\{x\})$, where $V$ is open in $Y$ and $U$ is open in X (applied Theorem 2.19). So, $(U \cap Y)\cap(E\setminus\{x\}) \rightarrow [U \cap E\setminus\{x\}]\cap Y = \Lim_X(E)\cap Y.$ For $\supset$, $\Lim_X(E)\cap Y \rightarrow [V \cap (E\setminus\{x\})]\cap Y$, where $V$ is an open set neighborhood of $x$ with respect to $X$. So, $[(V \cap Y)\cap[E\setminus\{x\}\cap Y]]$. Applying Theorem 2.19 to $V\cap Y = U$ where $U$ is open in $Y$. Then, $U\cap[E\setminus\{x\}\cap Y] = U \cap [E\setminus\{x\}]$, since $E \subset Y$. So, $U \cap [E\setminus\{x\}] \rightarrow \Lim_Y(E).$ So, $Lim_Y(E) = \Lim_X(E)\cap Y$.
 \end{solution}
 
 
@@ -52,7 +52,7 @@ Let $(X,d)$ be a metric space, and assume $Y \subset X.$ Let $(x_n)_{n=1}^{\inft
 \end{problem}
 
 \begin{solution}
-
+For $\subset$, if $x_n \rightarrow x$ in $X,$ and $x \in Y,$ then for some neighborhood $V$ of $x$ and $\exists$ some $n \in \N$ s.t. $x_n\in V.$ By Theorem 2.19, $U=V\cap Y \implies U$ is open in $Y$ so $x_n \in U.$ This implies that $x_n \rightarrow x$ and $x\in Y$. For $\supset$, $\exists$ a neighborhood $V$ around $x$ with respect to $Y$ s.t. $n \in \N$ that $x_n\in V.$ $V\subset Y \subset X$ so $x\in Y.$ If $x_n \in V,$ then $V = U \cap Y$ where $x_n \in U.$ So, $x_n\rightarrow x$ in $X$. 
 \end{solution}
 
 \begin{problem}[Exercise 1.14]
