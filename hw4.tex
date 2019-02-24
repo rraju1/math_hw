@@ -6,8 +6,14 @@
 \usepackage[margin=1in]{geometry}
 
 % include this if you want to import graphics files with /includegraphics
+\usepackage{mathtools}
 \usepackage{graphicx}
 \DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
 % info for header block in upper right hand corner
 \name{Ravi Raju}
 \class{MA 521}
@@ -26,8 +32,69 @@ Let $E_1$ and $E_2$ be subsets of a metric space $(X,d).$ Prove that $$\Lim_X(E_
 For $\subset$, assume $x\in \Lim_X(E_1\cup E_2)$ and $U$ is a neighborhood of $x$ in $X$. So, $\emptyset\neq U \cap (E_1 \cup E_2)\setminus \{x\}.$ $U \cap [(E_1\setminus\{x\})\cup(E_2\setminus\{x\})] = [U\cap(E_1\setminus\{x\})\cup U \cap (E_2\setminus\{x\})] = \Lim_X(E_1)\cup\Lim_X(E_2).$ For $\supset$, using Proposition 1.8, $E_1\subset E_1 \cup E_2 \rightarrow \Lim_X(E_1)\subset\Lim_X(E_1\cup E_2).$ Similarly, $E_2\subset E_1 \cup E_2 \rightarrow \Lim_X(E_2)\subset\Lim_X(E_1\cup E_2).$ So, $\Lim_X(E_1) \cup \Lim_X(E_2) \subset \Lim_X(E_1\cup E_2).$ So, $\Lim_X(E_1 \cup E_2) = \Lim_X(E_1)\cup\Lim_X(E_2).$
 \end{solution}
 
-\begin{problem}[Part A: Problem C]
-We defined addition of rational numbers in terms of representatives: \(\frac{a}{b}\) + \(\frac{c}{d}\)= \(\frac{ad+bc}{bd}\). Show that the addition of rational numbers is well-defined.
+\begin{problem}[Exercise 1.10]
+Let $(X,d)$ be a metric space, and assume $E\subset Y \subset X.$ Prove that $$\Lim_Y(E) = \Lim_X(E)\cap Y.$$
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 1.13]
+Let $(X,d)$ be a metric space, and assume $Y \subset X.$ Let $(x_n)_{n=1}^{\infty}$ be a sequence in $Y$ and let $x$ be a point of $X$. Prove that the following two statements are equivalent:
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item $x_n \rightarrow x$ in $X$, and $x\in Y.$
+	\item $x_n \rightarrow x$ in $Y$.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 1.14]
+Let $(X,d)$ be a metric space, and let $(x_n)_{n=1}^{\infty}$ be a sequence in $Y$ and let $x$ be a point of $X$. Prove that the following two statements are equivalent:
+\vspace{-2mm}
+\begin{enumerate}
+	\itemsep0em
+	\item $x_n \rightarrow x$ in $X$
+	\item For every $\epsilon > 0,$ there exists $N\in\N$ such that $n \ge N$ implies $x_n\in B_X(x,\epsilon) ($i.e.$ d(x, x_n) , \epsilon).$
+	\item $d(x, x_n) \rightarrow 0$ as $n\rightarrow\infty$.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 1.15]
+Let $(s_n)_{n=1}^{\infty}$ and $(t_n)_{n=1}^{\infty}$ be sequences of real numbers, with $t_n > 0$ for each $n\in\N.$ Assume that $t_n \rightarrow 0$ as $n\rightarrow \infty.$
+\vspace{-2mm}
+\begin{itemize}
+	\itemsep0em
+	\item Prove that if $\abs{s_n - s} < t_n$ for all $n \in \N$, then $s_n \rightarrow s$ as $n \rightarrow \infty.$
+	\item Prove that if $\frac{1}{n}\rightarrow 0$ as $n\rightarrow \infty.$
+\end{itemize}
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 1.21]
+Let $(X,d)$ be a metric space, and let $E$ be a subset of $X$. Prove that $\Lim_X(E)$ is a closed set of $X$.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 1.24]
+Let $(X,d)$ be a metric space, and let $E$ be a subset of $X$. Prove that $$X\setminus\Cl_X(E)=\Int_X(X\setminus E)$$. 
 \end{problem}
 
 \begin{solution}
