@@ -82,7 +82,12 @@ Let $(s_n)_{n=1}^{\infty}$ and $(t_n)_{n=1}^{\infty}$ be sequences of real numbe
 \end{problem}
 
 \begin{solution}
-
+\vspace{-2mm}
+\begin{itemize}
+	\itemsep0em
+	\item Given $\abs{s_n - s} < t_n \forall n$ is true, for any $t_n > 0,$ $\exists N \in \N$ s.t. $n \ge N$ implies $s_n \in B_X(s, t_n)$ as $d(s_n , s) < t_n \forall n\in\N$ so $s_n\rightarrow s$ as $n \rightarrow \infty.$
+	\item Let $a_n = (\frac{1}{n})_{n=1}^{\infty}$. Clearly, $\forall n\in \N, a_{n+1} < a_{n}$ (this is the Archimedean property). If $a_N < \epsilon$ for $N \in \N$ for any $\epsilon > 0$, $\exists n \ge N$ s.t. $a_n < a_N < \epsilon$ so $a_n \in B_X(0, \epsilon).$ 
+\end{itemize}
 \end{solution}
 
 \begin{problem}[Exercise 1.21]
@@ -90,7 +95,7 @@ Let $(X,d)$ be a metric space, and let $E$ be a subset of $X$. Prove that $\Lim_
 \end{problem}
 
 \begin{solution}
-
+Let $D = \Lim_X(E).$ To show that $D$ is closed, we need to prove $\Lim_X(D)\subset D.$ For all neighborhoods $U$ centered around $x$, $\emptyset\neq U \cap (D\setminus \{x\})\rightarrow \exists y \in \Lim_X(D), y \in U.$ For all neighborhoods $V$ centered around $y$, $\emptyset\neq V \cap (D\setminus \{y\})\rightarrow \exists z \in D.$ 
 \end{solution}
 
 \begin{problem}[Exercise 1.24]
