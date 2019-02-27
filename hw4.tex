@@ -103,7 +103,7 @@ Let $(X,d)$ be a metric space, and let $E$ be a subset of $X$. Prove that $$X\se
 \end{problem}
 
 \begin{solution}
-
-\end{solution}
+For $\subset$, $X\setminus\Cl_X(E)=X\setminus(E \cup \Lim_X(E)) = (X \setminus E) \cap (X\setminus \Lim_X(E))$. Recall from Exercise 1.21 that $\Lim_X (E)$ is a closed set so $X\setminus\Lim_X(E)$ is open. Let $x \in X\setminus E$ and $x \in X\setminus\Lim_X(E)$. $x \in \Int_X(X\setminus\Lim_X(E)) \rightarrow \exists\, \epsilon > 0$ s.t. $B_X(x, \epsilon) \subset \Int_X(X\setminus\Lim_X(E)).$ Since $x \in X\setminus E$, for $\epsilon > 0$, $B_X(x, \epsilon) \subset X\setminus E$ so $x \in \Int_X(X\setminus E).$ For $\supset$, let $x \in \Int_X(E) \subset X\setminus E$ so $x \in X \setminus E$. $x \subset \Int_X(X\setminus E) \subset \Int(X).$ This says that since $x$ is in this open set, $B_X(x,r)$ is open. $x \notin \Lim_X(E)$ as $\Lim_X(E)$ is closed; that is, $B_X(x, r) \not\subset \Lim_X(E)$. So, $x \in X\setminus\Lim_X(E)$. Thus, $X\setminus\Cl_X(E)=\Int_X(X\setminus E)$. 
+\end{solution} 
 
 \end{document}
