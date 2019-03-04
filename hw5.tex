@@ -1,0 +1,74 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{mathtools}
+\usepackage{graphicx}
+\DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\bigep}{\mathbb{E}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#5}
+\duedate{2/28/2018}
+
+\begin{document}
+
+\problemlist{1.25, 1.26, 1.28, 1.30, 1.31, 2.7, 2.9, 2.16, 2.18.}
+
+\begin{problem}[Exercise 1.25]
+Let $(X, d)$ be a metric space. Let $E$ and $Y$ be subsets of $X$ such that $E\subset Y.$ Prove that $$\Cl_Y(E)=\Cl_X(E)\cap Y.$$
+\end{problem}
+
+\begin{solution}
+$\Cl_Y(E)= E \cup \Lim_Y(E)= E \cup (\Lim_X(E)\cap Y)$ (by Exercise 1.10) $ = (E \cup \Lim_X(E))\cap Y = \Cl_X(E)\cap Y.$
+\end{solution}
+
+\begin{problem}[Exercise 1.26]
+Let $(X, d)$ be a metric space.
+	\vspace{-2mm}
+	\begin{enumerate}
+		\itemsep0em
+		\item Prove that for any collection $\bigep$ of subsets of $X$, we have $$ \bigcup_{E\in\bigep} \overline{E} \subset \overline{\bigcup_{E\in\bigep} E}$$ and equality holds if $\bigep$ is finite.
+		\item Prove that for any collection $\bigep$ of subsets of $X$, we have $$ \bigcap_{E\in\bigep} \overline{E} \supset \overline{\bigcap_{E\in\bigep} E}$$ and equality holds if $\bigep$ is finite.
+		\item Give examples that demonstrate that equality might fail in part (1) is $\bigep$ is not finite, and equality might fail in part (2) even if $\bigep$ is finite.
+	\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vspace{-2mm}
+	\begin{enumerate}
+		\itemsep0em
+		\item Let $x \in \bigcup_{E \in \bigep} \overline{E}.$ So, for some $E$, $x = E \cup \Lim_X(E).$ $\overline{\bigcup_{E\in\bigep}(E)} = [\bigcup_{E \in \bigep}E]\cup[\Lim_X(\bigcup_{E \in \bigep})].$ So, $E \subset \bigcup_{E \in \bigep}E$ and $\Lim_X (E) \subset \Lim_X(\bigcup_{E \in \bigep})$ by Exercise 1.9. So, $x \in \overline{\bigcup_{E\in\bigep} E}.$ For $\supset$, let $K = \bigcup_{E\in\bigep} \overline{E}.$ Since $K$ is union of finite number of closed sets, $K$ is a closed set. All $x\in \bigcap_{E \in \bigep}(E) \rightarrow x \in \Cl_X(E)$ and so $x \subset K.$ Thus, $\bigcap_{E \in \bigep}(E) \subset K.$ 
+		\item 
+		\item 
+	\end{enumerate}
+\end{solution}
+
+
+\end{document}
