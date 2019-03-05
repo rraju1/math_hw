@@ -12,8 +12,10 @@
 \DeclareMathOperator{\Int}{Int}
 \DeclareMathOperator{\Cl}{Cl}
 \DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\R}{\mathbb{R}}
 \DeclareMathOperator{\bigep}{\mathbb{E}}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 
 
 \newcommand*\xoverline[2][0.75]{%
@@ -46,7 +48,7 @@ Let $(X, d)$ be a metric space. Let $E$ and $Y$ be subsets of $X$ such that $E\s
 \end{problem}
 
 \begin{solution}
-$\Cl_Y(E)= E \cup \Lim_Y(E)= E \cup (\Lim_X(E)\cap Y)$ (by Exercise 1.10) $ = (E \cup \Lim_X(E))\cap Y = \Cl_X(E)\cap Y.$
+For $\subset$, let $x\in \Cl_Y(E)$. $\Cl_Y(E)= E \cup \Lim_Y(E)= E \cup (\Lim_X(E)\cap Y)$ (by Exercise 1.10) $ = (E \cup \Lim_X(E))\cap Y = \Cl_X(E)\cap Y.$ So, $x \in \Cl_X(E)\cap Y.$ For $\supset$, let $x\in\Cl_X(E), Y$. So, $\Cl_X(E) = (E \cup \Lim_X(E))\cap Y = E \cup (\Lim_X(E)\cap Y) = E \cup \Lim_Y(E) = Cl_Y(E).$
 \end{solution}
 
 \begin{problem}[Exercise 1.26]
@@ -69,6 +71,30 @@ Let $(X, d)$ be a metric space.
 		\item 
 	\end{enumerate}
 \end{solution}
+
+\begin{problem}[Exercise 1.28]
+Let $(X, d)$ be a metric space.
+	\vspace{-2mm}
+	\begin{enumerate}
+		\itemsep0em
+		\item Prove that $x\in X$ and $r > 0$, we have $\overline{B_X(x,r)}\subset \{y \in X : d(x,y) \leq r\}.$ (Hint: Take complements and draw a picture.) Note the inclusion $\overline{B_X(x,r)}\subset B_X(x, r + \epsilon)$ follows for any $\epsilon > 0.$
+		\item Give an example using the discrete metric that demonstrates that equality need not hold in the inclusion $\overline{B_X(x,r)}\subset \{y \in X : d(x,y) \leq r\}$ that you proved in (1).
+		\item Prove that in $\R^{n}$ under the Euclidean metric $d(x, y) = \norm{x - y}$, we have $\overline{B_{\R^{n}}(x,r)} = \{y \in \R^{n} : \norm{x - y} \leq r\}.$ (Again a picture might be useful)
+		\item Using part (1), prove if $A$ is bounded in $(X, d)$ then $\overline{A}$ is also bounded in $(X,d)$.
+	\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\vspace{-2mm}
+	\begin{enumerate}
+		\itemsep0em
+		\item $\overline{B_X(x,r)} = B_X(x, r) \cup \Lim_X(B_X(x, r)).$ Let's analyze some $z \in B_X(x, r)$. For any such $z$, $d(x, z) < r \rightarrow z \in \{y \in X : d(x,y) \leq r\}$. Now assume that $y \in \Lim_X(B_X(x, r)).$ $\Lim_X(B_X(x,r)) = \{x : U \cap \{ B_X(x,r)\setminus\{x\}\neq \emptyset \}\}$ where $U$ is any neighborhood of $x$. The set of limit points will contain those points with $d(x,y) \leq r.$ Any $y$ that has $d(x, y) \ge r + \epsilon$ will violate definition of limit point. So, $\Lim_X(B_X(x,r)) \subset \{y \in X : d(x,y) \leq r\}$. This completes the inclusion, $\subset$.
+		\item Let $r = 1$ and $y \in \{y \in X : d(x, y) \leq r\}. \,y \notin B_X(x, 1)=\{x\}$ and we need to show $y \notin \Lim_X(B_X(x, 1)) = U\cap (\{x\}\setminus y).$ Choose $U$ to be $B_X(y,1)$ so $y \notin \Lim_X(B_X(x,1))$.
+		\item Let $D = \{y \in \R^{n} : \norm{x - y} \leq r\}$. For $\subset,$ $\overline{B_{\R^{n}}(x,r)} = B_{\R^{n}}(x,r) \cup \Lim_X(B_{\R^{n}}(x,r)).$ If $y \in B_{\R^{n}}(x,r), \, d(x, y) < r$ so $y \in D.$ If $y \in \Lim_X(B_{\R^{n}}(x,r)) = U\cap(B_{\R^{n}}(x,r)\setminus\{y\})$ for any neighborhood around $y$. This includes $y$ when $d(x, y) = r$ so $y \in D.$ For $\supset$, choose $y \in D$ s.t. $d(x,y)<r$ so $y \in B_{\R^{n}}(x,r)$. Let $z \in D$ be s.t. $d(x, z) = r$. So, for any $\epsilon > 0$, $\nexists B_X(z, \epsilon)$ s.t. $B_X(z, \epsilon)\cap(B_{\R^{n}}(x,r)\setminus\{z\}).$ Thus, $z \in \Lim_X(B_{\R^{n}}(x,r))$.
+		\item Let $a \in \Lim_X(A) = B_X(x,R)\cup A \subset \{ a\}= \{\dots, b, \dots\}$. $d(a, x) \leq d(a, b) + d(b, x) \leq R.$ So, $\Lim_X(A)\in B_X(x,R)$ so $\overline{A}$ is bounded.
+	\end{enumerate}
+\end{solution}
+
 
 
 \end{document}
