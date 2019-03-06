@@ -141,7 +141,7 @@ Prove Proposition 2.8.
 \end{problem}
 
 \begin{solution}
-
+Prove (1) $\rightarrow$ (2). $p_n\rightarrow p$ in $X$ means $p_n \in B_X(p, r)$ for $r > 0$ s.t. $N\in\N$ and $n \ge N.$ Suppose $\exists$ some subsequence $p_n$ for $n \ge N$ s.t. $p_n \notin B_X(p, r)$. Then, $p_n$ does not converge to $p$ as it violates the definition of $p_n\rightarrow p$ in $X$ as $n\rightarrow \infty$. Prove (2) $\rightarrow$ (3). $S^{*}=(\Img S)' \cup S_{\infty}$, This is true by definition since $S^{*}$ is the set of all subsequential limits and all subsequences converges to $p$ in $X$. So, $S^{*}=p.$ Since all subsequences converge to a point $p$ in $X$, they converge in $X.$ Prove (3) $\rightarrow$ (1). If $p\in S_\infty$ then $\exists$ $p \in B_X(x,r)$ for all but finitely many points of $p_n$ for $n \ge N, N \in \N.$ If $p \in (\Img S)'$, then $\Lim_X(\Img(p_n))= \{p\}.$ Thus, $\exists$ a neighbourhood, $U$, of $p$ s.t. $(U)\cap \Img(S)\setminus\{p\}\neq\emptyset$. Also, every sybsequence of $p_n \rightarrow p$ as $n \rightarrow \infty.$ Thus, $\exists n \ge N$ s.t. $p_n \in U \forall n,$ which shows that $p_n \rightarrow p$ as $n\rightarrow \infty.$ 
 \end{solution}
 
 
@@ -156,7 +156,12 @@ Let $(X, d)$ be a metric space, and let $(x_n)_{n=1}^{\infty}$ be a sequence in 
 \end{problem}
 
 \begin{solution}
-
+\vspace{-1mm}
+	\begin{enumerate}
+		\itemsep0em
+		\item By definition of convergence, we have any neighbourhood $U$ s.t. $n \ge N$ implies $x_n \in U$. Let $U=B_X(x, r)$. By the triangle inequality. $d(x_m, x_n) \leq d(x_m,x) + d(x_n, x) \leq 2r$ so Cauchy in X.
+		\item If $(x_n)$ is Cauchy then $m \ge n \ge N$ implies $d(x_m, x_n) < \epsilon$. Thus, all but finitely many points are within $B_X(x, \epsilon)$. Let $r=\max(d(x_j, x))$ when $j \leq N.$ Construct $B_X(x, r + \epsilon)$ where $\epsilon > 0$. Thus all points of $\Img(x_n)$ are contained within $B_X(x, r + \epsilon)$ so $\Img(x_n)$ is bounded so $(x_n)$ is bounded.
+	\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 2.18]
@@ -170,7 +175,12 @@ Let $(X, d)$ be a metric space, and let $Y$ be a subset of $X$. Prove the follow
 \end{problem}
 
 \begin{solution}
-
+\vspace{-2mm}
+	\begin{enumerate}
+		\itemsep0em
+		\item Every Cauchy sequence in $Y$ converges in $Y$. So, $\exists$ a sequence $(x_n)_{n=1}^{\infty}$ in $Y\{x\}$ that converges to $x$ in $X$. So $x \in \Lim_X(Y)$ and $\Lim_X(Y)\subset Y$ so $Y$ is closed.
+		\item Since $Y$ is closed, $\Lim_X(Y)\subset Y$. From Exer 1.13, every Cauchy sequence in $X$ s.t. $x_n \rightarrow X$ and $x\in Y$ menas every Cauchy sequence also converges to $x$ in $Y$. This means it is a limit point of $Y$ which are all contained in $Y$. Thus. $Y$ is complete.
+	\end{enumerate}
 \end{solution}
 
 
