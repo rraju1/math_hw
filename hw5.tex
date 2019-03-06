@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \DeclareMathOperator{\Lim}{Lim}
 \DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Img}{Im}
 \DeclareMathOperator{\Cl}{Cl}
 \DeclareMathOperator{\N}{\mathbb{N}}
 \DeclareMathOperator{\R}{\mathbb{R}}
@@ -103,7 +104,7 @@ Let $(X, d)$ be a metric space, and let $E$ be a subset of $X$.
 	\begin{enumerate}
 		\itemsep0em
 		\item Show that $E$ is dense in $X$ if and only if any nonempty open subset of $X$ contains a point of $E$.
-		\item Suppose $Y\subset X.$ Prove that $E\cup Y$ is dense if and only if $\Cl_X(E) \supset Y$.
+		\item Suppose $E\subset Y\subset X.$ Prove that $E\cap Y$ is dense in $Y$ if and only if $\Cl_X(E) \supset Y$.
 	\end{enumerate}
 \end{problem}
 
@@ -111,7 +112,7 @@ Let $(X, d)$ be a metric space, and let $E$ be a subset of $X$.
 \vspace{-2mm}
 	\begin{enumerate}
 		\itemsep0em
-		\item 
+		\item For $\rightarrow$, let $x \in \Lim_X(E).$ Clearly, for any open set $U$, $U \cap E\setminus\{x\}\neq \emptyset$ so $U$ contains another point than $x$. For $\leftarrow$, let's argue via proof by contrapositive. Assume that no nonempty open subsets contain a point of $E$. So, $x\in U$ but $x \notin E$ and $x\notin \Lim_X(E)$ since $U\cap (E\setminus \{x\})=\emptyset.$ So, $x \in X$ but $x \notin \Cl_X(E).$ So, $E$ is not dense in $X$ for this case.
 		\item
 	\end{enumerate}
 \end{solution}
@@ -132,7 +133,7 @@ Let $S = (p_n)_{n=1}^{\infty}$ be a sequence in $\R$ whose image is $(\Q\cap (0,
 \end{problem}
 
 \begin{solution}
-
+Set $\Img S = (\Q\cap (0,1))\cup\{5\}$. So, $(\Img S)' = [0, 1]$ and $S_{\infty}=\{ 5\}$. $S^{*}=\{[0,1]\cup \{5\}, [0,1]\}$ because 5 might appear a finite number of times in the sequence so  $5 \notin S_{\infty}.$
 \end{solution}
 
 \begin{problem}[Exercise 2.9]
