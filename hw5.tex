@@ -15,7 +15,7 @@
 \DeclareMathOperator{\N}{\mathbb{N}}
 \DeclareMathOperator{\R}{\mathbb{R}}
 \DeclareMathOperator{\Q}{\mathbb{Q}}
-\DeclareMathOperator{\bigep}{\mathbb{E}}
+\DeclareMathOperator{\bigep}{\mathcal{E}}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 
@@ -59,7 +59,7 @@ Let $(X, d)$ be a metric space.
 	\begin{enumerate}
 		\itemsep0em
 		\item Prove that for any collection $\bigep$ of subsets of $X$, we have $$ \bigcup_{E\in\bigep} \overline{E} \subset \overline{\bigcup_{E\in\bigep} E}$$ and equality holds if $\bigep$ is finite.
-		\item Prove that for any collection $\bigep$ of subsets of $X$, we have $$ \bigcap_{E\in\bigep} \overline{E} \supset \overline{\bigcap_{E\in\bigep} E}$$ and equality holds if $\bigep$ is finite.
+		\item Prove that for any collection $\bigep$ of subsets of $X$, we have $$ \bigcap_{E\in\bigep} \overline{E} \supset \overline{\bigcap_{E\in\bigep} E}$$
 		\item Give examples that demonstrate that equality might fail in part (1) is $\bigep$ is not finite, and equality might fail in part (2) even if $\bigep$ is finite.
 	\end{enumerate}
 \end{problem}
@@ -68,9 +68,9 @@ Let $(X, d)$ be a metric space.
 \vspace{-2mm}
 	\begin{enumerate}
 		\itemsep0em
-		\item Let $x \in \bigcup_{E \in \bigep} \overline{E}.$ So, for some $E$, $x = E \cup \Lim_X(E).$ $\overline{\bigcup_{E\in\bigep}(E)} = [\bigcup_{E \in \bigep}E]\cup[\Lim_X(\bigcup_{E \in \bigep})].$ So, $E \subset \bigcup_{E \in \bigep}E$ and $\Lim_X (E) \subset \Lim_X(\bigcup_{E \in \bigep})$ by Exercise 1.9. So, $x \in \overline{\bigcup_{E\in\bigep} E}.$ For $\supset$, let $K = \bigcup_{E\in\bigep} \overline{E}.$ Since $K$ is union of finite number of closed sets, $K$ is a closed set. All $x\in \bigcap_{E \in \bigep}(E) \rightarrow x \in \Cl_X(E)$ and so $x \subset K.$ Thus, $\bigcap_{E \in \bigep}(E) \subset K.$ 
-		\item 
-		\item 
+		\item Let $x \in \bigcup_{E \in \bigep} \overline{E}.$ So, for some $E$, $x = E \cup \Lim_X(E).$ $\overline{\bigcup_{E\in\bigep}(E)} = [\bigcup_{E \in \bigep}E]\cup[\Lim_X(\bigcup_{E \in \bigep})].$ So, $E \subset \bigcup_{E \in \bigep}E$ and $\Lim_X (E) \subset \Lim_X(\bigcup_{E \in \bigep})$ by Exercise 1.9. So, $x \in \overline{\bigcup_{E\in\bigep} E}.$ For $\supset$, let $K = \bigcup_{E\in\bigep} \overline{E}.$ Since $K$ is union of finite number of closed sets, $K$ is a closed set. All $x\in \bigcup_{E \in \bigep}(E) \rightarrow x \in \Cl_X(E)$ and so $x \subset K.$ Thus, $\overline{\bigcup_{E \in \bigep}(E)} \subset K.$ 
+		\item $\bigcap_{E \in \bigep}\overline{E}$ is an intersection of closed sets so it is also closed. It also contains $\bigcap_{E\in \bigep}E$ so it must contain $\overline{\bigcap_{E \in \bigep} E}$ by definition of closure.
+		\item For part 1, let $\bigep$ be the collection of $\Q$. So then, $\bigcup_{E \in \bigep} \overline{E} = \Q \neq \overline{\bigcup_{E \in \bigep}(E)}=\R.$ For part 2, let $E_1 = (1,2)$ and $E_2 = (2, 3)$ so clearly $E_1\cap E_2 = \emptyset$ and $\overline{E_1\cap E_2}=\emptyset$. $\bigcap_{E \in \bigep} \overline{E} = \{2\}$ and clearly $2 \not\subset \emptyset.$
 	\end{enumerate}
 \end{solution}
 
