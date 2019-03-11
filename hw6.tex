@@ -1,0 +1,90 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{mathtools}
+\usepackage{graphicx}
+\DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\A}{\mathcal{A}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\bigep}{\mathcal{E}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#6}
+\duedate{2/28/2018}
+
+\begin{document}
+
+\problemlist{2.24, 3.12, 3.26, 5.3, 5.7, 5.8, 5.12, 5.13.}
+
+\begin{problem}[Exercise 2.24]
+Let $(X, d)$ be a metric space. Show that if $X$ is totally bounded, then $X$ is bounded.
+\end{problem}
+
+\begin{solution}
+Let $X = \bigcup_{B_X} B_X(x , \epsilon) = B_X(x,r)$. Choose $\zeta > 0$ so $B_X(x,r)\subset B_X(x, r + \zeta)$ so $X$ is bounded. 
+\end{solution}
+
+\begin{problem}[Exercise 3.12]
+Let $(X, d)$ be a metric space. Assume $F$ and $K$ are subsets of $X$, with $F$ closed and $K$ compact. Then $F\cap K$ is compact.
+\end{problem}
+
+\begin{solution}
+If $K$ is a compact subset of $X$, then $K$ is closed and bounded in $X$. The intersection of closed sets is closed so $F\cap K$ is closed. By Thm 3.10, $F \cap K \subset K$ and $K$ is compact so $F \cap K$ is also compact.
+\end{solution}
+
+\begin{problem}[Exercise 3.26]
+Give an example of a collection $\mathcal{A}$ of bounded subsets of $\R$ such that $\mathcal{A}$ has the finite intersection property, but $\bigcap_{A \in \mathcal{A}} A = \neq$. Hint: If $A \subset \R$ is bounded in $\R$, what else can prevent it from being compact?
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 5.3]
+Let $\A$ be a collection of convex subsets of $\R^{k}.$ Show that $B := \bigcap_{A \in \A} A$ is convex. 
+\end{problem}
+
+\begin{solution}
+Let's do proof by contradiction. Let $B=\bigcap_{A \in \A} A$. Assume $B$ is not convex. Let $a, b \in B$ so then $\exists \, t\in [0, 1]$ s.t. $z \in (1 - t)a + tb \notin B$. But $z \in A \forall A \in \A \rightarrow z \notin B$ so $B \neq \bigcap_{A \in \A} A.$ This is clearly a contradiction so $B$ is convex.
+\end{solution}
+
+\begin{problem}[Exercise 5.7]
+Let $(X, d)$ be a metric space and let $A$ and $B$ be disjoint subsets of $X$. Prove that if $A$ and $B$ are both open in $X$, then $A$ and $B$ are seperated.
+\end{problem}
+
+\begin{solution}
+We need to show that $A \cap \overline{B} = B \cap \overline{A} = \emptyset.$ So, let's analyze the first statement: $\overline{A}\cap B = (A \cup \Lim_{X}(A))\cap B = (A \cap B)\cup(\Lim_{X}(A) \cap B).$ $A$ and $B$ are disjoint so the only set we need to be concerned with is $\Lim_{X}(A) \cap B$. Consider the intersection of $\Lim_X(A)\cap \Lim_X(B) = C.$ Without loss of generality, choose $x \in C \rightarrow x \in \Lim_X(A)$ and $\Lim_X(B)\not \subset B$ since $B$ is open. So, $x \notin \Lim_X(A)\cap B.$ So, $\overline{A}\cap B = \emptyset$. This holds true for the other case as well and so $A$ and $B$ are both seperated.  
+\end{solution}
+
+
+\end{document}
