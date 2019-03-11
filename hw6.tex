@@ -86,5 +86,31 @@ Let $(X, d)$ be a metric space and let $A$ and $B$ be disjoint subsets of $X$. P
 We need to show that $A \cap \overline{B} = B \cap \overline{A} = \emptyset.$ So, let's analyze the first statement: $\overline{A}\cap B = (A \cup \Lim_{X}(A))\cap B = (A \cap B)\cup(\Lim_{X}(A) \cap B).$ $A$ and $B$ are disjoint so the only set we need to be concerned with is $\Lim_{X}(A) \cap B$. Consider the intersection of $\Lim_X(A)\cap \Lim_X(B) = C.$ Without loss of generality, choose $x \in C \rightarrow x \in \Lim_X(A)$ and $\Lim_X(B)\not \subset B$ since $B$ is open. So, $x \notin \Lim_X(A)\cap B.$ So, $\overline{A}\cap B = \emptyset$. This holds true for the other case as well and so $A$ and $B$ are both seperated.  
 \end{solution}
 
+\begin{problem}[Exercise 5.8]
+Let $E$ be a connected subset of a metric space $(X, d)$. Show that $\overline{E}$ is connected.
+\end{problem}
+
+\begin{solution}
+If $E$ is connected, then $E \subset \Lim_X (E)$ as $E$ is not seperated. Then $\overline{E}=E\cup \Lim_X(E)$ then $\overline{E}$ is the min of 2 non-disjoint of seperated sets. Thus, $\overline{E}$ is connected. 
+\end{solution}
+
+\begin{problem}[Exercise 5.12]
+Let $(X,d)$ be a metric space, and let $\mathcal{C}$ be a collection of connected subsets of $X$. Assume $A = \bigcap_{C \in \mathcal{C}} C$ is nonempty. Show that $B = \bigcap_{C \in \mathcal{C}}$ is connected.
+\end{problem}
+
+\begin{solution}
+ 
+\end{solution}
+
+\begin{problem}[Exercise 5.13]
+Let $X = \R^{2}$. Give an example of a connected subset $E$ of $X$, such that $\Int_X(E)$ is not connected. Prove both that your set $E$ is connected and that its interior is not. ((Hint: Consider the
+union of two convex sets joined at a point. You may assume without proof the fact that convexity implies
+connectedness in $\R^{2}$.)
+\end{problem}
+
+\begin{solution}
+ 
+\end{solution}
+
 
 \end{document}
