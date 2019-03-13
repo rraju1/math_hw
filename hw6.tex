@@ -51,7 +51,7 @@ Let $(X, d)$ be a metric space. Show that if $X$ is totally bounded, then $X$ is
 \end{problem}
 
 \begin{solution}
-Let $X = \bigcup_{B_X} B_X(x , \epsilon) = B_X(x,r)$. Choose $\zeta > 0$ so $B_X(x,r)\subset B_X(x, r + \zeta)$ so $X$ is bounded. 
+If $X$ is totally bounded, then it can be covered by finitely many balls of radius $\epsilon$ if $\{x_1, x_2, \dots, x_n\} \in X$ s.t. $\bigcup_{i = 1}^{n} B_{(X, d)}(x_j, \epsilon)$. So, simply choose the $x_n$ which has the ball with the maximum radius, $r_m$ and construct another ball with this radius $ + r$ s.t. all balls are contained within $B_X(x, r_m + r)$. So, $X$ is bounded.
 \end{solution}
 
 \begin{problem}[Exercise 3.12]
