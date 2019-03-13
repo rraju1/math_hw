@@ -91,7 +91,7 @@ Let $E$ be a connected subset of a metric space $(X, d)$. Show that $\overline{E
 \end{problem}
 
 \begin{solution}
-If $E$ is connected, then $E \subset \Lim_X (E)$ as $E$ is not seperated. Then $\overline{E}=E\cup \Lim_X(E)$ then $\overline{E}$ is the min of 2 non-disjoint of seperated sets. Thus, $\overline{E}$ is connected. 
+If $E$ is connected, then $E \subset \Lim_X (E)$. If $E$ is connected, then $E$ has no isolated points. If $E$ had isolated points, then $\exists$ some $x\in E$ s.t. $x \notin \Lim_X (E)$. Thus, $\exists$ some neighbourhood $U$ of $x$ s.t. $U\cap\setminus E\{x\} = \emptyset.$ Then, $E$ can be written as the union of two seperated sets $E = E\setminus \{x\}\cup \{x\}$, implying $E$ is not connected which is false. Thus, $\overline{E}$ is connected. 
 \end{solution}
 
 \begin{problem}[Exercise 5.12]
