@@ -63,7 +63,7 @@ If $K$ is a compact subset of $X$, then $K$ is closed and bounded in $X$. The in
 \end{solution}
 
 \begin{problem}[Exercise 3.26]
-Give an example of a collection $\mathcal{A}$ of bounded subsets of $\R$ such that $\mathcal{A}$ has the finite intersection property, but $\bigcap_{A \in \mathcal{A}} A = \neq$. Hint: If $A \subset \R$ is bounded in $\R$, what else can prevent it from being compact?
+Give an example of a collection $\mathcal{A}$ of bounded subsets of $\R$ such that $\mathcal{A}$ has the finite intersection property, but $\bigcap_{A \in \mathcal{A}} A = \emptyset$. Hint: If $A \subset \R$ is bounded in $\R$, what else can prevent it from being compact?
 \end{problem}
 
 \begin{solution}
@@ -95,11 +95,11 @@ If $E$ is connected, then $E \subset \Lim_X (E)$. If $E$ is connected, then $E$ 
 \end{solution}
 
 \begin{problem}[Exercise 5.12]
-Let $(X,d)$ be a metric space, and let $\mathcal{C}$ be a collection of connected subsets of $X$. Assume $A = \bigcap_{C \in \mathcal{C}} C$ is nonempty. Show that $B = \bigcap_{C \in \mathcal{C}}$ is connected.
+Let $(X,d)$ be a metric space, and let $\mathcal{C}$ be a collection of connected subsets of $X$. Assume $A = \bigcap_{C \in \mathcal{C}} C$ is nonempty. Show that $B = \bigcup_{C \in \mathcal{C}} C$ is connected.
 \end{problem}
 
 \begin{solution}
- 
+ Let's solve this problem via proof by contrapositive. Let $B$ not be connected so this implies that $B=Z\cup Y$ s.t. $Z \cap \overline{Y}=Y \cap \overline{Z} = \emptyset.$ Take connected subset $C_1 \in \mathcal{C}$ s.t. $C_1 \subset B$. By Thm. 5.11, $C_1 \subset Z$ or $C_1 \subset Y.$ So $Z \cap Y = \emptyset \rightarrow \bigcap_{C \in \mathcal{C}} C \neq \emptyset.$ So $B$ is connected.
 \end{solution}
 
 \begin{problem}[Exercise 5.13]
