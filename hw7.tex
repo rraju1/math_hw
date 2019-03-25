@@ -1,0 +1,142 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{mathtools}
+\usepackage{graphicx}
+\DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\A}{\mathcal{A}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\bigep}{\mathcal{E}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#7}
+\duedate{3/28/2018}
+
+\begin{document}
+
+\problemlist{1.2, 2.2, 2.9, 2.10, 2.11, 2.23,
+2.32, 2.36, 2.37.}
+
+\begin{problem}[Exercise 1.2]
+Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces, and let $E$ be a subset of $X$. Let $f : E \rightarrow Y$ be a function, and let $p$ be a limit point of $E$ in $X$. Prove that $f(x) \rightarrow q$ as $x\rightarrow p$ if and only if for every $\epsilon > 0$, there exists $\delta > 0$ such that $x \in E$ and $0 < d_X(x,p) < \delta$ imply together that $d_Y(f(x), q) < \epsilon.$
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.2]
+Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces; let $f : X \rightarrow Y$ be a function. Prove that $f$ is continuous at $p\in X$ if and only if for every $\epsilon$ > 0, there exists $\delta > 0$ such that $x \in B_X(p,\delta)$ implies $f(x)\in B_Y(f(p), \epsilon)$.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.9]
+Assume $f: \R \rightarrow \R$ is a function satisfying $\lim_{h\rightarrow 0} [f(x + h) - f(x - h)] = 0,$ for all $x \in \R$. Does it follow that $f$ must be continuous? If so, give a proof; if not, give a counterexample.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.10]
+Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces and $f: X \rightarrow Y$ a function. 
+\vspace{-2mm}
+    \begin{enumerate}
+        \itemsep0em
+        \item Show that $f$ is continuous if and only if $f^{-1}(C)$ is closed on $X$ whenever $C$ is closed in $Y$.
+        \item Show that $f: X \rightarrow Y$ is continuous if and only if $f(\overline{A})\subset\overline{f(A)}$ for every subset $A$ of $X$.
+        \item Consider the (continuous) function $g: \R \rightarrow \R$ given by $g(x) = \frac{1}{1 + x^{2}}.$ Give an example of a subset $A$ of $\R$ such that $g(\overline{A})\neq\overline{g(A)}.$
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.11]
+Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces and let $f$ and $g$ be continuous functions from $X$ to $Y$. Assume $E$ is a dense subset of $X$.
+\vspace{-2mm}
+\begin{enumerate}
+    \itemsep0em
+    \item Prove that $f(E)$ is dense in $f(X).$ (Hint: Use Exercise 1.30) in Chapter 4 and Exercise 2.10 above.)
+    \item Prove that if $f(x) = g(x)$ for all $x \in E$, then $f(x) = g(x)$ for all $x\in X$.
+\end{enumerate} 
+\end{problem}
+
+\begin{solution}
+ 
+\end{solution}
+
+\begin{problem}[Exercise 2.23]
+\begin{enumerate}
+    \itemsep0em
+    \item Find a closed subset of $E$ of $\R$ and a continuous function $f: \R \rightarrow \R$ is continuous such that $f(E)$ is not closed.
+    \item Find a bounded subset $E$ of $\R$ and a continuous function $f : E \rightarrow \R$ such that $f(E)$ is not bounded.
+    \item Show that if $E$ is a bounded subset of $\R$ and $f: \R \rightarrow \R$ is continuous, then $f(E)$ is bounded.
+\end{enumerate} 
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.32]
+Prove that the set $R^{2}\setminus\{0,0\}$ is path-connected, and therefore connected. Then, use the function $x\setminus\abs{x}$ to show that $S = \{x\in\R^{2}:\abs{x} = 1\}$ is connected.
+\end{problem}
+
+\begin{solution}
+ 
+\end{solution}
+
+\begin{problem}[Exercise 2.36]
+Assume $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ are uniformly continuous functions, where $(X, d_X), (Y, d_Y),$ and $(Z, d_Z)$ are metric spaces. Prove that $g \circ f$ is uniformly continuous.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 2.37]
+Let $E$ be a bounded subset of $\R^{k}$ and let $f : E \rightarrow \R$ be a uniformly continuous function. Show that $f$ is bounded. (Hint: You will need to use compactness of $\overline{E}$ at some point.)
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+
+\end{document}
