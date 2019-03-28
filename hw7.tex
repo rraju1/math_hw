@@ -96,7 +96,11 @@ Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces and let $f$ and $g$ be continuous
 \end{problem}
 
 \begin{solution}
- 
+\begin{enumerate}
+     \itemsep0em
+    \item By 2.10, $f(\overline{E})\subset\overline{f(E)}$. We want to prove that for an open subset $f(C)$ of $Y$ that $f(E) \cap f(C)\neq \emptyset$. So, $Y\setminus f(C)$ is a closed set in $Y$ then also $f^{-1}(Y\setminus f(C))$ is a closed set in $X$. $f^{-1}(Y\setminus f(C))=X\setminus f^{-1}(f(C))$ is closed so $f^{-1}(f(C))$ is open in $X$. So, $E\cap f^{-1}(f(C))\neq \emptyset.$ So there exists an element$x\in E$ s.t. $x \in f^{-1}(f(C))$ so $f(x) \in f(C).$ So, $f(x) \in f(E) \rightarrow f(C)\cap f(E)\neq \emptyset$. So $f(E)$ is dense in $f(X).$
+    \item Assume by contradiction that $f(a)\neq g(a), a\in X$. Let $d(f(a), g(a)) = r > 0$. Since $f$ is continuous at $a$ so $\exists \delta_1 > 0$ s.t. $f(B(a, \delta_1))\subset B(f(a),\frac{r}{4})$. $g$ is continuous at $a$ so $\exists \delta_2 > 0$ s.t. $g(B(a, \delta_2))\subset B(g(a),\frac{r}{4})$. Take $\delta = \min(\delta_1, \delta_2)$. Then, $f(B(a, \delta))\subset B(f(a),\frac{r}{4})$ and $g(B(a, \delta))\subset B(g(a),\frac{r}{4})$. Since $E$ is dense in $X$ so $B(a, \delta)\cap E \neq \emptyset$. Take $k\in B(a, \delta)\cap E$. Then, $f(k)=g(k).$ So, $f(k)\in B(f(a), \frac{r}{4})$ and $g(k)\in B(g(a), \frac{r}{4})$. Hence, by triangle inequality, we have $d(f(a), g(a)) \leq d(f(a), f(k)) + d(f(k), g(k)) + d(g(k), g(a)) < \frac{2r}{4}$, which is false since $d(f(a), g(a))=r.$ So, $f(x)=g(x)$ for all $x\in X$
+\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 2.23]
@@ -109,32 +113,40 @@ Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces and let $f$ and $g$ be continuous
 \end{problem}
 
 \begin{solution}
-
+\begin{enumerate}
+    \itemsep0em
+    \item Consider the function $f = \arctan(x)$ on the closed interval $[0, \infty)$. $f$ is continuous but does not yield a closed set as $f(0)=0$ and $f(\infty)=\frac{\pi}{2}$ so the interval was $[0, \frac{\pi}{2})$.
+    \item Let $E$ be the set $[0, 1]$ for $\frac{1}{x}$ defined on E. $\nexists$ any $r$ such that any ball in $\R$ can contain $\frac{1}{0}$.
+    \item For some $\delta > 0$, $E\subset B_X(p, \delta)$ since $E$ is bounded for some $p\in X$. So by definition of continuity of $f$, $f(B_X(p, \delta))\subset B_Yf(p), \epsilon)$ so $f(E)$ is bounded.
+\end{enumerate} 
 \end{solution}
 
 \begin{problem}[Exercise 2.32]
-Prove that the set $R^{2}\setminus\{0,0\}$ is path-connected, and therefore connected. Then, use the function $x\setminus\abs{x}$ to show that $S = \{x\in\R^{2}:\abs{x} = 1\}$ is connected.
+Prove that the set $R^{2}\setminus\{0,0\}$ is path-connected, and therefore connected. Then, use the function $\frac{x}{\abs{x}}$ to show that $S = \{x\in\R^{2}:\abs{x} = 1\}$ is connected.
 \end{problem}
 
 \begin{solution}
- 
+Let $a_0, a_1 \in \R^{2}\setminus\{0,0\}$. So, use polar coordinates for a curve: $a_i = r_i(\cos \theta_i, \sin \theta_i)$ with $r_i > 0$ and let $f(t) = r(t)(\cos \theta(t), \sin \theta(t))$ where $r(t) = (1 - t)r_0 + tr_1$ and $\theta(t)=(1-t)\theta_0 + t\theta_1$.
+Then $\theta(0) = \theta_0, \theta(1)=\theta_1, r(0) = r_0, r(1)=r_1 \rightarrow f(0)=a_0$ and $f(1) = a_1$. $\forall \, t\in [0,1], r(t) > 0$ since $t, 1-t, r_0, r_1 > 0$. So, $f(t)\neq 0 \forall t$ and therefore $f$ defines path from $a_0$ to $a_1$. So, $\R^{2}\setminus\{0,0\}$ is path-connected and is connected. \\
+Set $f(t)= \frac{a(1 - t) + tb}{\abs{a(1 - t) + tb}}$. Since $\abs{a(1 - t) + tb} \in S$, this will always be constrained to 1. So then $f(0) = a, f(1) = b$ and $S$ is path-connected and thus connected.
 \end{solution}
 
-\begin{problem}[Exercise 2.36]
+\begin{problem}[Exercise 2.40]
 Assume $f: X \rightarrow Y$ and $g: Y \rightarrow Z$ are uniformly continuous functions, where $(X, d_X), (Y, d_Y),$ and $(Z, d_Z)$ are metric spaces. Prove that $g \circ f$ is uniformly continuous.
 \end{problem}
 
 \begin{solution}
-
+Take $(x, y)$ in $X$ s.t. $d_X(x, y) < \delta (\delta > 0)$ then $d_Y(f(x), f(y)) < \epsilon.$ Set $\delta_1 = \epsilon$ so that $d_Y(f(x), f(y))<\delta_1$ then $d_Z(g(f(x)),g(f(y))) < \epsilon_2$.
+So for any choice of arbitrary $\epsilon_2$ so $g \circ f$ is uniformly continuous.
 \end{solution}
 
 
-\begin{problem}[Exercise 2.37]
+\begin{problem}[Exercise 2.41]
 Let $E$ be a bounded subset of $\R^{k}$ and let $f : E \rightarrow \R$ be a uniformly continuous function. Show that $f$ is bounded. (Hint: You will need to use compactness of $\overline{E}$ at some point.)
 \end{problem}
 
 \begin{solution}
-
+$\overline{E}$ is closed and bounded so it is compact. Because $\overline{E}$ is compact, it can be written as $\bigcup_{i = 1}^{n} B_{R^{k}}(x_i, \delta)$ which is a finite open cover. Uniform continuity of $f$ states that for $d(x,y) < \delta$ in $x, y \in \R^{k}$ then $d(f(x), f(y)) < \epsilon.$ Get the max distance of all $f(x_i)$ with each other and add $\epsilon$ and set this quantity to $r$. Then choose any $f(x_i)$ as center as $B_X(f(x_i), r)$ so $f$ is bounded. 
 \end{solution}
 
 
