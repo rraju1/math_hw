@@ -44,7 +44,7 @@
 \begin{document}
 
 \problemlist{1.2, 2.2, 2.9, 2.10, 2.11, 2.23,
-2.32, 2.36, 2.37.}
+2.32, 2.40, 2.41.}
 
 \begin{problem}[Exercise 1.2]
 Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces, and let $E$ be a subset of $X$. Let $f : E \rightarrow Y$ be a function, and let $p$ be a limit point of $E$ in $X$. Prove that $f(x) \rightarrow q$ as $x\rightarrow p$ if and only if for every $\epsilon > 0$, there exists $\delta > 0$ such that $x \in E$ and $0 < d_X(x,p) < \delta$ imply together that $d_Y(f(x), q) < \epsilon.$
@@ -55,7 +55,7 @@ Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces, and let $E$ be a subset of $X$. 
 \end{solution}
 
 \begin{problem}[Exercise 2.2]
-Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces; let $f : X \rightarrow Y$ be a function. Prove that $f$ is continuous at $p\in X$ if and only if for every $\epsilon$ > 0, there exists $\delta > 0$ such that $x \in B_X(p,\delta)$ implies $f(x)\in B_Y(f(p), \epsilon)$.
+Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces; let $f : X \rightarrow Y$ be a function. Prove that $f$ is continuous at $p\in X$ if and only if for every $\epsilon >$  0, there exists $\delta > 0$ such that $x \in B_X(p,\delta)$ implies $f(x)\in B_Y(f(p), \epsilon)$.
 \end{problem}
 
 \begin{solution}
@@ -67,7 +67,7 @@ Assume $f: \R \rightarrow \R$ is a function satisfying $\lim_{h\rightarrow 0} [f
 \end{problem}
 
 \begin{solution}
-
+No, define $f(x) \in \R$ to be $x$ if $x < x_0, -x_0 if x = x_0, x if x > x_0$. So essentially, there is a hole in the linear function such that it is defined at another point. $x_0$ is a limit point of $f(x)$ but $\lim_{x \rightarrow x_0} f(x) \neq f(x_0).$
 \end{solution}
 
 \begin{problem}[Exercise 2.10]
@@ -82,7 +82,12 @@ Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces and $f: X \rightarrow Y$ a functi
 \end{problem}
 
 \begin{solution}
-
+\begin{enumerate}
+        \itemsep0em
+        \item Let $C\subset Y$ and $C$ is closed. For $\rightarrow,$ because $f$ is continuous, $B=f^{-1}(A)$ is open in $X.$ So, $X\setminus B$ is closed in $X$. So, $f^{-1}(C) = X\setminus B$. For $\leftarrow, Y\setminus C$ is open in $Y$. $f^{-1}(Y\setminus C) = X\setminus f^{-1}(C)$ is open so $f$ is continuous by Prop 2.6.  
+        \item For $\rightarrow$, $f^{-1}(\overline{f(A)})$ is closed in X. Let $x \in \overline{A}\rightarrow f(x)\subset f(\overline{A})$. Since $\overline{A}$ is the smallest closed set containing $A$, $\overline{A}\subset f^{-1}(\overline{f(A)})$. So $f(\overline{A})\subset\overline{f(A)}$. For $\leftarrow, C$ is closed in $Y$ so $D = f^{-1}(C)$ needs to be closed in $X$ for f to be continuous. $f(\overline{D})\subset \overline{f(D)}=f(f^{-1}(C))\subset \overline{C}=C$. This means that $\overline{D}\subset f^{-1}(C)=D$, making $D$ closed. So, then $f$ is continuous. 
+        \item Let $A=[0,\infty)$. $g(\overline{A})=g([0,\infty]) = (0,1]$ and $\overline{g(A)}=[0,1].$
+    \end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 2.11]
