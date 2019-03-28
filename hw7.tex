@@ -51,7 +51,7 @@ Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces, and let $E$ be a subset of $X$. 
 \end{problem}
 
 \begin{solution}
-
+For $\rightarrow$, let $x\in E$ and for some $\delta > 0$. Since $p$ is a lim point of $E, \exists$ some $\delta$ s.t. $x\in B_X(p, \delta)$. $x\rightarrow p$ means for every $\delta > 0 \exists N \in \N$ s.t. $n \ge N$ that $x_n \in B_X(p, \delta)$. $f(x) \rightarrow q$ means for every $\epsilon > 0 \exists N \in \N$ s.t. for $n \ge \N$, $f(x_n)\in B_Y(q, \epsilon)$. This says that $d(f(x), q) < \epsilon.$ For $\leftarrow$, since $p$ is limit point, $\exists$ a sequence $(x_n)_{n=1}^{\infty}$ in $E\setminus\{p\}$ which converges to $p$ in $X$ so $x\rightarrow p.$ This satisfies $x \in E$ and $0 < d_X(x,p) < \delta$ for some $\delta > 0.$ For every $\epsilon > 0$ if $d_Y(f(x), q) < \epsilon$ implies $f(x_n)\in B_Y(q, \epsilon)$ s.t.  $\exists N \in \N$ s.t. for $n \ge \N$.
 \end{solution}
 
 \begin{problem}[Exercise 2.2]
@@ -59,7 +59,7 @@ Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces; let $f : X \rightarrow Y$ be a f
 \end{problem}
 
 \begin{solution}
-
+Let $x\in B_X(p,\delta)$ for some $\delta > 0.$ By def. of $f$ being continuous, $x\in B_X(p,\delta)$ implies for every neighborhood $V$ of $f(p)$, $f(x)\in V.$ This includes neighborhoods with every $\epsilon > 0$ so $f(x) \in B_Y(f(p), \epsilon)$. For $\rightarrow$, for every $\epsilon > 0,$ $\exists \delta > 0$ s.t. $x\in B_X(p, \delta)\rightarrow f(x)\in B_Y(f(p), \epsilon)$. Let $B_Y(f(p), \epsilon)$ be a neighborhood $V$ of $f(p)$. If $f(x)\in B_Y(f(p),\epsilon), x\in B_X(p,\delta)$ for some $\delta$ which is a neighborhood of $p$ in $X$ so $f$ is continuous.
 \end{solution}
 
 \begin{problem}[Exercise 2.9]
