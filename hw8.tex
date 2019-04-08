@@ -1,0 +1,103 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{mathtools}
+\usepackage{graphicx}
+\DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\A}{\mathcal{A}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\bigep}{\mathcal{E}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#8}
+\duedate{4/11/2018}
+
+\begin{document}
+
+\problemlist{Chapter 5: 3.9, 3.10 \\
+Chapter 6: 1.9, 4.2, 4.5}
+
+\begin{problem}[Exercise 3.9]
+A collection $\A$ of real-valued functions on a set $E$ is said to be \textit{uniformly bounded} on $E$ if there exists $M > 0$ such that $\abs{f(x)} \leq M$ for all $x \in E$, for all $f\in\A.$ (So each function is bounded, and the same bound works for all functions in $\A$.) Let $(f_n)$ be a sequence of bounded functions which converges uniformly to a limit function $f$. Prove that $\{f_n\}$ is uniformly bounded.
+\end{problem}
+
+\begin{solution}
+$(f_n)$ contains sequence of all bounded functions. By Prop 3.8, $f_n \rightarrow f$ uniformly iff $d_u(f, f_n) = \sup \abs{f_n(x) - f(x)}$ as $n\rightarrow\infty$. So, choose $n\in\N$ s.t. $\max(\abs{f_1(x) - f(x)}, \dots, \abs{f_n(x) - f(x)}, \dots) \forall \, x \in E$. Take this value s.t. $M = \abs{f_n(x) - f(x)} + 1$. By Prop 3.8, this is the largest deviation possible and all other functions will lie in $B(E)$ so they will also be bounded by $M$. So, $\{f_n\}$ is uniformly bounded.
+\end{solution}
+
+\begin{problem}[Exercise 3.10]
+Let $(f_n)$ and $(g_n)$ be sequences of real-valued functions on a set $E$, which converge uniformly on $E$ to limit functions $f$ and $g$, respectively.
+\begin{enumerate}
+    \item Prove that $(f_n + g_n)$ converges to $f + g$, uniformly on $E$.
+    \item If each $f_n$ and each $g_n$ is bounded, show that $(f_n g_n)$ converges uniformly to $fg$ on $E$.
+\end{enumerate} 
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 1.9]
+Prove the second and third points in Prop 1.8.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 4.2]
+Let $(s_n)_{n=1}^{\infty}$ and $(t_n)_{n=1}^{\infty}$ be sequences in $\overline{\R}$ and let $(u_n)_{n=1}^{\infty}$ be a sequence in $\R$. Prove the following statements.
+\vspace{-2mm}
+    \begin{enumerate}
+        \itemsep0em
+        \item If $s_n \leq t_n$ for each $n\in\N$ and $\lim_{n\rightarrow \infty} s_n = + \infty$, then $\lim_{n\rightarrow \infty} t_n = + \infty$ as well.
+        \item If $(s_n)$ and $(t_n)$ converge in $\overline{\R}$ to $s$ and $t$, respectively, and if $s_n \leq t_n$ for each $n\in\N,$ then $s \leq t.$
+    \end{enumerate}
+\end{problem}
+
+\begin{solution}
+\begin{enumerate}
+        \itemsep0em
+        \item 
+        \item
+    \end{enumerate}
+\end{solution}
+
+\begin{problem}[Exercise 4.2]
+Let $(a_n)_{n=1}^{\infty}$ and $(b_n)_{n=1}^{\infty}$ be sequences in of real numbers. Prove that $$\lim_{n \rightarrow} \sup(a_n + b_n) \leq \lim_{n \rightarrow \infty} \sup(a_n) + \lim_{n \rightarrow \infty} \sup(b_n),$$ provided that the RHS isn't of the form $\infty - \infty$.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\end{document}
