@@ -65,7 +65,7 @@ Let $(f_n)$ and $(g_n)$ be sequences of real-valued functions on a set $E$, whic
 \begin{solution}
 \begin{enumerate}
     \item So, for $(f_n + g_n)$ to converge uniformly, we need to show that $\abs{f_n(x) + g_n(x) - f(x) + g(x)} < \epsilon\, \forall \epsilon > 0$. Apply the trianle inequality so $\abs{f_n(x) + g_n(x) - f(x) + g(x)} \leq \abs{f_n(x) - f(x)} + \abs{g_n(x) - g(x)} < \epsilon_1 + \epsilon_2$, where $\epsilon_1$ is the $\sup \abs{f_n - f}$ and $\epsilon_2$ is the $\sup \abs{g_n - g}$. Since $f$, $g$ both converge uniformly on $E$, $f_n + g_n$ is also uniformly converges on $E$.
-    \item $(f_n) \leq M$,$(g_n) \leq L$, $\abs{g_n(x) - g(x)} < \epsilon_1$, and $\abs{f_n(x) - f(x)} < \epsilon_2$. We need to prove that $\abs{f_n(x)g_n(x) - f(x)g(x)} < \epsilon \forall \, \epsilon > 0.$ So, $\abs{f_n(x)g_n(x) - f(x)g(x)} \leq \abs{f_n(x)}\abs{g_n(x) - g(x)} + \abs{g(x)}\abs{f_n(x) - f(x)} = M\epsilon_1 + L\epsilon_2$. So, $f_n + g_n$ uniformly converges to $fg$ on $E$.
+    \item $(f_n) \leq M$,$(g_n) \leq L, $where $L, M \in \R$, $\abs{g_n(x) - g(x)} < \epsilon_1$, and $\abs{f_n(x) - f(x)} < \epsilon_2$. We need to prove that $\abs{f_n(x)g_n(x) - f(x)g(x)} < \epsilon \forall \, \epsilon > 0.$ So, $\abs{f_n(x)g_n(x) - f(x)g(x)} \leq \abs{f_n(x)}\abs{g_n(x) - g(x)} + \abs{g(x)}\abs{f_n(x) - f(x)} = M\epsilon_1 + L\epsilon_2$. So, $f_n + g_n$ uniformly converges to $fg$ on $E$.
 \end{enumerate}
 \end{solution}
 
