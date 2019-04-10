@@ -74,7 +74,10 @@ Prove the second and third points in Prop 1.8.
 \end{problem}
 
 \begin{solution}
-
+\begin{enumerate}
+    \item For $\rightarrow$, by definition of limits, for all nbd $V$ of $q$, $\exists$ a nbd $U$ of $+\infty$ s.t. $x \in U \cap B\setminus\{+\infty\}\neq\emptyset\rightarrow g(x)\in V.$ So pick $M$ s.t. $(M, +\infty)\subset B.$ So, pick $V = B_{\overline{\R}}(q,\epsilon)$ for some $\epsilon$ in $V$. So, $g(x)\in B_{\overline{\R}}(q,\epsilon) \rightarrow \abs{g(x) - q} < \epsilon$. For the other direction, for every $\epsilon > 0$, $\exists M \in \R$ s.t. $x > M$ and $x \in B$ together imply that $\abs{g(x) - q} < \epsilon.$ $\abs{g(x) - q} < \epsilon \rightarrow g(x) \in B_{\overline{\R}}(q, \epsilon)$ for every $\epsilon > 0.$ Pick an $M$ in $\R$ and set $U$ in $\R$ as  $(M, +\infty)$. So $x \in (M, + \infty)$. So $x\in (M, +\infty)$ and $x\in B$ and $(M,+\infty)\cap B \setminus \{+\infty\}\neq\emptyset.$
+    \item For every neighborhood $V$ of $+\infty$, $\exists$ a nbd $U$ of $+\infty$ s.t. $x\in U\cap C \setminus \{+\infty\}\neq\emptyset$. Let $U$ be the neighborhood of $+\infty$ for some $P\in\R$, $(P,+\infty)$. So, let $x\in C$ and $x > P$ to be in $(P, +\infty)$. So, let $h(x)\in V$ around $+\infty$. So, for any choice of $N$, $h(x)$ will always be in $V$. For $\leftarrow$, let $U$ be a neighborhood of $+\infty$ s.t. $x\in (P,+\infty)$ and $x\in C$. $h(x) > N$ implies that $V$ can be chosen as $(N, +\infty)$. To see if $+\infty$ is limit point, $U\cap C \setminus \{+\infty\}\neq \emptyset.$
+\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 4.2]
