@@ -94,16 +94,16 @@ Let $(s_n)_{n=1}^{\infty}$ and $(t_n)_{n=1}^{\infty}$ be sequences in $\overline
 \begin{enumerate}
         \itemsep0em
         \item If $\lim_{n\rightarrow\infty} s_n = +\infty$, for every $N \in \R$, $\exists P \in \R$ s.t. $x>P$ and $x\in\N$ together impu $(s_n) > N.$ This says that for every neighborhood $V$ of $+\infty, \exists$ neighorhood $U$ of $+\infty$ s.t. $U\cap\N\setminus \{+\infty\}$. So, pick $V$ of $+\infty$ s.t. $s_n\in V$ and $\exists U$ of $+\infty$ s.t. $U\cap\N\setminus \{+\infty\}\neq\emptyset$. Since $(t_n) > (s_n) \forall n\in\N, t_n \in V$ and the same neighborhood $U$ will still satisify the limit point condition since $t_n$ maps $\N\rightarrow\overline{\R}.$
-        \item
+        \item The upper limit of $s(n)$ is defined $\lim_{n\rightarrow\infty}\sup s_n = \inf_{n \in \N}(\sup_{k \ge n} s_k)$ and the lower limit of $t(n)$ is defined as $\lim_{n\rightarrow\infty}\inf t_n = \sup_{n \in \N}(\inf_{k \ge n} t_k)$. For any choice of $n$, the upper limit of $s_n$ will always be smaller or equal than the lower limit of $t_n$ since $s_k \leq t_k.$ Since both sequences conver to $s$ and $t$ respectively, we can claim $s \leq t.$
     \end{enumerate}
 \end{solution}
-
-\begin{problem}[Exercise 4.2]
+\newpage 
+\begin{problem}[Exercise 4.5]
 Let $(a_n)_{n=1}^{\infty}$ and $(b_n)_{n=1}^{\infty}$ be sequences in of real numbers. Prove that $$\lim_{n \rightarrow} \sup(a_n + b_n) \leq \lim_{n \rightarrow \infty} \sup(a_n) + \lim_{n \rightarrow \infty} \sup(b_n),$$ provided that the RHS isn't of the form $\infty - \infty$.
 \end{problem}
 
 \begin{solution}
-
+For all $k\in\N,$ set $A_k=\sup\{a_n : n \ge k\}$, $B_k=\sup\{b_n : n \ge k\}$, and $C_k = \sup\{ a_n + b_n : n \ge k\}$. Now for a particular $K$, for all $n \ge k$, we have $a_n + b_n \leq A_k + B_k.$ $C_k = \sup{(a_n + b_n)} \leq A_k + B_k$. So, $sup\{ a_n + b_n : n \ge k\} = \sup\{a_n : n \ge k\} + \sup\{b_n : n \ge k\}$. Take limit of both sides of inequality, $\lim_{n\rightarrow\infty}sup\{ a_n + b_n : n \ge k\} = \lim_{n\rightarrow\infty}\sup\{a_n : n \ge k\} + \lim_{n\rightarrow\infty}\sup\{b_n : n \ge k\}$.
 \end{solution}
 
 \end{document}
