@@ -1,0 +1,102 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{mathtools}
+\usepackage{graphicx}
+\DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\A}{\mathcal{A}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\bigep}{\mathcal{E}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#9}
+\duedate{4/18/2019}
+
+\begin{document}
+
+\problemlist{Chapter 7: 2.16, 2.17, 3.6, 3.7}
+
+\begin{problem}[Exercise 2.16]
+For each of the following sequences $(a_n)_{n = 1}^{\infty}$, prove whether the series $\sum_{n =1}^{\infty}a_n$ converges or diverges. (If it converges, you do not need to find the limit.)
+\begin{enumerate}
+    \item $a_n = \sqrt{n + 1} - \sqrt{n}$.
+    \item $a_n = \frac{\sqrt{n + 1} - \sqrt{n}}{n}$.
+    \item $a_n = (\sqrt[n]{n} - 1)^{n}$.
+    \item $a_n = \frac{(-1)^{n}}{\log{n}}$ for $n \ge 2$ (and $a_1 = 0$).
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\begin{enumerate}
+    \item 
+    \item 
+    \item 
+    \item 
+\end{enumerate}
+\end{solution}
+
+\begin{problem}[Exercise 2.17]
+Consider the series $$\sum_{n=1}^{\infty} \frac{1}{1 + z^{n}}.$$ Determine which values of $z\in\R (z \neq -1)$ make the series convergent and which make it divergent. Prove your answers are correct.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 3.6]
+Assume that $\sum_{n = 1}^{\infty} a_n$ converges absolutely. Prove that $\sum_{n =1}^{\infty} \frac{\sqrt{\abs{a_n}}}{n}$ converges. (Hint: Use the inequality $2AB \leq A^{2} + B^{2},$ valid for any real numbers $A, B$).
+\end{problem}
+
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 3.7]
+\begin{enumerate}
+    \item Assume that $\sum_{n = 1}^{\infty} a_n$ and $\sum_{n = 1}^{\infty} b_n$ converge absolutely. Prove that $\sum_{n = 1}^{\infty} (a_n + b_n)$ absolutely as well.
+    \item Assume that $\sum_{n = 1}^{\infty} a_n$ converges. Does it follow that $\sum_{n = 1}^{\infty} a_2n$ converges? Give a proof or counterexample.
+    \item Assume that $\sum_{n = 1}^{\infty} a_n$ converges absolutely. Does it follow that $\sum_{n = 1}^{\infty} a_2n$ converges absolutely? Give a proof or counterexample.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\begin{enumerate}
+    \item 
+    \item
+    \item 
+\end{enumerate}
+\end{solution}
+
+\end{document}
