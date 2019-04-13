@@ -57,10 +57,10 @@ For each of the following sequences $(a_n)_{n = 1}^{\infty}$, prove whether the 
 
 \begin{solution}
 \begin{enumerate}
-    \item 
-    \item 
-    \item 
-    \item 
+    \item Enumerate partial sums of $a_n$. $s_n=(\sqrt{2} - \sqrt{1}) + (\sqrt{3} - \sqrt{2}) \dots + (\sqrt{k + 1} - \sqrt{k}) = -1 + (\sqrt{2} - \sqrt{2}) \dots + (\sqrt{k} - \sqrt{k}) + \sqrt{k + 1}.$ So, $\sqrt{k + 1} - 1$ as $n\rightarrow\infty$ diverges so series diverges.
+    \item Multiply numerator and denominator by $\frac{\sqrt{n + 1} + \sqrt{n}}{\sqrt{n + 1} + \sqrt{n}}$. So, $\frac{\sqrt{n + 1} - \sqrt{n}}{n} = \frac{1}{n\sqrt{n + 1} + \sqrt{n}} < n^{\frac{-3}{2}}$. According to Theorem 2.4, $\frac{\sqrt{n + 1} - \sqrt{n}}{n}$ diverges.
+    \item Use Root Test so $\lim_{n \rightarrow\infty} \sup(\sqrt[n]{n} - 1) < 1. \lim_{n \rightarrow\infty} \sup \sqrt[n]{n} < 2. \lim_{n \rightarrow\infty} \sup \frac{\log{n}}{n} < \log{2}$. $\lim_{n \rightarrow\infty} \sup n < 2^{n} \rightarrow \frac{n}{2^{n}} < 1$, which is true for all  n. So series converges. 
+    \item Use Alternating Series Test to show that $\frac{1}{\log{n}}$ is monotonically decreasing. For all $n \ge 2, \frac{1}{\log{n + 1}} < \frac{1}{\log{n}}$. So by AST, this series converges.
 \end{enumerate}
 \end{solution}
 
