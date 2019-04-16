@@ -86,16 +86,16 @@ Assume that $\sum_{n = 1}^{\infty} a_n$ converges absolutely. Prove that $\sum_{
 \begin{problem}[Exercise 3.7]
 \begin{enumerate}
     \item Assume that $\sum_{n = 1}^{\infty} a_n$ and $\sum_{n = 1}^{\infty} b_n$ converge absolutely. Prove that $\sum_{n = 1}^{\infty} (a_n + b_n)$ absolutely as well.
-    \item Assume that $\sum_{n = 1}^{\infty} a_n$ converges. Does it follow that $\sum_{n = 1}^{\infty} a_2n$ converges? Give a proof or counterexample.
-    \item Assume that $\sum_{n = 1}^{\infty} a_n$ converges absolutely. Does it follow that $\sum_{n = 1}^{\infty} a_2n$ converges absolutely? Give a proof or counterexample.
+    \item Assume that $\sum_{n = 1}^{\infty} a_n$ converges. Does it follow that $\sum_{n = 1}^{\infty} a_{2n}$ converges? Give a proof or counterexample.
+    \item Assume that $\sum_{n = 1}^{\infty} a_n$ converges absolutely. Does it follow that $\sum_{n = 1}^{\infty} a_{2n}$ converges absolutely? Give a proof or counterexample.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-    \item 
-    \item
-    \item 
+    \item If $\sum_{n = 1}^{\infty} a_n$ and $\sum_{n = 1}^{\infty} b_n$ absolutely converge, then $\sum_{n = 1}^{\infty} \abs{a_n}$ and $\sum_{n = 1}^{\infty} \abs{b_n}$ converge. By triangle inequality, $\sum_{n = 1}^{\infty} \abs{a_n + b_n} \leq \sum_{n = 1}^{\infty} \abs{a_n} + \sum_{n = 1}^{\infty} \abs{b_n}$. By comparison test, $\sum_{n = 1}^{\infty} \abs{a_n + b_n}$ converges. So, $\sum_{n = 1}^{\infty} (a_n + b_n)$ absolutely converges.
+    \item No. Consider the series $\sum_{n=1}^{\infty} \frac{(-1)^{n}}{n}$, which converges by AST. But, $\sum_{n=1}^{\infty} \frac{(-1)^{2n}}{2n}= \sum_{n=1}^{\infty} \frac{(1)}{2n}$ is a divergent series.
+    \item Yes. If $\sum_{n = 1}^{\infty} a_n$ converges absolutely, then $\sum_{n = 1}^{\infty} \abs{a_n}$ converges. For any $k\in\N, \sum_{n = 1}^{k} \abs{a_{2n}} \leq \sum_{n = 1}^{k} \abs{a_n} \leq \sum_{n = 1}^{\infty} \abs{a_n}.$ So, $\sum_{n = 1}^{\infty} abs{a_{2n}}$ converges which implies $\sum_{n = 1}^{\infty} a_{2n}$ converges absolutely.
 \end{enumerate}
 \end{solution}
 
