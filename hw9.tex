@@ -69,7 +69,7 @@ Consider the series $$\sum_{n=1}^{\infty} \frac{1}{1 + z^{n}}.$$ Determine which
 \end{problem}
 
 \begin{solution}
-
+Let's use the Ratio Test. $\abs{\frac{a_{n+1}}{a_n}} = \abs{(\frac{1+z}{1 + z^{2}}, \frac{1+z^{2}}{1+z^{3}},\frac{1+z^{3}}{1+z^{4}},\dots, \frac{1+z^{n}}{1+z^{n+1}})}$. So, $\lim_{n\rightarrow \infty} \sup \abs{\frac{1+z^{n}}{1+z^{n+1}}} = \abs{\frac{z^{n}}{z^{n+1}}} = \frac{1}{\abs{z}} < 1$. If $\abs{z}>1$, then $\sum_{n}^{\infty}\frac{1}{1 + z^{n}}$ converges. Now, $\lim_{n\rightarrow \infty} \inf \abs{\frac{1+z^{n}}{1+z^{n+1}}} = \abs{\frac{z^{n}}{z^{n+1}}} = \frac{1}{\abs{z}} > 1$. If $\abs{z} < 1, \sum_{n=1}^{\infty} \frac{1}{1 + z^{n}}$ diverges. If $z=1$, $\sum_{n=1}^{\infty} \frac{1}{1 + 1^{n}}$. We know that $\sum_{n=1}^{\infty} \frac{1}{2}$ diverges so by comparison test, $\sum_{n=1}^{\infty} \frac{1}{1 + z^{n}}$ diverges for $z=1$.
 \end{solution}
 
 
