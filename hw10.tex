@@ -1,0 +1,128 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{mathtools}
+\usepackage{graphicx}
+\DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\A}{\mathcal{A}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\bigep}{\mathcal{E}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#10}
+\duedate{4/18/2019}
+
+\begin{document}
+
+\problemlist{Chapter 7: 4.3, 4.6, 4.7 \\
+            Chapter 8: 1.5, 1.11, 1.12, 1.17}
+
+\begin{problem}[Exercise 4.3]
+Let $B = \{0\}\cup \{\frac{-1}{n^{2}}\}_{n\in\N}$ and $E=\R\setminus B.$ Consider the series $$\sum_{n=1}^{\infty} \frac{1}{1 + n^{2}x}$$ on the set $E$.
+\begin{enumerate}
+    \item Prove that the series converges absolutely for all $x \in E$; therefore it converges pointwise to a function $f : E\rightarrow \R$.
+    \item Prove that the series converges uniformly to $f$ on $(-\infty, -\delta) \cup (\delta, \infty)\setminus B$ for any $\delta > 0$, but that it does not converge uniformly to $f$ on $E$.
+    \item Prove that $f$ is continous. 
+    \item Prove that $f(0+) = +\infty$, that therefore $f$ is not a bounded function.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\begin{enumerate}
+    
+\end{enumerate}
+\end{solution}
+
+\begin{problem}[Exercise 4.6]
+Find the radius of convergence for each of the following power series: $$
+\sum_{n=0}^{\infty} n^{n} z^{n} \quad \sum_{n=0}^{\infty} \frac{z^{n}}{n !} \quad \sum_{n=0}^{\infty} z^{n} \quad \sum_{n=0}^{\infty} \frac{z^{n}}{n} \quad \sum_{n=0}^{\infty} \frac{z^{n}}{n^{2}}
+.$$
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 4.7]
+Consider the power series $\sum_{n=0}^{\infty} c_nz^{n}$. Let $R$ be the radius of convergence of the power series, and assume $R>0$. Let $f: (-R,R) \rightarrow \R$ be the function defined by $f(z)=\sum_{n=0}^{\infty} c_nz^{n}$. Prove the following statements, which refine Thm 4.5.
+\begin{enumerate}
+    \item For any $r \in (0, R)$, the series $\sum_{n=0}^{\infty}$ converges uniformly on $(-r, r)$ to $f$.
+    \item $f$ is continuous on all of $(-R,R)$.
+\end{enumerate}
+\end{problem}
+
+
+\begin{solution}
+\end{solution}
+
+
+\begin{problem}[Exercise 1.5]
+Let $f: \R \rightarrow \R$ be a function such that $\abs{f(x) - f(y)} \leq (x - y)^{2}$ for all $x, y \in \R.$ Prove that $f$ is constant.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 1.11]
+Let $f: \R \rightarrow \R$ be differentiable, and assume $\lim_{x \rightarrow +\infty}x\abs{f'(x)}=0$. Define a sequence $(a_n)$ in $\R$ by $a_n = f(2n) -f(n)$ for each $n \in \N$. Prove that $a_n \rightarrow$ as $n\rightarrow\infty$.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 1.12]
+Let $f: (a,b) \rightarrow \R$ be differentiable with $f'(x) > 0$ for all $x\in(a,b)$.
+\begin{enumerate}
+    \item Prove that $f$ is injectibe.
+    \item By part (1), there exists a function $g : f((a,b))\rightarrow (a,b)$ such that $g(f(x))= x$ for all $x\in(a, b).$ Prove that $g$ is continuous.
+    \item Prove that $g$ is differentiable, and that $g'(f(x))= \frac{1}{f'(x)},$ for all $x \in (a,b)$.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 1.17]
+Use Taylor's Theorem with remainder to estimate $e^{\frac{1}{2}}$ to an accuracy of within $10^{-3}.$ Prove your answer has the desired accuracy.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+
+\end{document}
