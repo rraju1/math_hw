@@ -85,13 +85,17 @@ Find the radius of convergence for each of the following power series: $$
 \begin{problem}[Exercise 4.7]
 Consider the power series $\sum_{n=0}^{\infty} c_nz^{n}$. Let $R$ be the radius of convergence of the power series, and assume $R>0$. Let $f: (-R,R) \rightarrow \R$ be the function defined by $f(z)=\sum_{n=0}^{\infty} c_nz^{n}$. Prove the following statements, which refine Thm 4.5.
 \begin{enumerate}
-    \item For any $r \in (0, R)$, the series $\sum_{n=0}^{\infty}$ converges uniformly on $(-r, r)$ to $f$.
+    \item For any $r \in (0, R)$, the series $\sum_{n=0}^{\infty}c_nz^{n}$ converges uniformly on $(-r, r)$ to $f$.
     \item $f$ is continuous on all of $(-R,R)$.
 \end{enumerate}
 \end{problem}
 
 
 \begin{solution}
+\begin{enumerate}
+    \item For any $\epsilon > 0$, take the Weierstrauss-$M$ test for any $r$, we have $\sum_{n=0}^{\infty}c_nr^{n}$ $ < \sum_{n=0}^{\infty}\abs{c_nr^{n}} < \sum_{n=0}^{\infty}c_n(r + \epsilon)^{n}$. We can ensure convergence of $\sum_{n=0}^{\infty}c_n(r + \epsilon )^{n}$ s.t. $r + \epsilon \in (0,R)$. So, by Weierstrauss-$M$ test, $\sum_{n=0}^{\infty}c_nr^{n}$ converges uniformly for all $r\in(0, R).$
+    \item For any $r, \epsilon > 0$ and $r < R$, $\sum_{n=0}^{\infty}c_n(r - \epsilon)^{n} < \sum_{n=0}^{\infty}c_nr^{n} < \sum_{n=0}^{\infty}c_n(r + \epsilon)^{n}$. So, $-\sum_{n=0}^{\infty}c_n(r + \epsilon)^{n} < \sum_{n=0}^{\infty}c_nr^{n} < \sum_{n=0}^{\infty}c_n(r + \epsilon)^{n}$. So, $\abs{\sum_{n=0}^{\infty}c_nr^{n}} \leq \epsilon$ which implies $\sum_{n=0}^{\infty}c_nr^{n} \in B(\sum_{n=0}^{\infty}c_nr^{n}, \epsilon)$ for any $\delta$ so $f$ is continuous.
+\end{enumerate}
 \end{solution}
 
 
@@ -100,15 +104,15 @@ Let $f: \R \rightarrow \R$ be a function such that $\abs{f(x) - f(y)} \leq (x - 
 \end{problem}
 
 \begin{solution}
-
+$\lim_{t\rightarrow x} \frac{\abs{f(t) - f(x)}}{t - x} \leq \abs{f(t) - f(x)} \leq (t - x)^{2}$. $ \abs{f(t) - f(x)} \leq (t - x)^{2} \rightarrow 0.$ So then, $\lim_{t \rightarrow x} \frac{\abs{f(t) - f(x)}}{t - x} \rightarrow 0.$ This shows that $\frac{f(t) - f(x)}{t - x}\rightarrow 0$ showing that $f$ is constant.
 \end{solution}
-
+\pagebreak
 \begin{problem}[Exercise 1.11]
 Let $f: \R \rightarrow \R$ be differentiable, and assume $\lim_{x \rightarrow +\infty}x\abs{f'(x)}=0$. Define a sequence $(a_n)$ in $\R$ by $a_n = f(2n) -f(n)$ for each $n \in \N$. Prove that $a_n \rightarrow$ as $n\rightarrow\infty$.
 \end{problem}
 
 \begin{solution}
-If $\lim_{x \rightarrow +\infty} = 0$ 
+If $\lim_{x \rightarrow +\infty} \abs{f'(x)}= 0$ thus $f'(x) \rightarrow$ a constant function as $x \rightarrow \infty$ $\frac{f(2n) - f(n)}{2n - n}\rightarrow 0$ as $n \rightarrow \infty$. $2n - n \forall n\in\N$, then $f(2n) - f(n)\rightarrow 0$ as $n\rightarrow \infty$. Thus, $a_n\rightarrow 0$ as $n \rightarrow \infty.$
 \end{solution}
 
 \begin{problem}[Exercise 1.12]
