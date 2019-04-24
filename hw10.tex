@@ -74,7 +74,7 @@ Find the radius of convergence for each of the following power series: $$
 \begin{solution}
 \begin{enumerate}
     \item $\lim_{n \rightarrow \infty}\sup (n^{n})^{\frac{1}{n}} \rightarrow \lim_{n \rightarrow \infty}\sup n\rightarrow +\infty$. So, radius of convergence is zero.
-    \item 
+    \item Apply ratio test so
     \item 
     \item 
 \end{enumerate}
@@ -107,20 +107,24 @@ Let $f: \R \rightarrow \R$ be differentiable, and assume $\lim_{x \rightarrow +\
 \end{problem}
 
 \begin{solution}
-
+If $\lim_{x \rightarrow +\infty} = 0$ 
 \end{solution}
 
 \begin{problem}[Exercise 1.12]
 Let $f: (a,b) \rightarrow \R$ be differentiable with $f'(x) > 0$ for all $x\in(a,b)$.
 \begin{enumerate}
-    \item Prove that $f$ is injectibe.
+    \item Prove that $f$ is injective.
     \item By part (1), there exists a function $g : f((a,b))\rightarrow (a,b)$ such that $g(f(x))= x$ for all $x\in(a, b).$ Prove that $g$ is continuous.
     \item Prove that $g$ is differentiable, and that $g'(f(x))= \frac{1}{f'(x)},$ for all $x \in (a,b)$.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
-
+\begin{enumerate}
+    \item Because $f$ is strictly increasing by Cor. 1.10, there are only unique elements that are in the codomain, that is $\R$. This implies that no two elements in $(a,b)$ can map to the same element in $\R$ proving $f$ is injective.
+    \item $g$ implies that $f$ is surjective as well so it is bijective. Because $f$ is strictly increasing we can say that $x \in [x - \epsilon, x + \epsilon]\subset (a,b)$ so that $f(x) \in [f(x - \epsilon), f(x + \epsilon))]$. So, by Theorem 2.24, $g$ is continuous at $x$ and since $\epsilon$ was arbitrary, $g$ is continuous for all $x$ on $(a,b)$. 
+    \item $\frac{g(f(x_n)) - g(f(x))}{f(x_n) - f(x)} = \frac{x_n - x}{f(x_n) - f(x)} = \frac{1}{f'(x)}$ which is greater than 0 so the limit exists and $g$ is differrentiable. 
+\end{enumerate}
 \end{solution}
 
 \begin{problem}[Exercise 1.17]
@@ -128,7 +132,7 @@ Use Taylor's Theorem with remainder to estimate $e^{\frac{1}{2}}$ to an accuracy
 \end{problem}
 
 \begin{solution}
-
+We need $\frac{\abs{f^{n+1}(x^{*})}}{2^{n + 1}(n + 1)!} < .001$. So this means that we need to pick n=4 for the series so that $(n + 1)!2^{n + 1} > 1000$. This translates into the Taylor approximation formula, $e^{x}=\sum_{n=1}^{\infty} \frac{x^{k}}{k!} = 1 + \frac{1}{2} + \frac{1}{8} + \frac{1}{48} + \frac{1}{384} = \frac{211}{128}=1.64864375$ compared to the calculator's answer 1.6489 which is within the bounds.
 \end{solution}
 
 
