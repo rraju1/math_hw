@@ -39,7 +39,7 @@
 \name{Ravi Raju}
 \class{MA 521}
 \assignment{Homework \#10}
-\duedate{4/18/2019}
+\duedate{4/25/2019}
 
 \begin{document}
 
@@ -58,7 +58,10 @@ Let $B = \{0\}\cup \{\frac{-1}{n^{2}}\}_{n\in\N}$ and $E=\R\setminus B.$ Conside
 
 \begin{solution}
 \begin{enumerate}
-    
+    \item Consider the series, $A=\sum_{n=1}^{\infty} \frac{1}{xn^{2}}$. For the case that $x > 0$, we know that $\sum_{n=1}^{\infty} \abs{\frac{1}{1 + n^{2}x}}= \sum_{n=1}^{\infty} \frac{1}{1 + n^{2}x} \leq A$. A converges so for this case this series absolutely converges. The other case is $x < 0$. For this case, $1 + n^{2}x < -n^{2}$ after some value $N$. This value can be selected in this fashion: $-n^{2}-n^{2}x \ge 1 \rightarrow -n^{2} \ge \frac{1}{1 + x} \rightarrow n^{2} \ge \abs{\frac{1}{1 + x}}$. So from  $(N, \infty)$ this series absolutely converges by Comparison Test.
+    \item From part 1, select a series that converges that is larger than $f$, such as $\sum_{n=1}^{\infty} \frac{1}{1 - \delta n^{2}}= M_n$. This is the largest choice since $\delta$ is the smallest positive and largest negative so it will cover both cases in terms of x. By the Weierstrass $M$-Test, this converges uniformly on the given interval. This is not true for $E$ because $\exists \epsilon > 0$ s.t. $x=\delta - \epsilon$ s.t. $M_n < \frac{1}{\abs{1 - (\delta - \epsilon)n^{2}}}$.
+    \item By part 2, we know that $f$ converges uniformly on $(-\infty, -\delta)\cup(\delta, \infty)$ so pick an arbitrary nbd $(a,b) \in (\delta, \infty).$ Uniform Convergence guarantees that $\abs{f(x_1) - f(x_2)} < \epsilon$ for $\abs{x_1 - x_2} <\delta$ which translates directly to the $\epsilon - \delta$ of continutiy. 
+    \item Choose the $\sum_{n =1}^{\infty}\frac{1}{n}$. For $x \leq \frac{1}{4}$, choose $n\in\N$ s.t. that $n \ge 2$ then $\frac{1}{1 + xn^{2}} > \frac{1}{n}$ and we know that $\frac{1}{n}$ diverges by p-test so by CST this series diverges as $x\rightarrow0$
 \end{enumerate}
 \end{solution}
 
@@ -69,7 +72,12 @@ Find the radius of convergence for each of the following power series: $$
 \end{problem}
 
 \begin{solution}
-
+\begin{enumerate}
+    \item $\lim_{n \rightarrow \infty}\sup (n^{n})^{\frac{1}{n}} \rightarrow \lim_{n \rightarrow \infty}\sup n\rightarrow +\infty$. So, radius of convergence is zero.
+    \item 
+    \item 
+    \item 
+\end{enumerate}
 \end{solution}
 
 
