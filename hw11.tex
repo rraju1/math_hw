@@ -1,0 +1,113 @@
+% HMC Math dept HW template example
+% v0.04 by Eric J. Malm, 10 Mar 2005
+\documentclass[12pt,letterpaper,boxed]{hmcpset}
+
+% set 1-inch margins in the document
+\usepackage[margin=1in]{geometry}
+
+% include this if you want to import graphics files with /includegraphics
+\usepackage{mathtools}
+\usepackage{graphicx}
+\DeclareMathOperator{\Lim}{Lim}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\A}{\mathcal{A}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\bigep}{\mathcal{E}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newcommand*\xoverline[2][0.75]{%
+    \sbox{\myboxA}{$\m@th#2$}%
+    \setbox\myboxB\null% Phantom box
+    \ht\myboxB=\ht\myboxA%
+    \dp\myboxB=\dp\myboxA%
+    \wd\myboxB=#1\wd\myboxA% Scale phantom
+    \sbox\myboxB{$\m@th\overline{\copy\myboxB}$}%  Overlined phantom
+    \setlength\mylenA{\the\wd\myboxA}%   calc width diff
+    \addtolength\mylenA{-\the\wd\myboxB}%
+    \ifdim\wd\myboxB<\wd\myboxA%
+       \rlap{\hskip 0.5\mylenA\usebox\myboxB}{\usebox\myboxA}%
+    \else
+        \hskip -0.5\mylenA\rlap{\usebox\myboxA}{\hskip 0.5\mylenA\usebox\myboxB}%
+    \fi}
+
+% info for header block in upper right hand corner
+\name{Ravi Raju}
+\class{MA 521}
+\assignment{Homework \#11}
+\duedate{5/2/2019}
+
+\begin{document}
+
+\problemlist{Chapter 8: 2.12, 2.15, 2.16, 2.17,\\
+             2.18, 2.19, 2.20, 3.3}
+
+\begin{problem}[Exercise 2.12]
+Which $n\in\N$ have the property that $f^{n} \in \mathcal{R}([a,b])$ implies $\mathcal{R}([a,b])$? Give proofs(s) and counterexamples(s) to show your answer is correct and complete.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.15]
+Show that if $f : [a, b] \rightarrow \R$ is continuous and $F(x) := \int_{a}^{x} f(t) dt = 0$ for all $x \in [a, b]$, then $f(x) \in [a,b].$ Provide an example to show that the statement is false if $f$ is not continuous.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 2.16]
+Assume $f$ and $g$ are differentiable functions on $[a,b]$ and assume $f', g' \in \mathcal{R}([a,b]).$ Show that the integration by parts formula is valid: $$\int_{a}^{b} fg'dx = f(b)g(b) - f(a)g(a) = \int_{a}^{b} fg'dx.$$ Make sure you show the relevant functions are Riemann integrable when you do the proof!
+\end{problem}
+
+
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}[Exercise 2.17]
+Assume $g : [a, b] \rightarrow \R$ is differentiable, that $g'$ is continuous, and $M$ and $m$ are upper and loewr bounds, respectively, for the function $g$. Assume $f : [m,M]\rightarrow\R$ is continuous. SHow that the change of variables formula is valid: $$\int_{a}^{b}f(g(x))g'(x)dx = \int_{g(a)}^{g(b)}f(t)dt.$$ Again, part of the exercise is to check that the relevant functions are Riemann integrable when you do the proof!
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.18]
+Assume $f \in \mathcal{R}([a,b]),$ but that $f$ has a jump discontinuity at $c \in (a,b)$, i.e. $f(c-)\neq f(c+).$ Show that $F(x) := \int_{a}^{x} f(t)dt$ is not differentiable at $x=c$.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.20]
+Assume $g$ is bounded, $g \in \mathcal{R}([0,1])$ and $g$ is continuous at 0. Show that $$\lim_{n\rightarrow \infty}\int_{0}^{1}g(x^{n})dx = g(0).$$ Hint: Consider the difference $\int_{0}^{1}g(x^{n})dx - g(0)$; add and subtract $\int_{0}^{c} g(x^{n})dx$ for a carefully chosen $c$, and then that $\int_{0}^{c}dx$ is close to $cg(0)$ for large enough $n.$
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 3.3]
+Let $(f_n)$ be a sequence of real-valued, Riemann integrable functions on the interval $[a,b]$. Assume that $f_{n}(x)\rightarrow 0$ as $n\rightarrow\infty$ for each $x\in[a,b],$ and additionally, $$\sum_{n=1}^{\infty}|f_{n + 1}(x) - f_{n}(x)|$$ converges uniformly on $[a,b]$.
+\begin{enumerate}
+    \item Show that $\lim_{n \rightarrow\infty}\int_{a}^{b}f_n dx \rightarrow 0.$
+    \item Is it necessarily the case that the series $\sum_{n=1}^{\infty}f_n$ converges uniformly? Give a proof or counterexample to support your answer.
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\end{solution}
+
+
+
+\end{document}
