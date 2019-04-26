@@ -47,11 +47,11 @@
              2.18, 2.19, 2.20, 3.3}
 
 \begin{problem}[Exercise 2.12]
-Which $n\in\N$ have the property that $f^{n} \in \mathcal{R}([a,b])$ implies $\mathcal{R}([a,b])$? Give proofs(s) and counterexamples(s) to show your answer is correct and complete.
+Which $n\in\N$ have the property that $f^{n} \in \mathcal{R}([a,b])$ implies $f\in\mathcal{R}([a,b])$? Give proofs(s) and counterexamples(s) to show your answer is correct and complete.
 \end{problem}
 
 \begin{solution}
-
+We knwo that if $f$ is differentiable on $[a,b]$ that is must be continuous on $[a,b]$. By contradition, we will show that $f$ is bounded. If $f$ is unbounded at $[a,b]$ then $\exists x\in[a,b]$ s.t. $\nexists M$ s.t. $\abs{x} < M$. Let's analyze the limit as $\lim_{h \rightarrow 0}\frac{f(x + h) - f(x)}{h} = f'(x)$. Without loss of generality, assume $f(x + h)$ is finite. By our previous statement, we claimed that $f(x)$ was unbounded which implies this limit can't exist. This means that $f^{1} \notin \mathcal{R}([a,b])$ which is a contradition. Since $f$ is continuous and bounded, we can say that by Theorem 2.8 $f\in\mathcal{R}([a,b]).$ If this holds for $f^{1}$, then it will hold for all $n > 1$ as well.
 \end{solution}
 
 \begin{problem}[Exercise 2.15]
