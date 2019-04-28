@@ -62,19 +62,18 @@ Show that if $f : [a, b] \rightarrow \R$ is continuous and $F(x) := \int_{a}^{x}
 We want $\lim_{t\rightarrow x} \frac{F(t) - F(x)}{t - x} = F'(x) = f(x) = 0\, \forall x \in [a, b]$. We know that $F(x) := \int_{a}^{x} f(t) dt = 0.$ So this means that $\forall x\in[a,b], F(x)=F(a)$ by the Fundamental Theorem of Calculus. So then, substitue $F(a)$ for $F(x)$ and $\lim_{t \rightarrow x} \frac{F(t) - F(a)}{t - x} = F'(x)= f(x) = 0 \forall x\in[a, b].$ Let's pick the same function $f(x) = 0$ but at some point $x \in [a,b]$, there exists a removable discontinuity where $f(x) = 1$. If we choose the partitions of the function correctly, we can obtain the original expression with $f(x)\neq0 \forall x \in [a,b].F(x) := \int_{a}^{x} f(t) dt = 0.$
 \end{solution}
 
-
+\pagebreak
 \begin{problem}[Exercise 2.16]
-Assume $f$ and $g$ are differentiable functions on $[a,b]$ and assume $f', g' \in \mathcal{R}([a,b]).$ Show that the integration by parts formula is valid: $$\int_{a}^{b} fg'dx = f(b)g(b) - f(a)g(a) = \int_{a}^{b} f'gdx.$$ Make sure you show the relevant functions are Riemann integrable when you do the proof!
+Assume $f$ and $g$ are differentiable functions on $[a,b]$ and assume $f', g' \in \mathcal{R}([a,b]).$ Show that the integration by parts formula is valid: $$\int_{a}^{b} fg'dx = f(b)g(b) - f(a)g(a) - \int_{a}^{b} f'gdx.$$ Make sure you show the relevant functions are Riemann integrable when you do the proof!
 \end{problem}
 
-
 \begin{solution}
-
+Let's analyze the product of the functions, $fg$. Apply the product rule so $\frac{d}{dx}fg = f'g + fg'$. Apply the Fundamental Theorem of Calculus, $\int_{a}^{b} \frac{d}{dx}(fg)dx = \int_{a}^{b}fg'dx + \int_{a}^{b}fg'dx \rightarrow \int_{a}^{b}fg'dx = \int_{a}^{b}\frac{d}{dx}(fg) dx - \int_{a}^{b}fg'dx$. Evaluate the expression so $\int_{a}^{b}fg'dx = f(b)g(b) - f(a)g(a) - \int_{a}^{b}f'gdx$. By Theorem 2.10(b), $\frac{d}{dx}(fg) \in \mathcal{R}$ so both functions in integrals are Reimann integrable.
 \end{solution}
 
 
 \begin{problem}[Exercise 2.17]
-Assume $g : [a, b] \rightarrow \R$ is differentiable, that $g'$ is continuous, and $M$ and $m$ are upper and loewr bounds, respectively, for the function $g$. Assume $f : [m,M]\rightarrow\R$ is continuous. SHow that the change of variables formula is valid: $$\int_{a}^{b}f(g(x))g'(x)dx = \int_{g(a)}^{g(b)}f(t)dt.$$ Again, part of the exercise is to check that the relevant functions are Riemann integrable when you do the proof!
+Assume $g : [a, b] \rightarrow \R$ is differentiable, that $g'$ is continuous, and $M$ and $m$ are upper and lower bounds, respectively, for the function $g$. Assume $f : [m,M]\rightarrow\R$ is continuous. SHow that the change of variables formula is valid: $$\int_{a}^{b}f(g(x))g'(x)dx = \int_{g(a)}^{g(b)}f(t)dt.$$ Again, part of the exercise is to check that the relevant functions are Riemann integrable when you do the proof!
 \end{problem}
 
 \begin{solution}
