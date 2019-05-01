@@ -85,7 +85,7 @@ Assume $f \in \mathcal{R}([a,b]),$ but that $f$ has a jump discontinuity at $c \
 \end{problem}
 
 \begin{solution}
-
+$|\frac{F(x) - F(c)}{x - c}| < \epsilon \rightarrow |\frac{\int_{a}^{x}g(t)dt - \int_{a}^{c}f(t)dt}{x - c} - \frac{\int_{c}^{x}f(c)dx}{x-c}|=|\frac{\int_{c}^{x}f(t)dt}{x-c} - \frac{\int_{c}^{x}f(c)dt}{x-c}| \rightarrow \frac{1}{\abs{x-c}}\abs{\int_{c}^{x}f(t) - f(c)dt}\leq \frac{1}{\abs{x-c}}\int_{c}^{x}f(t) - f(c)dt.$ Since $f$ is continuous at c, $\exists\delta>0$ s.t. for all $x\in[a,b]$ if $\abs{x-c} < \delta$ then $\abs{g(x)-(c)}<\epsilon.$ So take any $\epsilon>0$, we then have that $\exists\delta>0$ s.t. $\forall x\in[a,b]$ if $(c - \delta,c)$. $\abs{\frac{F(x) - F(c)}{x - c} - f(c)} \leq \frac{1}{\abs{x-c}}\int_{c}^{x}\abs{f(t) - f(c)}dt < \frac{1}{\abs{x - c}}\int_{c}^{x}\epsilon dt=\epsilon.$ So, the left derivative of $F$ at c is $f(c)$. Right side is similar derivation. But since we know that a jump discontinuity exists at $c$, the limit cannot exist so $F$ is not differentiable at $x=c.$
 \end{solution}
 
 \begin{problem}[Exercise 2.19]
