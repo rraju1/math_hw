@@ -77,11 +77,19 @@ Assume $g : [a, b] \rightarrow \R$ is differentiable, that $g'$ is continuous, a
 \end{problem}
 
 \begin{solution}
-
+The chain rule is defined as $\frac{d}{dx}F(g(x))= F'(g(x))g'(x)$, where $f = F'$. Apply the Fundamental Theorem of Calculus $\int_{a}^{b} \frac{d}{dx}F(g(x))dx = F(g(b)) - F(g(a)) = \int_{g(a)}^{g(b)} f(t)dt.$ $g(x)\in\mathcal{R}$ since $g$ is continuous and bounded. By Thm. 2.9, $f\in\mathcal{R}$ so $f(g)\in\mathcal{R}$. $g'$ is continuous on a compact set so it is bounded so $g'\in\mathcal{R}$. For the other function, since $f$ is continuous and $g(a)$, $g(b)$ are bounded on a compact so $f\in\mathcal{R}.$
 \end{solution}
 
 \begin{problem}[Exercise 2.18]
 Assume $f \in \mathcal{R}([a,b]),$ but that $f$ has a jump discontinuity at $c \in (a,b)$, i.e. $f(c-)\neq f(c+).$ Show that $F(x) := \int_{a}^{x} f(t)dt$ is not differentiable at $x=c$.
+\end{problem}
+
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}[Exercise 2.19]
+Given a function $f : [a,b]\rightarrow \R$, define its total variation $T f$ by $$T f = \sup\{\sum_{k=1}^{n} |f(x_k) - f(x_{k-1})|\},$$ where the supremum is taken over all partitions $P$ of $[a,b]$. Show that if $f'$ is continuous, then $$T f = \int_{b}^{a}|f'(x)|dx.$$ (Hint: Use the FTC for one inequality, and use the MVT for the other direction.)
 \end{problem}
 
 \begin{solution}
