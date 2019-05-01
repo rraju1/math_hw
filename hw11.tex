@@ -93,7 +93,7 @@ Given a function $f : [a,b]\rightarrow \R$, define its total variation $T f$ by 
 \end{problem}
 
 \begin{solution}
-
+$T f = \sup\{\sum_{k=1}^{n} |f(x_k) - f(x_{k-1})|\} \frac{x_k - x_{k-1}}{x_k - x_{k-1}} \rightarrow \sup\{\sum_{k=1}^{n}\abs{f'(x)}(x_k - x_{k-1})\} \ge \\lim_{n \rightarrow \infty} \sup \{\sum_{k=1}^{n}|f'(x)|(x_k - x_{k-1})\}$ by MVT. So, $\int_{a}^{b}\abs{f'(x)}dx \leq \sup \{\sum_{k=1}^{n}|f'(x)|(x_k - x_{k-1})\}.$
 \end{solution}
 
 \begin{problem}[Exercise 2.20]
